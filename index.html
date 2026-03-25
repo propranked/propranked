@@ -23,303 +23,168 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-dark: #0a0e27;
-            --secondary-dark: #1a1f3a;
-            --accent-gold: #d4af37;
-            --accent-light: #e8d5b8;
-            --green: #00d084;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b9d4;
-            --border: rgba(212, 175, 55, 0.2);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f1429 100%);
-            color: var(--text-primary);
-            min-height: 100vh;
-            overflow-x: hidden;
-            background-attachment: fixed;
+            background-color: #0f1419;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
         }
 
-        /* Animated background elements */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: drift 20s linear infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes drift {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* HEADER */
         header {
-            padding: 40px 0;
-            border-bottom: 1px solid var(--border);
-            background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
-            backdrop-filter: blur(10px);
+            background-color: #0f1419;
+            border-bottom: 1px solid #1a1f2e;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        .header-content {
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
 
         .logo {
-            font-size: 32px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-transform: uppercase;
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3)); }
-            50% { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6)); }
-        }
-
-        nav {
             display: flex;
-            gap: 40px;
             align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #00d084;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
         }
 
         nav a {
-            color: var(--text-secondary);
+            color: #e0e0e0;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-gold), var(--green));
-            transition: width 0.3s ease;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--accent-gold);
+            color: #00d084;
         }
 
-        nav a:hover::after {
-            width: 100%;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* HERO */
-        .hero {
-            padding: 100px 0;
+        .page-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 60px 20px 40px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            animation: pulse 8s ease-in-out infinite;
-            pointer-events: none;
+        .page-header h1 {
+            font-size: 48px;
+            color: #00d084;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
-            50% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+        .page-header p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 8vw, 80px);
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-light) 50%, var(--green) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -2px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat {
-            padding: 30px;
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .stat:hover {
-            background: rgba(212, 175, 55, 0.1);
-            border-color: var(--accent-gold);
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* CONTROLS */
         .controls {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 60px;
+            gap: 15px;
+            margin: 40px 0;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .control-btn {
-            padding: 12px 24px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            border-radius: 8px;
+            background-color: #1a1f2e;
+            color: #00d084;
+            border: 1px solid #00d084;
+            padding: 10px 20px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 13px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 14px;
             transition: all 0.3s ease;
         }
 
         .control-btn:hover,
         .control-btn.active {
-            background: var(--accent-gold);
-            color: var(--primary-dark);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-            transform: translateY(-2px);
+            background-color: #00d084;
+            color: #0f1419;
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
         }
 
         .search-box {
-            padding: 12px 24px;
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
+            background-color: #1a1f2e;
+            color: #e0e0e0;
+            border: 1px solid #2a3040;
+            padding: 10px 15px;
+            border-radius: 6px;
             font-size: 14px;
-            width: 300px;
+            width: 250px;
             transition: all 0.3s ease;
         }
 
         .search-box::placeholder {
-            color: var(--text-secondary);
+            color: #b0b0b0;
         }
 
         .search-box:focus {
             outline: none;
-            border-color: var(--accent-gold);
-            background: rgba(212, 175, 55, 0.1);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            border-color: #00d084;
+            background-color: #252a38;
         }
 
-        /* FIRMS GRID */
         .firms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 100px;
+            padding: 40px 0;
         }
 
         .firm-card {
-            background: rgba(26, 31, 58, 0.4);
-            border: 1px solid var(--border);
+            background-color: #1a1f2e;
+            border: 1px solid #2a3040;
             border-radius: 12px;
-            padding: 24px;
-            cursor: pointer;
+            padding: 30px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
             display: flex;
             flex-direction: column;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .firm-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-gold);
-            background: rgba(26, 31, 58, 0.6);
-            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+            border-color: #00d084;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 208, 132, 0.1);
         }
 
         .firm-card-content {
-            position: relative;
-            z-index: 1;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -328,138 +193,123 @@
         .firm-name {
             font-size: 18px;
             font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
+            color: #fff;
+            margin-bottom: 12px;
         }
 
         .firm-rating {
-            font-size: 20px;
+            color: #00d084;
+            font-size: 16px;
             margin-bottom: 12px;
-            letter-spacing: 1px;
+            font-weight: 600;
         }
 
         .firm-discount {
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
-            color: var(--primary-dark);
-            padding: 6px 14px;
-            border-radius: 20px;
+            background-color: #00d084;
+            color: #0f1419;
+            padding: 6px 12px;
+            border-radius: 4px;
             display: inline-block;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 16px;
             width: fit-content;
         }
 
         .firm-platforms {
-            color: var(--text-secondary);
-            font-size: 12px;
+            color: #b0b0b0;
+            font-size: 13px;
             line-height: 1.6;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .platform-label {
-            color: var(--accent-gold);
+            color: #00d084;
             font-weight: 600;
             font-size: 11px;
             text-transform: uppercase;
+            margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
 
         .firm-cta {
             margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            gap: 10px;
+            padding-top: 20px;
+            border-top: 1px solid #2a3040;
         }
 
         .visit-btn {
-            flex: 1;
-            padding: 11px 18px;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
-            color: var(--primary-dark);
+            background-color: #00d084;
+            color: #0f1419;
             border: none;
+            padding: 10px 20px;
             border-radius: 6px;
-            font-weight: 700;
             cursor: pointer;
+            font-weight: 700;
+            font-size: 12px;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 0.5px;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
         }
 
         .visit-btn:hover {
+            background-color: #00e699;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
         }
 
-        /* FOOTER */
         footer {
-            border-top: 1px solid var(--border);
-            padding: 60px 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.03) 100%);
-            backdrop-filter: blur(10px);
+            background-color: #1a1f2e;
+            border-top: 1px solid #2a3040;
+            padding: 40px 20px;
+            text-align: center;
+            color: #b0b0b0;
+            margin-top: 60px;
         }
 
         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-section h3 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
+            color: #00d084;
+            font-size: 13px;
             font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .footer-section a {
             display: block;
-            color: var(--text-secondary);
+            color: #b0b0b0;
             text-decoration: none;
-            margin-bottom: 12px;
             font-size: 13px;
-            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--accent-gold);
-            transform: translateX(5px);
+            color: #00d084;
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--border);
-            padding-top: 40px;
-            text-align: center;
-            color: var(--text-secondary);
+            border-top: 1px solid #2a3040;
+            padding-top: 20px;
             font-size: 12px;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            nav {
-                gap: 20px;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero h1 {
-                font-size: clamp(32px, 6vw, 48px);
+            .page-header h1 {
+                font-size: 32px;
             }
 
             .firms-grid {
@@ -479,73 +329,27 @@
                 width: 100%;
             }
         }
-
-        /* Smooth animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .firm-card {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .firm-card:nth-child(1) { animation-delay: 0.05s; }
-        .firm-card:nth-child(2) { animation-delay: 0.1s; }
-        .firm-card:nth-child(3) { animation-delay: 0.15s; }
-        .firm-card:nth-child(4) { animation-delay: 0.2s; }
-        .firm-card:nth-child(5) { animation-delay: 0.25s; }
-        .firm-card:nth-child(6) { animation-delay: 0.3s; }
-        .firm-card:nth-child(n+7) { animation-delay: 0.35s; }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">⚡ PropRanked</div>
-                <nav>
-                    <a href="#compare">Compare</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="trading-guides.html">Guides</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </div>
+        <nav>
+            <a href="/" class="logo"><span>🏆</span> PropRanked</a>
+            <ul>
+                <li><a href="#compare">Compare</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="trading-guides.html">Guides</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>THE ELITE PROP FIRMS RANKED</h1>
-                    <p>Discover your perfect prop trading partner with real data & exclusive affiliate deals</p>
+        <div class="page-header">
+            <h1>PropRanked: Elite Prop Trading Firms</h1>
+            <p>Compare the best prop trading firms with real data, exclusive discounts, and affiliate deals</p>
+        </div>
 
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">22+</div>
-                            <div class="stat-label">Firms Compared</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">50%+</div>
-                            <div class="stat-label">Average Discount</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">Real-Time</div>
-                            <div class="stat-label">Data Updates</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="compare" class="container">
+        <div class="container">
             <div class="controls">
                 <input type="text" class="search-box" id="searchBox" placeholder="Search firms...">
                 <button class="control-btn active" data-sort="rating">Sort by Rating</button>
@@ -556,53 +360,34 @@
             <div class="firms-grid" id="firmsGrid">
                 <!-- Populated by JavaScript -->
             </div>
-        </section>
+        </div>
 
-        <section id="blog" style="padding: 100px 0; border-top: 1px solid var(--border);">
-            <div class="container" style="text-align: center;">
-                <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Latest Insights & Guides</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 40px;">Daily updates on prop firm changes, strategy guides & trading insights</p>
-                <a href="blog.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Explore Blog</a>
-            </div>
-        </section>
-
-        <section id="guides" style="padding: 100px 0; border-top: 1px solid var(--border);">
-            <div class="container" style="text-align: center;">
-                <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trading Guides</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 40px;">Master the fundamentals of prop trading with our expert guides</p>
-                <a href="trading-guides.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">View Guides</a>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <a href="#compare">Compare Firms</a>
-                    <a href="#blog">Latest Blog</a>
-                    <a href="#guides">Trading Guides</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="blog.html">Blog & Updates</a>
-                    <a href="trading-guides.html">Trading Guides</a>
-                    <a href="#">Affiliate Program</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <a href="#">About PropRanked</a>
-                    <a href="#">Our Methodology</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Disclaimer</a>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <a href="/">Compare Firms</a>
+                <a href="blog.html">Blog</a>
+                <a href="trading-guides.html">Guides</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PropRanked. All rights reserved. | Affiliate Disclosure: We earn commissions from affiliate links.</p>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="blog.html">Blog & Updates</a>
+                <a href="trading-guides.html">Trading Guides</a>
+                <a href="#">Affiliate Program</a>
+                <a href="#">Privacy Policy</a>
             </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <a href="#">About PropRanked</a>
+                <a href="#">Contact</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PropRanked. Helping traders find their perfect prop firm.</p>
         </div>
     </footer>
 
