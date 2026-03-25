@@ -488,6 +488,150 @@
                 font-size: 0.7rem;
             }
         }
+
+        /* Coming Soon Banner */
+        .coming-soon-banner {
+            position: sticky;
+            top: 60px;
+            background: linear-gradient(90deg, #00d084 0%, #00b86d 100%);
+            padding: 1rem 2rem;
+            text-align: center;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
+        }
+
+        .coming-soon-banner p {
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .coming-soon-banner strong {
+            color: var(--primary-dark);
+        }
+
+        /* Disabled Button State */
+        .btn-disabled {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            background: rgba(0, 208, 132, 0.3);
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--border-color);
+            cursor: not-allowed;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-disabled:hover {
+            background: rgba(0, 208, 132, 0.3);
+            cursor: not-allowed;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--secondary-dark);
+            border: 2px solid var(--accent-green);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            text-align: center;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-content h2 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .modal-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .modal-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-form input {
+            flex: 1;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .modal-form input:focus {
+            outline: none;
+            border-color: var(--accent-green);
+        }
+
+        .modal-form button {
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-green);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .modal-form button:hover {
+            background: var(--accent-green-hover);
+        }
+
+        .modal-close {
+            color: var(--text-secondary);
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-green);
+        }
     </style>
 </head>
 <body>
@@ -500,6 +644,25 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Coming Soon Banner -->
+    <div class="coming-soon-banner">
+        <p>🚀 <strong>Affiliate links launching soon!</strong> Join our waitlist to get early access when we go live.</p>
+    </div>
+
+    <!-- Notify Modal -->
+    <div id="notifyModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Get Early Access 🎯</h2>
+            <p>Be the first to know when affiliate links go live. We'll notify you as soon as everything is ready!</p>
+            <div class="modal-form">
+                <input type="email" id="emailInput" placeholder="your@email.com" required>
+                <button onclick="subscribeEmail()">Notify Me</button>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem;">We'll never spam you. Unsubscribe anytime.</p>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -554,7 +717,7 @@
                     <td>Monthly Sub</td>
                     <td>-10%</td>
                     <td><div class="rating"><span class="star">★</span> 4.8</div></td>
-                    <td><a href="YOUR_TOPSTEP_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">Apex Trader Funding</td>
@@ -564,7 +727,7 @@
                     <td>1-Step</td>
                     <td>-10-15%</td>
                     <td><div class="rating"><span class="star">★</span> 4.7</div></td>
-                    <td><a href="YOUR_APEX_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">FTMO</td>
@@ -574,7 +737,7 @@
                     <td>2-Step</td>
                     <td>10%+</td>
                     <td><div class="rating"><span class="star">★</span> 4.7</div></td>
-                    <td><a href="YOUR_FTMO_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">FundedNext</td>
@@ -584,7 +747,7 @@
                     <td>1 or 2-Step</td>
                     <td>Up to 18%</td>
                     <td><div class="rating"><span class="star">★</span> 4.6</div></td>
-                    <td><a href="YOUR_FUNDEDNEXT_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">The5ers</td>
@@ -594,7 +757,7 @@
                     <td>1-Step / Instant</td>
                     <td>20-40%</td>
                     <td><div class="rating"><span class="star">★</span> 4.5</div></td>
-                    <td><a href="YOUR_5ERS_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">FXIFY</td>
@@ -604,7 +767,7 @@
                     <td>1-Step</td>
                     <td>-15%</td>
                     <td><div class="rating"><span class="star">★</span> 4.5</div></td>
-                    <td><a href="YOUR_FXIFY_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">E8 Funding</td>
@@ -614,7 +777,7 @@
                     <td>2-Step</td>
                     <td>Up to 20%</td>
                     <td><div class="rating"><span class="star">★</span> 4.3</div></td>
-                    <td><a href="YOUR_E8_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">Earn2Trade</td>
@@ -624,7 +787,7 @@
                     <td>Monthly Sub</td>
                     <td>Up to 40%</td>
                     <td><div class="rating"><span class="star">★</span> 4.2</div></td>
-                    <td><a href="YOUR_EARN2TRADE_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
                 <tr>
                     <td class="firm-name">Blue Guardian</td>
@@ -634,7 +797,7 @@
                     <td>2-Step</td>
                     <td>10-15%</td>
                     <td><div class="rating"><span class="star">★</span> 4.1</div></td>
-                    <td><a href="YOUR_BLUEGUARDIAN_AFFILIATE_LINK" class="btn btn-visit">Visit →</a></td>
+                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
                 </tr>
             </tbody>
         </table>
@@ -672,7 +835,7 @@
                         <span class="spec-value">★★★★★ 4.8/5</span>
                     </div>
                 </div>
-                <a href="YOUR_TOPSTEP_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- Apex Trader Funding -->
@@ -697,7 +860,7 @@
                         <span class="spec-value">★★★★☆ 4.7/5</span>
                     </div>
                 </div>
-                <a href="YOUR_APEX_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- FTMO -->
@@ -722,7 +885,7 @@
                         <span class="spec-value">★★★★☆ 4.7/5</span>
                     </div>
                 </div>
-                <a href="YOUR_FTMO_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- FundedNext -->
@@ -747,7 +910,7 @@
                         <span class="spec-value">★★★★☆ 4.6/5</span>
                     </div>
                 </div>
-                <a href="YOUR_FUNDEDNEXT_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- The5ers -->
@@ -772,7 +935,7 @@
                         <span class="spec-value">★★★★☆ 4.5/5</span>
                     </div>
                 </div>
-                <a href="YOUR_5ERS_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- FXIFY -->
@@ -797,7 +960,7 @@
                         <span class="spec-value">★★★★☆ 4.5/5</span>
                     </div>
                 </div>
-                <a href="YOUR_FXIFY_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- E8 Funding -->
@@ -822,7 +985,7 @@
                         <span class="spec-value">★★★★☆ 4.3/5</span>
                     </div>
                 </div>
-                <a href="YOUR_E8_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- Earn2Trade -->
@@ -847,7 +1010,7 @@
                         <span class="spec-value">★★★★☆ 4.2/5</span>
                     </div>
                 </div>
-                <a href="YOUR_EARN2TRADE_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
 
             <!-- Blue Guardian -->
@@ -872,7 +1035,7 @@
                         <span class="spec-value">★★★★☆ 4.1/5</span>
                     </div>
                 </div>
-                <a href="YOUR_BLUEGUARDIAN_AFFILIATE_LINK" class="btn">Get Started</a>
+                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
             </div>
         </div>
     </section>
@@ -913,5 +1076,42 @@
             <p>&copy; 2026 PropRanked. Independent prop firm reviews. Not financial advice. Trade at your own risk.</p>
         </div>
     </footer>
+
+    <script>
+        // Modal Functions
+        function openModal() {
+            document.getElementById('notifyModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('notifyModal').classList.remove('active');
+        }
+
+        function subscribeEmail() {
+            const email = document.getElementById('emailInput').value;
+            if (email && email.includes('@')) {
+                alert('✅ Thanks! We\'ll notify you when affiliate links go live. Check your email for confirmation!');
+                document.getElementById('emailInput').value = '';
+                closeModal();
+            } else {
+                alert('Please enter a valid email address');
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('notifyModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Allow Enter key to subscribe
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && document.getElementById('emailInput') === document.activeElement) {
+                subscribeEmail();
+            }
+        });
+    </script>
 </body>
 </html>
