@@ -4,51 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PropRanked - Best Prop Trading Firms 2026</title>
-    <meta name="description" content="Compare the best prop trading firms with real discounts, affiliate programs, and trading platforms">
+    <meta name="description" content="Compare the best prop trading firms with real discounts and affiliate programs">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f1419; color: #e0e0e0; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%); padding: 40px 20px; text-align: center; border-bottom: 2px solid #00d084; }
-        h1 { font-size: 2.5em; color: #00d084; margin-bottom: 10px; }
-        .subtitle { color: #b0b0b0; font-size: 1.1em; }
-        .container { max-width: 1400px; margin: 40px auto; padding: 0 20px; }
-        .controls { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; align-items: center; }
-        .filter-dropdown { background-color: #1a1f2e; color: #00d084; border: 2px solid #00d084; padding: 12px 15px; border-radius: 5px; font-size: 1em; cursor: pointer; font-weight: bold; }
-        .sort-buttons { display: flex; gap: 10px; }
-        .sort-btn { background-color: #00d084; color: #0f1419; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 0.9em; transition: all 0.3s ease; }
-        .sort-btn:hover { background-color: #00e699; transform: translateY(-2px); }
-        .sort-btn.active { background-color: #00a860; }
-        .table-wrapper { background-color: #1a1f2e; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 208, 132, 0.1); }
-        table { width: 100%; border-collapse: collapse; }
-        thead { background-color: #0f1419; border-bottom: 2px solid #00d084; }
-        th { color: #00d084; padding: 20px; text-align: left; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
-        td { padding: 15px 20px; border-bottom: 1px solid #2a2f3e; }
-        tr:hover { background-color: #252a38; }
-        .discount { color: #00d084; font-weight: bold; font-size: 1.05em; }
-        .status { padding: 8px 12px; border-radius: 4px; text-align: center; font-weight: bold; font-size: 0.85em; }
-        .status.verified { background-color: #2d5a3d; color: #4caf50; }
-        .status.pending { background-color: #5a5233; color: #ffc107; }
-        .btn-copy { background-color: #00d084; color: #0f1419; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85em; transition: all 0.3s ease; }
-        .btn-copy:hover { background-color: #00e699; transform: scale(1.05); }
-        footer { background-color: #1a1f2e; border-top: 2px solid #00d084; padding: 30px 20px; text-align: center; color: #b0b0b0; margin-top: 50px; }
-        .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-        .footer-links a { color: #00d084; text-decoration: none; transition: color 0.3s ease; }
-        .footer-links a:hover { color: #00e699; }
-        nav { text-align: center; padding: 20px; border-bottom: 1px solid #2a2f3e; }
-        nav a { color: #00d084; text-decoration: none; margin: 0 20px; font-weight: bold; transition: color 0.3s; }
-        nav a:hover { color: #00e699; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background-color: #0f1419; color: #e0e0e0; line-height: 1.6; }
+        
+        header { 
+            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%); 
+            padding: 80px 20px 60px; 
+            text-align: center; 
+            border-bottom: 2px solid #00d084;
+        }
+        
+        h1 { 
+            font-size: 3.5em; 
+            color: #00d084; 
+            margin-bottom: 15px; 
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle { 
+            color: #b0b0b0; 
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        nav { 
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background-color: #0f1419;
+            border-bottom: 1px solid #2a2f3e;
+            flex-wrap: wrap;
+        }
+        
+        nav a { 
+            color: #00d084; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+        
+        nav a:hover { 
+            color: #00e699;
+            transform: translateY(-2px);
+        }
+        
+        .container { 
+            max-width: 1300px; 
+            margin: 50px auto; 
+            padding: 0 20px; 
+        }
+        
+        .controls { 
+            display: flex; 
+            gap: 15px; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap; 
+            align-items: center;
+        }
+        
+        .filter-dropdown { 
+            background-color: #1a1f2e; 
+            color: #00d084; 
+            border: 2px solid #00d084; 
+            padding: 12px 15px; 
+            border-radius: 5px; 
+            font-size: 1em; 
+            cursor: pointer; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-dropdown:hover { 
+            background-color: #252a38;
+            border-color: #00e699;
+        }
+        
+        .sort-buttons { 
+            display: flex; 
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .sort-btn { 
+            background-color: #00d084; 
+            color: #0f1419; 
+            border: none; 
+            padding: 12px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: 700;
+            font-size: 0.95em; 
+            transition: all 0.3s ease;
+        }
+        
+        .sort-btn:hover { 
+            background-color: #00e699; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
+        }
+        
+        .sort-btn.active { 
+            background-color: #00a860;
+        }
+        
+        .table-wrapper { 
+            background-color: #1a1f2e; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0, 208, 132, 0.15);
+            border: 1px solid #2a2f3e;
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse;
+        }
+        
+        thead { 
+            background: linear-gradient(90deg, #0f1419 0%, #1a1f2e 100%);
+            border-bottom: 2px solid #00d084;
+        }
+        
+        th { 
+            color: #00d084; 
+            padding: 22px 20px; 
+            text-align: left; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.8em;
+            letter-spacing: 1px;
+        }
+        
+        td { 
+            padding: 18px 20px; 
+            border-bottom: 1px solid #2a2f3e;
+        }
+        
+        tr:hover { 
+            background-color: #252a38;
+        }
+        
+        .firm-name {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.05em;
+        }
+        
+        .discount { 
+            color: #00d084; 
+            font-weight: 800; 
+            font-size: 1.2em;
+        }
+        
+        .btn-link { 
+            background-color: #00d084; 
+            color: #0f1419; 
+            border: none; 
+            padding: 10px 18px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: 700; 
+            font-size: 0.9em; 
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-link:hover { 
+            background-color: #00e699; 
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.4);
+        }
+        
+        footer { 
+            background-color: #1a1f2e; 
+            border-top: 2px solid #00d084; 
+            padding: 40px 20px; 
+            text-align: center; 
+            color: #b0b0b0; 
+            margin-top: 60px;
+        }
+        
+        .footer-links { 
+            display: flex; 
+            gap: 30px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a { 
+            color: #00d084; 
+            text-decoration: none; 
+            transition: color 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover { 
+            color: #00e699;
+        }
+        
         @media (max-width: 768px) {
-            h1 { font-size: 1.8em; }
+            h1 { font-size: 2.2em; }
             .controls { flex-direction: column; }
             .filter-dropdown, .sort-btn { width: 100%; }
-            nav a { display: block; margin: 10px 0; }
+            table { font-size: 0.9em; }
+            th, td { padding: 12px 10px; }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>🏆 PropRanked</h1>
-        <p class="subtitle">Compare the best prop trading firms with real discounts & affiliate programs</p>
+        <p class="subtitle">The most comprehensive comparison of prop trading firms with exclusive discounts</p>
     </header>
 
     <nav>
@@ -60,16 +235,16 @@
 
     <div class="container">
         <div class="controls">
-            <label for="filterDropdown" style="color: #00d084; font-weight: bold;">🔍 Prop Firm Finder:</label>
+            <label for="filterDropdown" style="color: #00d084; font-weight: 700; font-size: 1.1em;">🔍 Filter:</label>
             <select id="filterDropdown" class="filter-dropdown">
                 <option value="">All Firms</option>
                 <option value="Best Pricing">Best Pricing (40%+)</option>
             </select>
 
             <div class="sort-buttons">
-                <button class="sort-btn active" onclick="sortTable('firm')">Sort by Firm</button>
-                <button class="sort-btn" onclick="sortTable('rating')">Sort by Rating</button>
-                <button class="sort-btn" onclick="sortTable('discount')">Sort by Discount</button>
+                <button class="sort-btn active" onclick="sortTable('firm')">Name</button>
+                <button class="sort-btn" onclick="sortTable('rating')">Rating</button>
+                <button class="sort-btn" onclick="sortTable('discount')">Discount</button>
             </div>
         </div>
 
@@ -81,9 +256,7 @@
                         <th>Rating</th>
                         <th>Discount</th>
                         <th>Trading Platforms</th>
-                        <th>Max Accounts</th>
-                        <th>Status</th>
-                        <th>Affiliate Code</th>
+                        <th>Get Started</th>
                     </tr>
                 </thead>
                 <tbody id="comparisonTable">
@@ -95,38 +268,38 @@
     <footer>
         <div class="footer-links">
             <a href="/blog-load-more.html">📝 Blog</a>
-            <a href="/trading-guides-updated.html">📚 Trading Guides</a>
+            <a href="/trading-guides-updated.html">📚 Guides</a>
             <a href="/faq.html">❓ FAQ</a>
             <a href="/contact.html">📧 Contact</a>
-            <a href="/affiliate-disclosure.html">💼 Affiliate Disclosure</a>
+            <a href="/affiliate-disclosure.html">💼 Affiliate</a>
         </div>
-        <p>&copy; 2026 PropRanked. All rights reserved. | Helping traders find the right prop firm.</p>
+        <p>&copy; 2026 PropRanked. Helping traders find their perfect prop firm.</p>
     </footer>
 
     <script>
         const firmsData = [
-            {name: "Apex Trader Funding", rating: "⭐⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, Rhythmic", max_accounts: "20", status: "Verified", code: "APEX"},
-            {name: "TopStep Trader", rating: "⭐⭐⭐⭐⭐", discount: "30%", platforms: "Tradovate, Rhythmic", max_accounts: "10", status: "Verified", code: "TOPSTEP"},
-            {name: "FTMO", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5, cTrader", max_accounts: "15", status: "Verified", code: "FTMO"},
-            {name: "FundedNext", rating: "⭐⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate, cTrader", max_accounts: "12", status: "Verified", code: "FUNDEDNEXT"},
-            {name: "The5ers", rating: "⭐⭐⭐⭐⭐", discount: "25%", platforms: "MT4/MT5, TradingView", max_accounts: "8", status: "Verified", code: "THE5ERS"},
-            {name: "E8 Funding", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "Tradovate, NinjaTrader", max_accounts: "6", status: "Verified", code: "E8"},
-            {name: "Earn2Trade", rating: "⭐⭐⭐⭐", discount: "45%", platforms: "Tradovate, ThinkOrSwim", max_accounts: "10", status: "Verified", code: "EARN2TRADE"},
-            {name: "Blue Guardian", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "5", status: "Verified", code: "BLUE"},
-            {name: "FXIFY", rating: "⭐⭐⭐⭐", discount: "15%", platforms: "MT4/MT5, cTrader", max_accounts: "7", status: "Pending", code: "FXIFY"},
-            {name: "Lucid Trading", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LUCID"},
-            {name: "WarBux", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "WARBUX"},
-            {name: "Take Profit Trader", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TPT"},
-            {name: "Tradeify", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TRADEIFY"},
-            {name: "Legends Trading", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LEGENDS"},
-            {name: "MyFundedFutures", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "MFF"},
-            {name: "Funded Futures Network", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate", max_accounts: "N/A", status: "Verified", code: "FFN"},
-            {name: "DayTraders.com", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "DAYTRADERS"},
-            {name: "TheTradesMakers", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TTM"},
-            {name: "BluSky Trading", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BLUSKY"},
-            {name: "Bulenox", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BULENOX"},
-            {name: "TradeDay", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4/MT5, cTrader", max_accounts: "5", status: "Verified", code: "TRADEDAY"},
-            {name: "UProfit", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "UPROFIT"}
+            {name: "Apex Trader Funding", rating: "⭐⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, Rhythmic", url: "https://apextraderfunding.com"},
+            {name: "TopStep Trader", rating: "⭐⭐⭐⭐⭐", discount: "30%", platforms: "Tradovate, Rhythmic", url: "https://topsteptrader.com"},
+            {name: "FTMO", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5, cTrader", url: "https://ftmo.com"},
+            {name: "FundedNext", rating: "⭐⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate, cTrader", url: "https://fundednext.com"},
+            {name: "The5ers", rating: "⭐⭐⭐⭐⭐", discount: "25%", platforms: "MT4/MT5, TradingView", url: "https://the5ers.com"},
+            {name: "E8 Funding", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "Tradovate, NinjaTrader", url: "https://e8funding.com"},
+            {name: "Earn2Trade", rating: "⭐⭐⭐⭐", discount: "45%", platforms: "Tradovate, ThinkOrSwim", url: "https://earn2trade.com"},
+            {name: "Blue Guardian", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", url: "https://blueguardian.com"},
+            {name: "FXIFY", rating: "⭐⭐⭐⭐", discount: "15%", platforms: "MT4/MT5, cTrader", url: "https://fxify.com"},
+            {name: "Lucid Trading", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", url: "https://lucidtrading.com"},
+            {name: "WarBux", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5", url: "https://warbux.com"},
+            {name: "Take Profit Trader", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "MT4/MT5", url: "https://takeprofittrader.com"},
+            {name: "Tradeify", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4/MT5", url: "https://tradeify.com"},
+            {name: "Legends Trading", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4/MT5", url: "https://legendstrading.com"},
+            {name: "MyFundedFutures", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", url: "https://myfundedfutures.com"},
+            {name: "Funded Futures Network", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate", url: "https://fundedfuturesnetwork.com"},
+            {name: "DayTraders.com", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", url: "https://daytraders.com"},
+            {name: "TheTradesMakers", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://thetradesmakers.com"},
+            {name: "BluSky Trading", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://bluskytrading.com"},
+            {name: "Bulenox", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://bulenox.com"},
+            {name: "TradeDay", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4/MT5, cTrader", url: "https://tradeday.com"},
+            {name: "UProfit", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://uprofit.com"}
         ];
 
         function renderTable(data) {
@@ -135,23 +308,13 @@
             data.forEach(firm => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${firm.name}</td>
+                    <td class="firm-name">${firm.name}</td>
                     <td>${firm.rating}</td>
                     <td class="discount">${firm.discount}</td>
                     <td>${firm.platforms}</td>
-                    <td>${firm.max_accounts}</td>
-                    <td><span class="status ${firm.status.toLowerCase()}">${firm.status}</span></td>
-                    <td><button class="btn-copy" onclick="copyToClipboard('${firm.code}', this)">Copy: ${firm.code}</button></td>
+                    <td><a href="${firm.url}" target="_blank" class="btn-link">Visit →</a></td>
                 `;
                 tableBody.appendChild(row);
-            });
-        }
-
-        function copyToClipboard(code, button) {
-            navigator.clipboard.writeText(code).then(() => {
-                const originalText = button.textContent;
-                button.textContent = '✓ Copied!';
-                setTimeout(() => { button.textContent = originalText; }, 2000);
             });
         }
 
