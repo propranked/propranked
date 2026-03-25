@@ -297,12 +297,12 @@
         }
 
         .firm-card {
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6) 0%, rgba(15, 20, 41, 0.6) 100%);
+            background: rgba(26, 31, 58, 0.4);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 30px;
+            padding: 24px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
@@ -310,27 +310,11 @@
             flex-direction: column;
         }
 
-        .firm-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.05) 100%);
-            transition: all 0.4s ease;
-            pointer-events: none;
-        }
-
         .firm-card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-8px);
             border-color: var(--accent-gold);
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(15, 20, 41, 0.8) 100%);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-        }
-
-        .firm-card:hover::before {
-            transform: scale(1.2);
+            background: rgba(26, 31, 58, 0.6);
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
         }
 
         .firm-card-content {
@@ -342,48 +326,48 @@
         }
 
         .firm-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
         }
 
         .firm-rating {
-            font-size: 24px;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
+            font-size: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
         .firm-discount {
             background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
             color: var(--primary-dark);
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
             display: inline-block;
             font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 20px;
+            font-size: 13px;
+            margin-bottom: 16px;
             width: fit-content;
         }
 
         .firm-platforms {
             color: var(--text-secondary);
-            font-size: 13px;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 16px;
         }
 
         .platform-label {
             color: var(--accent-gold);
             font-weight: 600;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .firm-cta {
             margin-top: auto;
-            padding-top: 20px;
+            padding-top: 16px;
             border-top: 1px solid var(--border);
             display: flex;
             gap: 10px;
@@ -391,27 +375,27 @@
 
         .visit-btn {
             flex: 1;
-            padding: 12px 20px;
+            padding: 11px 18px;
             background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
             color: var(--primary-dark);
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
             text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .visit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
         }
 
         /* FOOTER */
@@ -528,8 +512,8 @@
                 <div class="logo">⚡ PropRanked</div>
                 <nav>
                     <a href="#compare">Compare</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#guides">Guides</a>
+                    <a href="/blog-load-more.html">Blog</a>
+                    <a href="/trading-guides-updated.html">Guides</a>
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
@@ -578,7 +562,7 @@
             <div class="container" style="text-align: center;">
                 <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Latest Insights & Guides</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 40px;">Daily updates on prop firm changes, strategy guides & trading insights</p>
-                <a href="blog-load-more.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Explore Blog</a>
+                <a href="/blog-load-more.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Explore Blog</a>
             </div>
         </section>
 
@@ -586,7 +570,7 @@
             <div class="container" style="text-align: center;">
                 <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trading Guides</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 40px;">Master the fundamentals of prop trading with our expert guides</p>
-                <a href="trading-guides-updated.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">View Guides</a>
+                <a href="/trading-guides-updated.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">View Guides</a>
             </div>
         </section>
     </main>
