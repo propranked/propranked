@@ -94,6 +94,35 @@
             margin-bottom: 3rem;
         }
 
+        .form-iframe-wrapper {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+        }
+
+        .form-iframe-wrapper iframe {
+            display: block;
+            border: none;
+        }
+
+        .google-form-note {
+            background: rgba(0, 208, 132, 0.1);
+            border: 1px solid var(--accent-teal);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .google-form-note strong {
+            color: var(--accent-green);
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -251,7 +280,12 @@
 
         <div class="contact-form">
             <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">Send us a Message</h2>
-            <iframe src="https://docs.google.com/forms/d/1Bogt_pQ-_uBZ1450Ea2QnrZj-FZTxN8RQZxBzfbuOTg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 8px;">Loading…</iframe>
+            <div class="google-form-note">
+                <strong>Note:</strong> If you see a Google sign-in prompt, simply sign in to your Google account to submit the form. Your responses are automatically saved to our database.
+            </div>
+            <div class="form-iframe-wrapper">
+                <iframe src="https://docs.google.com/forms/d/1Bogt_pQ-_uBZ1450Ea2QnrZj-FZTxN8RQZxBzfbuOTg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 8px; display: block;">Loading…</iframe>
+            </div>
         </div>
 
         <div class="contact-info">
