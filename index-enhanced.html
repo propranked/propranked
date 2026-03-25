@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropRanked - Best Prop Trading Firms 2026</title>
+    <meta name="description" content="Compare the best prop trading firms with real discounts, affiliate programs, and trading platforms">
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1419;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #00d084;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #00d084;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1.1em;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-dropdown {
+            background-color: #1a1f2e;
+            color: #00d084;
+            border: 2px solid #00d084;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .sort-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sort-btn {
+            background-color: #00d084;
+            color: #0f1419;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .sort-btn:hover {
+            background-color: #00e699;
+            transform: translateY(-2px);
+        }
+
+        .sort-btn.active {
+            background-color: #00a860;
+        }
+
+        .table-wrapper {
+            background-color: #1a1f2e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 208, 132, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #0f1419;
+            border-bottom: 2px solid #00d084;
+        }
+
+        th {
+            color: #00d084;
+            padding: 20px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #2a2f3e;
+        }
+
+        tr:hover {
+            background-color: #252a38;
+        }
+
+        .firm-logo {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .firm-name {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #00d084;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+
+        .discount {
+            color: #00d084;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        .status {
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .status.verified {
+            background-color: #2d5a3d;
+            color: #4caf50;
+        }
+
+        .status.pending {
+            background-color: #5a5233;
+            color: #ffc107;
+        }
+
+        .btn-copy {
+            background-color: #00d084;
+            color: #0f1419;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-copy:hover {
+            background-color: #00e699;
+            transform: scale(1.05);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #b0b0b0;
+        }
+
+        footer {
+            background-color: #1a1f2e;
+            border-top: 2px solid #00d084;
+            padding: 30px 20px;
+            text-align: center;
+            color: #b0b0b0;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #00d084;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00e699;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .filter-dropdown,
+            .sort-btn {
+                width: 100%;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .firm-logo {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏆 PropRanked</h1>
+        <p class="subtitle">Compare the best prop trading firms with real discounts & affiliate programs</p>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <label for="filterDropdown" style="color: #00d084; font-weight: bold;">🔍 Prop Firm Finder:</label>
+            <select id="filterDropdown" class="filter-dropdown">
+                <option value="">All Firms</option>
+                <option value="Best Pricing">Best Pricing (40%+)</option>
+                <option value="Quickest Funding">Quickest Funding</option>
+                <option value="Best for Futures">Best for Futures</option>
+                <option value="Highest Commission">Highest Commission</option>
+                <option value="Current Discounts">Current Discounts</option>
+            </select>
+
+            <div class="sort-buttons">
+                <button class="sort-btn active" onclick="sortTable('firm')">Sort by Firm</button>
+                <button class="sort-btn" onclick="sortTable('rating')">Sort by Rating</button>
+                <button class="sort-btn" onclick="sortTable('discount')">Sort by Discount</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Firm Name</th>
+                        <th>Rating</th>
+                        <th>Discount</th>
+                        <th>Trading Platforms</th>
+                        <th>Max Accounts</th>
+                        <th>Status</th>
+                        <th>Affiliate Code</th>
+                    </tr>
+                </thead>
+                <tbody id="comparisonTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/blog-load-more.html">📝 Blog</a>
+            <a href="/trading-guides-updated.html">📚 Trading Guides</a>
+            <a href="/faq.html">❓ FAQ</a>
+            <a href="/contact.html">📧 Contact</a>
+            <a href="/affiliate-disclosure.html">💼 Affiliate Disclosure</a>
+        </div>
+        <p>&copy; 2026 PropRanked. All rights reserved. | Helping traders find the right prop firm.</p>
+    </footer>
+
+    <script>
+        const firmsData = [
+            {name: "Apex Trader Funding", logo: "https://www.apextraderfunding.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, Rhythmic", max_accounts: "20", status: "Verified", code: "APEX", category: "Best Pricing,Best for Futures"},
+            {name: "TopStep Trader", logo: "https://www.topsteptrader.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "30%", platforms: "Tradovate, Rhythmic", max_accounts: "10", status: "Verified", code: "TOPSTEP", category: "Current Discounts"},
+            {name: "FTMO", logo: "https://www.ftmo.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5, cTrader", max_accounts: "15", status: "Verified", code: "FTMO", category: "Current Discounts"},
+            {name: "FundedNext", logo: "https://www.fundednext.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate, cTrader", max_accounts: "12", status: "Verified", code: "FUNDEDNEXT", category: "Best Pricing,Quickest Funding"},
+            {name: "The5ers", logo: "https://www.the5ers.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "25%", platforms: "MT4/MT5, TradingView", max_accounts: "8", status: "Verified", code: "THE5ERS", category: "Current Discounts"},
+            {name: "E8 Funding", logo: "https://www.e8funding.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "Tradovate, NinjaTrader", max_accounts: "6", status: "Verified", code: "E8", category: "Best Pricing"},
+            {name: "Earn2Trade", logo: "https://www.earn2trade.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "45%", platforms: "Tradovate, ThinkOrSwim", max_accounts: "10", status: "Verified", code: "EARN2TRADE", category: "Best Pricing,Highest Commission"},
+            {name: "Blue Guardian", logo: "https://www.blueguardian.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "5", status: "Verified", code: "BLUE", category: "Best Pricing"},
+            {name: "FXIFY", logo: "https://www.fxify.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "15%", platforms: "MT4/MT5, cTrader", max_accounts: "7", status: "Pending", code: "FXIFY", category: ""},
+            {name: "Lucid Trading", logo: "https://www.lucidtrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LUCID", category: "Best Pricing"},
+            {name: "WarBux", logo: "https://www.warbux.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "WARBUX", category: "Current Discounts"},
+            {name: "Take Profit Trader", logo: "https://www.takeprofittrader.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TPT", category: "Best Pricing"},
+            {name: "Tradeify", logo: "https://www.tradeify.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TRADEIFY", category: "Current Discounts"},
+            {name: "Legends Trading", logo: "https://www.legendstrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LEGENDS", category: "Best Pricing"},
+            {name: "MyFundedFutures", logo: "https://www.myfundedfutures.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "MFF", category: "Best for Futures"},
+            {name: "Funded Futures Network", logo: "https://www.fundedfuturesnetwork.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate", max_accounts: "N/A", status: "Verified", code: "FFN", category: "Best Pricing,Best for Futures"},
+            {name: "DayTraders.com", logo: "https://www.daytraders.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "DAYTRADERS", category: "Best for Futures"},
+            {name: "TheTradesMakers", logo: "https://www.thetradesmakers.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TTM", category: ""},
+            {name: "BluSky Trading", logo: "https://www.bluskytrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BLUSKY", category: ""},
+            {name: "Bulenox", logo: "https://www.bulenox.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BULENOX", category: ""},
+            {name: "TradeDay", logo: "https://www.tradeday.com/favicon.ico", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4/MT5, cTrader", max_accounts: "5", status: "Verified", code: "TRADEDAY", category: "Current Discounts"},
+            {name: "UProfit", logo: "https://www.uprofit.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "UPROFIT", category: ""}
+        ];
+
+        function renderTable(data) {
+            const tableBody = document.getElementById('comparisonTable');
+            tableBody.innerHTML = '';
+
+            if (data.length === 0) {
+                tableBody.innerHTML = '<tr><td colspan="7" class="empty-state">No firms match your filter. Try selecting a different option.</td></tr>';
+                return;
+            }
+
+            data.forEach(firm => {
+                const row = document.createElement('tr');
+                row.dataset.category = firm.category;
+                row.innerHTML = `
+                    <td class="firm-name">
+                        <img src="${firm.logo}" alt="${firm.name}" class="firm-logo" onerror="this.style.display='none'">
+                        ${firm.name}
+                    </td>
+                    <td class="rating">${firm.rating}</td>
+                    <td class="discount">${firm.discount}</td>
+                    <td>${firm.platforms}</td>
+                    <td>${firm.max_accounts}</td>
+                    <td><span class="status ${firm.status.toLowerCase()}">${firm.status}</span></td>
+                    <td>
+                        <button class="btn-copy" onclick="copyToClipboard('${firm.code}', this)">
+                            Copy: ${firm.code}
+                        </button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function applyFilter() {
+            const filterValue = document.getElementById('filterDropdown').value;
+            let filtered = firmsData;
+
+            if (filterValue) {
+                filtered = firmsData.filter(firm => 
+                    firm.category.includes(filterValue)
+                );
+            }
+
+            renderTable(filtered);
+        }
+
+        function sortTable(by) {
+            let sorted = [...firmsData];
+
+            if (by === 'firm') {
+                sorted.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (by === 'rating') {
+                sorted.sort((a, b) => b.rating.length - a.rating.length);
+            } else if (by === 'discount') {
+                sorted.sort((a, b) => {
+                    const aVal = parseInt(a.discount) || 0;
+                    const bVal = parseInt(b.discount) || 0;
+                    return bVal - aVal;
+                });
+            }
+
+            renderTable(sorted);
+            
+            // Update active button
+            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function copyToClipboard(code, button) {
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        // Initialize
+        renderTable(firmsData);
+        document.getElementById('filterDropdown').addEventListener('change', applyFilter);
+    </script>
+</body>
+</html>
