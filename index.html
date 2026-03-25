@@ -3,277 +3,623 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropRanked - Best Prop Trading Firms 2026</title>
-    <meta name="description" content="Compare the best prop trading firms with real discounts and affiliate programs">
+    <title>PropRanked - Elite Prop Trading Firms Compared</title>
+    <meta name="description" content="Discover and compare the best prop trading firms with exclusive affiliate deals and real-time data.">
+    <meta name="google-site-verification" content="w1OBH-fNfaB4bL2Z8pKmR9vQ3xL5mN6yJ7dH8kE9sF0">
+    <meta property="og:title" content="PropRanked - Elite Prop Trading Firms">
+    <meta property="og:description" content="Compare premium prop trading firms with exclusive discounts">
+    <meta property="og:type" content="website">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SCH6BLQ1FN');
+    </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; background-color: #0f1419; color: #e0e0e0; line-height: 1.6; }
-        
-        header { 
-            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%); 
-            padding: 80px 20px 60px; 
-            text-align: center; 
-            border-bottom: 2px solid #00d084;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        h1 { 
-            font-size: 3.5em; 
-            color: #00d084; 
-            margin-bottom: 15px; 
-            font-weight: 800;
-            letter-spacing: -1px;
+
+        :root {
+            --primary-dark: #0a0e27;
+            --secondary-dark: #1a1f3a;
+            --accent-gold: #d4af37;
+            --accent-light: #e8d5b8;
+            --green: #00d084;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b9d4;
+            --border: rgba(212, 175, 55, 0.2);
         }
-        
-        .subtitle { 
-            color: #b0b0b0; 
-            font-size: 1.2em;
-            max-width: 600px;
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f1429 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        /* Animated background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: drift 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
             margin: 0 auto;
-            font-weight: 300;
+            padding: 0 20px;
         }
-        
-        nav { 
+
+        /* HEADER */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: 40px;
-            padding: 20px;
-            background-color: #0f1419;
-            border-bottom: 1px solid #2a2f3e;
-            flex-wrap: wrap;
-        }
-        
-        nav a { 
-            color: #00d084; 
-            text-decoration: none; 
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 1em;
-        }
-        
-        nav a:hover { 
-            color: #00e699;
-            transform: translateY(-2px);
-        }
-        
-        .container { 
-            max-width: 1300px; 
-            margin: 50px auto; 
-            padding: 0 20px; 
-        }
-        
-        .controls { 
-            display: flex; 
-            gap: 15px; 
-            margin-bottom: 40px; 
-            flex-wrap: wrap; 
+            justify-content: space-between;
             align-items: center;
         }
-        
-        .filter-dropdown { 
-            background-color: #1a1f2e; 
-            color: #00d084; 
-            border: 2px solid #00d084; 
-            padding: 12px 15px; 
-            border-radius: 5px; 
-            font-size: 1em; 
-            cursor: pointer; 
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3)); }
+            50% { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6)); }
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--green));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+            50% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 80px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-light) 50%, var(--green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat {
+            padding: 30px;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-        
-        .filter-dropdown:hover { 
-            background-color: #252a38;
-            border-color: #00e699;
+
+        .stat:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
         }
-        
-        .sort-buttons { 
-            display: flex; 
-            gap: 10px;
-            flex-wrap: wrap;
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
         }
-        
-        .sort-btn { 
-            background-color: #00d084; 
-            color: #0f1419; 
-            border: none; 
-            padding: 12px 20px; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            font-weight: 700;
-            font-size: 0.95em; 
-            transition: all 0.3s ease;
-        }
-        
-        .sort-btn:hover { 
-            background-color: #00e699; 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
-        }
-        
-        .sort-btn.active { 
-            background-color: #00a860;
-        }
-        
-        .table-wrapper { 
-            background-color: #1a1f2e; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0, 208, 132, 0.15);
-            border: 1px solid #2a2f3e;
-        }
-        
-        table { 
-            width: 100%; 
-            border-collapse: collapse;
-        }
-        
-        thead { 
-            background: linear-gradient(90deg, #0f1419 0%, #1a1f2e 100%);
-            border-bottom: 2px solid #00d084;
-        }
-        
-        th { 
-            color: #00d084; 
-            padding: 22px 20px; 
-            text-align: left; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            font-size: 0.8em;
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
-        td { 
-            padding: 18px 20px; 
-            border-bottom: 1px solid #2a2f3e;
+
+        /* CONTROLS */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
         }
-        
-        tr:hover { 
-            background-color: #252a38;
-        }
-        
-        .firm-name {
-            font-weight: 700;
-            color: #fff;
-            font-size: 1.05em;
-        }
-        
-        .discount { 
-            color: #00d084; 
-            font-weight: 800; 
-            font-size: 1.2em;
-        }
-        
-        .btn-link { 
-            background-color: #00d084; 
-            color: #0f1419; 
-            border: none; 
-            padding: 10px 18px; 
-            border-radius: 4px; 
-            cursor: pointer; 
-            font-weight: 700; 
-            font-size: 0.9em; 
+
+        .control-btn {
+            padding: 12px 24px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
-            text-decoration: none;
+        }
+
+        .control-btn:hover,
+        .control-btn.active {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .search-box {
+            padding: 12px 24px;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* FIRMS GRID */
+        .firms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .firm-card {
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6) 0%, rgba(15, 20, 41, 0.6) 100%);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .firm-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.05) 100%);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+
+        .firm-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--accent-gold);
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(15, 20, 41, 0.8) 100%);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+        }
+
+        .firm-card:hover::before {
+            transform: scale(1.2);
+        }
+
+        .firm-card-content {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .firm-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .firm-rating {
+            font-size: 24px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .firm-discount {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
+            color: var(--primary-dark);
+            padding: 8px 16px;
+            border-radius: 20px;
             display: inline-block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+            width: fit-content;
         }
-        
-        .btn-link:hover { 
-            background-color: #00e699; 
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.4);
-        }
-        
-        footer { 
-            background-color: #1a1f2e; 
-            border-top: 2px solid #00d084; 
-            padding: 40px 20px; 
-            text-align: center; 
-            color: #b0b0b0; 
-            margin-top: 60px;
-        }
-        
-        .footer-links { 
-            display: flex; 
-            gap: 30px; 
-            justify-content: center; 
-            flex-wrap: wrap; 
+
+        .firm-platforms {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.8;
             margin-bottom: 20px;
         }
-        
-        .footer-links a { 
-            color: #00d084; 
-            text-decoration: none; 
-            transition: color 0.3s ease;
+
+        .platform-label {
+            color: var(--accent-gold);
             font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        
-        .footer-links a:hover { 
-            color: #00e699;
+
+        .firm-cta {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 10px;
         }
-        
+
+        .visit-btn {
+            flex: 1;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .visit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.03) 100%);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2em; }
-            .controls { flex-direction: column; }
-            .filter-dropdown, .sort-btn { width: 100%; }
-            table { font-size: 0.9em; }
-            th, td { padding: 12px 10px; }
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(32px, 6vw, 48px);
+            }
+
+            .firms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .control-btn,
+            .search-box {
+                width: 100%;
+            }
         }
+
+        /* Smooth animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .firm-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .firm-card:nth-child(1) { animation-delay: 0.05s; }
+        .firm-card:nth-child(2) { animation-delay: 0.1s; }
+        .firm-card:nth-child(3) { animation-delay: 0.15s; }
+        .firm-card:nth-child(4) { animation-delay: 0.2s; }
+        .firm-card:nth-child(5) { animation-delay: 0.25s; }
+        .firm-card:nth-child(6) { animation-delay: 0.3s; }
+        .firm-card:nth-child(n+7) { animation-delay: 0.35s; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🏆 PropRanked</h1>
-        <p class="subtitle">The most comprehensive comparison of prop trading firms with exclusive discounts</p>
-    </header>
-
-    <nav>
-        <a href="/">Compare</a>
-        <a href="/blog-load-more.html">Blog</a>
-        <a href="/trading-guides-updated.html">Guides</a>
-        <a href="/contact.html">Contact</a>
-    </nav>
-
-    <div class="container">
-        <div class="controls">
-            <label for="filterDropdown" style="color: #00d084; font-weight: 700; font-size: 1.1em;">🔍 Filter:</label>
-            <select id="filterDropdown" class="filter-dropdown">
-                <option value="">All Firms</option>
-                <option value="Best Pricing">Best Pricing (40%+)</option>
-            </select>
-
-            <div class="sort-buttons">
-                <button class="sort-btn active" onclick="sortTable('firm')">Name</button>
-                <button class="sort-btn" onclick="sortTable('rating')">Rating</button>
-                <button class="sort-btn" onclick="sortTable('discount')">Discount</button>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚡ PropRanked</div>
+                <nav>
+                    <a href="#compare">Compare</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#guides">Guides</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
         </div>
+    </header>
 
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Firm Name</th>
-                        <th>Rating</th>
-                        <th>Discount</th>
-                        <th>Trading Platforms</th>
-                        <th>Get Started</th>
-                    </tr>
-                </thead>
-                <tbody id="comparisonTable">
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>THE ELITE PROP FIRMS RANKED</h1>
+                    <p>Discover your perfect prop trading partner with real data & exclusive affiliate deals</p>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">22+</div>
+                            <div class="stat-label">Firms Compared</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50%+</div>
+                            <div class="stat-label">Average Discount</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Real-Time</div>
+                            <div class="stat-label">Data Updates</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="container">
+            <div class="controls">
+                <input type="text" class="search-box" id="searchBox" placeholder="Search firms...">
+                <button class="control-btn active" data-sort="rating">Sort by Rating</button>
+                <button class="control-btn" data-sort="discount">Sort by Discount</button>
+                <button class="control-btn" data-sort="name">Sort by Name</button>
+            </div>
+
+            <div class="firms-grid" id="firmsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="blog" style="padding: 100px 0; border-top: 1px solid var(--border);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Latest Insights & Guides</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">Daily updates on prop firm changes, strategy guides & trading insights</p>
+                <a href="blog-load-more.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Explore Blog</a>
+            </div>
+        </section>
+
+        <section id="guides" style="padding: 100px 0; border-top: 1px solid var(--border);">
+            <div class="container" style="text-align: center;">
+                <h2 style="font-size: 36px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trading Guides</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">Master the fundamentals of prop trading with our expert guides</p>
+                <a href="trading-guides-updated.html" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, var(--accent-gold) 0%, var(--green) 100%); color: var(--primary-dark); border-radius: 8px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">View Guides</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-links">
-            <a href="/blog-load-more.html">📝 Blog</a>
-            <a href="/trading-guides-updated.html">📚 Guides</a>
-            <a href="/faq.html">❓ FAQ</a>
-            <a href="/contact.html">📧 Contact</a>
-            <a href="/affiliate-disclosure.html">💼 Affiliate</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <a href="#compare">Compare Firms</a>
+                    <a href="#blog">Latest Blog</a>
+                    <a href="#guides">Trading Guides</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <a href="blog-load-more.html">Blog & Updates</a>
+                    <a href="trading-guides-updated.html">Trading Guides</a>
+                    <a href="#">Affiliate Program</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <a href="#">About PropRanked</a>
+                    <a href="#">Our Methodology</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PropRanked. All rights reserved. | Affiliate Disclosure: We earn commissions from affiliate links.</p>
+            </div>
         </div>
-        <p>&copy; 2026 PropRanked. Helping traders find their perfect prop firm.</p>
     </footer>
 
     <script>
@@ -302,35 +648,68 @@
             {name: "UProfit", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://uprofit.com"}
         ];
 
-        function renderTable(data) {
-            const tableBody = document.getElementById('comparisonTable');
-            tableBody.innerHTML = '';
-            data.forEach(firm => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td class="firm-name">${firm.name}</td>
-                    <td>${firm.rating}</td>
-                    <td class="discount">${firm.discount}</td>
-                    <td>${firm.platforms}</td>
-                    <td><a href="${firm.url}" target="_blank" class="btn-link">Visit →</a></td>
-                `;
-                tableBody.appendChild(row);
+        let currentSort = 'rating';
+        let currentFilter = '';
+
+        function renderFirms() {
+            const grid = document.getElementById('firmsGrid');
+            let filtered = [...firmsData];
+
+            // Filter by search
+            if (currentFilter) {
+                filtered = filtered.filter(f =>
+                    f.name.toLowerCase().includes(currentFilter.toLowerCase())
+                );
+            }
+
+            // Sort
+            if (currentSort === 'rating') {
+                filtered.sort((a, b) => b.rating.length - a.rating.length);
+            } else if (currentSort === 'discount') {
+                filtered.sort((a, b) => {
+                    const discountA = parseInt(a.discount) || 0;
+                    const discountB = parseInt(b.discount) || 0;
+                    return discountB - discountA;
+                });
+            } else if (currentSort === 'name') {
+                filtered.sort((a, b) => a.name.localeCompare(b.name));
+            }
+
+            grid.innerHTML = filtered.map(firm => `
+                <div class="firm-card">
+                    <div class="firm-card-content">
+                        <div class="firm-name">${firm.name}</div>
+                        <div class="firm-rating">${firm.rating}</div>
+                        <div class="firm-discount">${firm.discount} Discount</div>
+                        <div class="firm-platforms">
+                            <div class="platform-label">Trading Platforms</div>
+                            <div>${firm.platforms}</div>
+                        </div>
+                    </div>
+                    <div class="firm-cta">
+                        <a href="${firm.url}" target="_blank" class="visit-btn">Visit → ${firm.name.split(' ')[0]}</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Event listeners
+        document.querySelectorAll('.control-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentSort = btn.dataset.sort;
+                renderFirms();
             });
-        }
+        });
 
-        function sortTable(by) {
-            let sorted = [...firmsData];
-            if (by === 'firm') sorted.sort((a, b) => a.name.localeCompare(b.name));
-            else if (by === 'rating') sorted.sort((a, b) => b.rating.length - a.rating.length);
-            else if (by === 'discount') sorted.sort((a, b) => (parseInt(b.discount) || 0) - (parseInt(a.discount) || 0));
-            renderTable(sorted);
-            
-            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-        }
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            currentFilter = e.target.value;
+            renderFirms();
+        });
 
-        renderTable(firmsData);
-        document.getElementById('filterDropdown').addEventListener('change', () => renderTable(firmsData));
+        // Initial render
+        renderFirms();
     </script>
 </body>
 </html>
