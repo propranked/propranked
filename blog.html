@@ -116,6 +116,23 @@
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            opacity: 1;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .blog-card.hidden {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .blog-card:hover {
@@ -159,6 +176,53 @@
 
         .read-more:hover {
             gap: 12px;
+        }
+
+        .load-more-container {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .load-more-btn {
+            background-color: #00d084;
+            color: #0f1419;
+            border: none;
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .load-more-btn:hover {
+            background-color: #00b870;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 208, 132, 0.2);
+        }
+
+        .load-more-btn:active {
+            transform: translateY(0);
+        }
+
+        .load-more-btn.loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .load-more-btn:disabled {
+            background-color: #666;
+            color: #999;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .posts-count {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
         }
 
         footer {
@@ -220,6 +284,10 @@
             .blog-grid {
                 grid-template-columns: 1fr;
             }
+
+            .load-more-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -244,9 +312,9 @@
             <p>Latest insights, news, and tips for prop trading success.</p>
         </div>
 
-        <div class="blog-grid">
+        <div class="blog-grid" id="blogGrid">
             <!-- Blog Post 1: Prop Firm Updates 2026 -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="0">
                 <div class="blog-date">March 25, 2026</div>
                 <h3>Latest Prop Firm Updates & Industry News</h3>
                 <p>Stay updated with the latest news and announcements from the top prop trading firms in 2026. Including new features, promotions, and major milestones from industry leaders.</p>
@@ -254,7 +322,7 @@
             </div>
 
             <!-- Blog Post 2: Commission Payout Comparison -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="1">
                 <div class="blog-date">March 24, 2026</div>
                 <h3>Commission & Payout Structure Comparison</h3>
                 <p>Detailed breakdown of commission structures across 7 leading prop firms. Compare earning potential, payout methods, withdrawal speeds, and crypto options available to traders.</p>
@@ -262,7 +330,7 @@
             </div>
 
             <!-- Blog Post 3: Best Futures Prop Firms -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="2">
                 <div class="blog-date">March 23, 2026</div>
                 <h3>Best Futures Prop Firms for ES, NQ & YM Trading</h3>
                 <p>Top 5 prop firms specializing in futures trading. Complete analysis of TopStep, The5ers, E8 Markets, Apex, and FundedNext for ES, NQ, and YM traders. Find the best fit for your trading style.</p>
@@ -270,7 +338,7 @@
             </div>
 
             <!-- Blog Post 4: The5ers Evaluation Rules -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="3">
                 <div class="blog-date">March 22, 2026</div>
                 <h3>The5ers Complete Evaluation Guide 2026</h3>
                 <p>Comprehensive guide to The5ers prop firm. Learn about their account structures, evaluation rules, commission scaling, and how they've evolved with their 10-year anniversary milestone.</p>
@@ -278,7 +346,7 @@
             </div>
 
             <!-- Blog Post 5: 2026 Pricing Comparison -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="4">
                 <div class="blog-date">March 21, 2026</div>
                 <h3>2026 Prop Firm Pricing Comparison & ROI Analysis</h3>
                 <p>Complete pricing breakdown across 9 prop firms. Compare costs, hidden fees, evaluation prices, and ROI potential. Includes real data on FTMO, TopStep, Apex, and more with promotional offers.</p>
@@ -286,11 +354,18 @@
             </div>
 
             <!-- Blog Post 6: FTMO vs TopStep -->
-            <div class="blog-card">
+            <div class="blog-card" data-post-index="5">
                 <div class="blog-date">March 20, 2026</div>
                 <h3>FTMO vs TopStep: Detailed Comparison</h3>
                 <p>In-depth comparison between two of the most popular prop firms. Analyze their evaluation processes, payout structures, market access, and determine which is better for your trading goals.</p>
                 <a href="blog-1-ftmo-vs-topstep.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn" onclick="loadMorePosts()">Load More Posts</button>
+            <div class="posts-count">
+                <span id="postsShown">6</span> of <span id="totalPosts">6</span> posts
             </div>
         </div>
     </div>
@@ -328,5 +403,55 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let postsPerPage = 6;
+        let currentlyShown = 6;
+        let totalPosts = document.querySelectorAll('.blog-card').length;
+
+        // Update total posts count
+        document.getElementById('totalPosts').textContent = totalPosts;
+
+        // Hide all posts after the first 6
+        function initializeView() {
+            const allPosts = document.querySelectorAll('.blog-card');
+            allPosts.forEach((post, index) => {
+                if (index >= postsPerPage) {
+                    post.classList.add('hidden');
+                }
+            });
+
+            // Hide load more button if 6 or fewer posts
+            updateLoadMoreButton();
+        }
+
+        function loadMorePosts() {
+            const allPosts = document.querySelectorAll('.blog-card');
+            const hiddenPosts = Array.from(allPosts).filter(post => post.classList.contains('hidden'));
+
+            // Show next batch of posts
+            for (let i = 0; i < postsPerPage && i < hiddenPosts.length; i++) {
+                hiddenPosts[i].classList.remove('hidden');
+                currentlyShown++;
+            }
+
+            // Update count
+            document.getElementById('postsShown').textContent = currentlyShown;
+
+            // Update button state
+            updateLoadMoreButton();
+        }
+
+        function updateLoadMoreButton() {
+            const btn = document.getElementById('loadMoreBtn');
+            if (currentlyShown >= totalPosts) {
+                btn.textContent = 'All Posts Loaded';
+                btn.disabled = true;
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', initializeView);
+    </script>
 </body>
 </html>
