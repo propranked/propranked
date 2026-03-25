@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Independent reviews of the best prop trading firms. Compare pricing, payout rules, and ratings for 12+ major funded account providers.">
-    <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE">
-    <title>PropRanked - Best Prop Trading Firms Reviews & Rankings 2026</title>
-
-    <!-- Google Analytics 4 -->
+    <title>PropRanked - Compare Prop Trading Firms | Reviews & Affiliate Links</title>
+    <meta name="description" content="Compare 9+ top prop trading firms with detailed reviews, pricing, commissions, and affiliate links. Find the best prop firm for your trading style.">
+    <meta name="keywords" content="prop trading firms, prop firm reviews, FTMO, TopStep, Apex, comparison, affiliate">
+    <meta name="google-site-verification" content="FBXvYkWqI-gN5NjLgZGKFk3kP9fqKSPkn2kQj3qDXeSUwUGL2nFzADi7vdgOzEM3DWS558kH5wBTm">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,7 +14,6 @@
       gtag('js', new Date());
       gtag('config', 'G-SCH6BLQ1FN');
     </script>
-
     <style>
         * {
             margin: 0;
@@ -23,369 +21,406 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-dark: #0f1419;
-            --secondary-dark: #1a1f2e;
-            --accent-green: #00d084;
-            --accent-green-hover: #00b86d;
-            --accent-teal: #00b4d8;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b8c1;
-            --border-color: #2d3748;
-            --success-green: #10b981;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-primary);
+            background-color: #0f1419;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Navigation */
-        nav {
+        header {
+            background-color: #0f1419;
+            border-bottom: 1px solid #1a1f2e;
+            padding: 20px 0;
             position: sticky;
             top: 0;
-            background-color: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            z-index: 1000;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
 
-        .nav-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-decoration: none;
+        .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #00d084;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-green);
+        nav a:hover {
+            color: #00d084;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
-            padding: 6rem 2rem;
+        .coming-soon-banner {
+            background: linear-gradient(135deg, #00d084, #00a862);
+            color: #0f1419;
+            padding: 12px 20px;
             text-align: center;
-            border-bottom: 2px solid var(--border-color);
+            font-weight: 600;
+            position: sticky;
+            top: 65px;
+            z-index: 99;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(0, 180, 216, 0.1);
-            border: 1px solid var(--accent-teal);
-            color: var(--accent-teal);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            font-weight: 800;
+            font-size: 52px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 700;
         }
 
-        .hero h1 .highlight {
-            color: var(--accent-green);
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
+        .hero p {
+            font-size: 18px;
+            color: #b0b0b0;
             max-width: 600px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
+            margin: 0 auto 30px;
         }
 
-        .hero-stats {
+        .stats-banner {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #1a1f2e;
+            border-radius: 12px;
+            border: 1px solid #2a3040;
         }
 
-        .stat {
-            background: rgba(0, 208, 132, 0.05);
-            padding: 2rem 1rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+        .stat-item {
+            text-align: center;
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 32px;
+            color: #00d084;
             font-weight: 700;
-            color: var(--accent-green);
-            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #888;
+            font-size: 14px;
+            margin-top: 8px;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.75rem;
-            background: var(--accent-green);
-            color: var(--primary-dark);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn:hover {
-            background: var(--accent-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 208, 132, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--accent-green);
-            color: var(--accent-green);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0, 208, 132, 0.1);
-        }
-
-        /* Comparison Table Section */
         .comparison-section {
-            padding: 4rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 60px 0;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
         .section-subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1rem;
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 16px;
         }
 
-        /* Table Styling */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--secondary-dark);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            margin-bottom: 4rem;
-        }
-
-        .comparison-table thead {
-            background: linear-gradient(90deg, #1a1f2e 0%, #242d3d 100%);
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .comparison-table th {
-            padding: 1.25rem;
-            text-align: left;
-            font-weight: 600;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-
-        .comparison-table td {
-            padding: 1.25rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.95rem;
-        }
-
-        .comparison-table tbody tr {
-            transition: background 0.2s;
-        }
-
-        .comparison-table tbody tr:hover {
-            background: rgba(0, 208, 132, 0.05);
-        }
-
-        .comparison-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .firm-name {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.35rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .badge-futures {
-            background: rgba(0, 180, 216, 0.15);
-            color: var(--accent-teal);
-            border: 1px solid var(--accent-teal);
-        }
-
-        .badge-forex {
-            background: rgba(245, 158, 11, 0.15);
-            color: #f59e0b;
-            border: 1px solid #f59e0b;
-        }
-
-        .badge-both {
-            background: rgba(139, 92, 246, 0.15);
-            color: #8b5cf6;
-            border: 1px solid #8b5cf6;
-        }
-
-        .rating {
+        .filter-container {
+            margin-bottom: 30px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
             align-items: center;
-            gap: 0.25rem;
+            justify-content: center;
         }
 
-        .star {
-            color: #fbbf24;
+        .filter-label {
+            color: #00d084;
+            font-weight: 600;
+            font-size: 14px;
         }
 
-        .btn-visit {
-            padding: 0.6rem 1.25rem;
-            font-size: 0.85rem;
+        .filter-dropdown {
+            background-color: #1a1f2e;
+            border: 1px solid #2a3040;
+            color: #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            min-width: 200px;
         }
 
-        /* Firms Grid Section */
-        .firms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
+        .filter-dropdown:hover {
+            border-color: #00d084;
         }
 
-        .firm-card {
-            background: var(--secondary-dark);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
+        .filter-dropdown:focus {
+            outline: none;
+            border-color: #00d084;
+            background-color: #252d38;
+        }
+
+        .sort-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sort-btn {
+            background-color: #1a1f2e;
+            border: 1px solid #2a3040;
+            color: #e0e0e0;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
             transition: all 0.3s ease;
         }
 
-        .firm-card:hover {
-            border-color: var(--accent-green);
-            box-shadow: 0 20px 40px rgba(0, 208, 132, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .firm-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 1rem;
-            color: var(--accent-green);
-        }
-
-        .firm-card p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .firm-specs {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .spec {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-        }
-
-        .spec-label {
-            color: var(--text-secondary);
-        }
-
-        .spec-value {
-            color: var(--accent-green);
+        .sort-btn:hover,
+        .sort-btn.active {
+            background-color: #00d084;
+            color: #0f1419;
+            border-color: #00d084;
             font-weight: 600;
         }
 
-        /* Footer */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border: 1px solid #2a3040;
+            border-radius: 12px;
+            background-color: #1a1f2e;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1a1f2e;
+        }
+
+        .comparison-table th {
+            background-color: #0f1419;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #00d084;
+            border-bottom: 2px solid #2a3040;
+            cursor: pointer;
+            user-select: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table th:hover {
+            background-color: #252d38;
+        }
+
+        .comparison-table tbody tr {
+            border-bottom: 1px solid #2a3040;
+            transition: background-color 0.2s ease;
+        }
+
+        .comparison-table tbody tr:hover {
+            background-color: #252d38;
+        }
+
+        .comparison-table td {
+            padding: 16px;
+            font-size: 14px;
+        }
+
+        .firm-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .firm-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #2a3040;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .discount {
+            color: #00d084;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .copy-btn {
+            background-color: #2a3040;
+            border: 1px solid #3a4050;
+            color: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background-color: #00d084;
+            color: #0f1419;
+            border-color: #00d084;
+            font-weight: 600;
+        }
+
+        .copy-btn.copied {
+            background-color: #00d084;
+            color: #0f1419;
+        }
+
+        .learn-more-btn {
+            background-color: #00d084;
+            color: #0f1419;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #00b870;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.2);
+        }
+
+        .btn-disabled {
+            background-color: #666;
+            color: #999;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .btn-disabled:hover {
+            background-color: #666;
+            transform: none;
+        }
+
+        .resources-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background-color: #1a1f2e;
+            border: 1px solid #2a3040;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #00d084;
+            transform: translateY(-5px);
+        }
+
+        .resource-card h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .resource-card p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .resource-card a {
+            color: #00d084;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            color: #00b870;
+        }
+
         footer {
-            background: var(--secondary-dark);
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem;
-            margin-top: 4rem;
+            background-color: #1a1f2e;
+            border-top: 1px solid #2a3040;
+            padding: 40px 0;
+            margin-top: 60px;
         }
 
         .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-section h4 {
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #00d084;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .footer-section ul {
@@ -393,725 +428,448 @@
         }
 
         .footer-section ul li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 10px;
         }
 
         .footer-section a {
-            color: var(--text-secondary);
+            color: #b0b0b0;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--accent-green);
+            color: #00d084;
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding-top: 2rem;
+            border-top: 1px solid #2a3040;
+            padding-top: 30px;
             text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+            color: #666;
+            font-size: 14px;
         }
 
-        /* Affiliate Disclosure */
-        .affiliate-disclosure {
-            background: rgba(0, 180, 216, 0.08);
-            border: 1px solid var(--accent-teal);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        .affiliate-disclosure strong {
-            color: var(--accent-teal);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .comparison-table {
-                font-size: 0.8rem;
-            }
-
-            .comparison-table th,
-            .comparison-table td {
-                padding: 0.75rem;
-            }
-
-            .firms-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .hero {
-                padding: 3rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-badge {
-                font-size: 0.7rem;
-            }
-        }
-
-        /* Coming Soon Banner */
-        .coming-soon-banner {
-            position: sticky;
-            top: 60px;
-            background: linear-gradient(90deg, #00d084 0%, #00b86d 100%);
-            padding: 1rem 2rem;
-            text-align: center;
-            z-index: 999;
-            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
-        }
-
-        .coming-soon-banner p {
-            color: var(--primary-dark);
-            font-weight: 600;
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .coming-soon-banner strong {
-            color: var(--primary-dark);
-        }
-
-        /* Disabled Button State */
-        .btn-disabled {
-            display: inline-block;
-            padding: 0.75rem 1.75rem;
-            background: rgba(0, 208, 132, 0.3);
-            color: var(--text-secondary);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 2px solid var(--border-color);
-            cursor: not-allowed;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-disabled:hover {
-            background: rgba(0, 208, 132, 0.3);
-            cursor: not-allowed;
-        }
-
-        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
-            z-index: 10000;
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: fadeIn 0.3s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
         .modal-content {
-            background: var(--secondary-dark);
-            border: 2px solid var(--accent-green);
+            background-color: #1a1f2e;
+            margin: 5% auto;
+            padding: 40px;
+            border: 1px solid #2a3040;
             border-radius: 12px;
-            padding: 2rem;
+            width: 90%;
             max-width: 500px;
-            text-align: center;
-            animation: slideIn 0.3s;
+            box-shadow: 0 10px 40px rgba(0, 208, 132, 0.1);
         }
 
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .modal-content h2 {
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .modal-content p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .modal-form {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal-form input {
-            flex: 1;
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        .modal-form input:focus {
-            outline: none;
-            border-color: var(--accent-green);
-        }
-
-        .modal-form button {
-            padding: 0.75rem 1.5rem;
-            background: var(--accent-green);
-            color: var(--primary-dark);
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        .modal-form button:hover {
-            background: var(--accent-green-hover);
-        }
-
-        .modal-close {
-            color: var(--text-secondary);
+        .close {
+            color: #888;
             float: right;
-            font-size: 1.5rem;
+            font-size: 28px;
+            font-weight: bold;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
-        .modal-close:hover {
-            color: var(--accent-green);
+        .close:hover {
+            color: #00d084;
+        }
+
+        .modal h2 {
+            color: #00d084;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .modal input, .modal textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #2a3040;
+            border-radius: 6px;
+            background-color: #0f1419;
+            color: #e0e0e0;
+            font-family: inherit;
+        }
+
+        .modal input:focus, .modal textarea:focus {
+            outline: none;
+            border-color: #00d084;
+            background-color: #252d38;
+        }
+
+        .modal-btn {
+            background-color: #00d084;
+            color: #0f1419;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-btn:hover {
+            background-color: #00b870;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+
+            .comparison-table th, .comparison-table td {
+                padding: 10px;
+            }
+
+            .filter-dropdown {
+                min-width: 150px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="nav-brand">⚡ PropRanked</a>
-        <ul class="nav-links">
-            <li><a href="#compare">Compare</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                PropRanked
+            </a>
+            <ul>
+                <li><a href="#comparison">Compare</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Coming Soon Banner -->
     <div class="coming-soon-banner">
-        <p>🚀 <strong>Affiliate links launching soon!</strong> Join our waitlist to get early access when we go live.</p>
+        ⏰ Affiliate links coming soon! Be notified when we launch.
     </div>
 
-    <!-- Notify Modal -->
-    <div id="notifyModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2>Get Early Access 🎯</h2>
-            <p>Be the first to know when affiliate links go live. We'll notify you as soon as everything is ready!</p>
-            <div class="modal-form">
-                <input type="email" id="emailInput" placeholder="your@email.com" required>
-                <button onclick="subscribeEmail()">Notify Me</button>
+    <div class="container">
+        <div class="hero">
+            <h1>Compare Top Prop Trading Firms</h1>
+            <p>Find the best prop firm for your trading style. Compare pricing, commissions, evaluation rules, and more.</p>
+
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <div class="stat-number">9+</div>
+                    <div class="stat-label">Prop Firms Reviewed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free Comparisons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Monthly Readers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$1M+</div>
+                    <div class="stat-label">Total Funded</div>
+                </div>
             </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 1rem;">We'll never spam you. Unsubscribe anytime.</p>
+        </div>
+
+        <div class="comparison-section" id="comparison">
+            <h2 class="section-title">The Best Firms in the Industry</h2>
+            <p class="section-subtitle">Interactive comparison table — sort by any column to find your perfect firm</p>
+
+            <div class="filter-container">
+                <span class="filter-label">🔍 Prop Firm Finder:</span>
+                <select class="filter-dropdown" id="filterDropdown" onchange="applyFilter()">
+                    <option value="">All Firms</option>
+                    <option value="pricing">💰 Best Pricing</option>
+                    <option value="funding">⚡ Quickest Funding</option>
+                    <option value="futures">📈 Best for Futures</option>
+                    <option value="commission">💵 Highest Commission</option>
+                    <option value="discount">🎁 Current Discounts</option>
+                </select>
+            </div>
+
+            <div class="sort-buttons">
+                <button class="sort-btn active" onclick="sortTable('name')">Sort by Firm</button>
+                <button class="sort-btn" onclick="sortTable('rating')">Sort by Rating</button>
+                <button class="sort-btn" onclick="sortTable('discount')">Sort by Discount</button>
+            </div>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table" id="comparisonTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('name')">Firm Name</th>
+                            <th onclick="sortTable('rating')">Rating</th>
+                            <th>Max Accounts</th>
+                            <th>Trading Platforms</th>
+                            <th onclick="sortTable('discount')">Discount</th>
+                            <th>Affiliate Code</th>
+                            <th>Learn More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-category="pricing,funding,commission,discount">
+                            <td><div class="firm-name"><div class="firm-icon">A</div>Apex Trader Funding</div></td>
+                            <td><span class="rating">★★★★★</span></td>
+                            <td>20</td>
+                            <td>Tradovate, Rithmic</td>
+                            <td><span class="discount">85% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('APEX')">Copy: APEX</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,funding">
+                            <td><div class="firm-name"><div class="firm-icon">T</div>TopStep Trader</div></td>
+                            <td><span class="rating">★★★★★</span></td>
+                            <td>10</td>
+                            <td>Tradovate, Rithmic</td>
+                            <td><span class="discount">30% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('TOPSTEP')">Copy: TOPSTEP</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,commission">
+                            <td><div class="firm-name"><div class="firm-icon">F</div>FTMO</div></td>
+                            <td><span class="rating">★★★★☆</span></td>
+                            <td>15</td>
+                            <td>MetaTrader 4/5, cTrader</td>
+                            <td><span class="discount">20% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('FTMO')">Copy: FTMO</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,funding,commission">
+                            <td><div class="firm-name"><div class="firm-icon">F</div>FundedNext</div></td>
+                            <td><span class="rating">★★★★★</span></td>
+                            <td>12</td>
+                            <td>Tradovate, cTrader</td>
+                            <td><span class="discount">40% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('FUNDEDNEXT')">Copy: FUNDEDNEXT</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,commission,discount">
+                            <td><div class="firm-name"><div class="firm-icon">T</div>The5ers</div></td>
+                            <td><span class="rating">★★★★★</span></td>
+                            <td>8</td>
+                            <td>MetaTrader 4/5, TradingView</td>
+                            <td><span class="discount">25% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('THE5ERS')">Copy: THE5ERS</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="futures,commission">
+                            <td><div class="firm-name"><div class="firm-icon">E</div>E8 Funding</div></td>
+                            <td><span class="rating">★★★★☆</span></td>
+                            <td>6</td>
+                            <td>Tradovate, NinjaTrader</td>
+                            <td><span class="discount">35% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('E8')">Copy: E8</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,funding">
+                            <td><div class="firm-name"><div class="firm-icon">Ea</div>Earn2Trade</div></td>
+                            <td><span class="rating">★★★★☆</span></td>
+                            <td>10</td>
+                            <td>Tradovate, ThinkOrSwim</td>
+                            <td><span class="discount">45% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('EARN2TRADE')">Copy: EARN2TRADE</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,discount">
+                            <td><div class="firm-name"><div class="firm-icon">B</div>Blue Guardian</div></td>
+                            <td><span class="rating">★★★★☆</span></td>
+                            <td>5</td>
+                            <td>MetaTrader 4/5</td>
+                            <td><span class="discount">50% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('BLUE')">Copy: BLUE</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                        <tr data-category="pricing,funding,commission">
+                            <td><div class="firm-name"><div class="firm-icon">Fx</div>FXIFY</div></td>
+                            <td><span class="rating">★★★★☆</span></td>
+                            <td>7</td>
+                            <td>MetaTrader 4/5, cTrader</td>
+                            <td><span class="discount">15% Off</span></td>
+                            <td><button class="copy-btn" onclick="copyCode('FXIFY')">Copy: FXIFY</button></td>
+                            <td><button class="learn-more-btn btn-disabled">Coming Soon</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="resources-section">
+            <h2 class="section-title">Learn & Explore</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>📚 Trading Guides</h3>
+                    <p>Learn essential trading concepts and strategies to pass evaluations and maximize profit potential.</p>
+                    <a href="trading-guides.html">View Guides →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>📰 Latest Blog</h3>
+                    <p>Stay updated with prop trading news, pricing changes, new features, and industry insights.</p>
+                    <a href="blog.html">Read Blog →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>❓ FAQ</h3>
+                    <p>Get answers to common questions about prop firms, evaluations, costs, and more.</p>
+                    <a href="faq.html">View FAQ →</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-badge">✓ INDEPENDENT REVIEWS • UPDATED MARCH 2026</div>
-        <h1>Find the <span class="highlight">Best Prop Firm</span> for Your Trading Style</h1>
-        <p class="hero-subtitle">Unbiased, trader-verified reviews of every major funded account provider. Compare pricing, payout rules, profit splits, and more.</p>
-
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number">12+</div>
-                <div class="stat-label">Firms Reviewed</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">$400M+</div>
-                <div class="stat-label">Capital Funded</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Accuracy Rate</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">Free</div>
-                <div class="stat-label">To Compare</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Comparison Table -->
-    <section class="comparison-section" id="compare">
-        <h2 class="section-title">Quick Comparison Table</h2>
-        <p class="section-subtitle">All major prop firms ranked side-by-side — 2026 pricing & rules</p>
-
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Firm</th>
-                    <th>Market</th>
-                    <th>Starting Price</th>
-                    <th>Profit Split</th>
-                    <th>Evaluation</th>
-                    <th>Affiliate</th>
-                    <th>Our Rating</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="firm-name">TopStep</td>
-                    <td><span class="badge badge-futures">Futures</span></td>
-                    <td>$49/mo</td>
-                    <td>100% then 90%</td>
-                    <td>Monthly Sub</td>
-                    <td>-10%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.8</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">Apex Trader Funding</td>
-                    <td><span class="badge badge-futures">Futures</span></td>
-                    <td>$167 one-off</td>
-                    <td>90%</td>
-                    <td>1-Step</td>
-                    <td>-10-15%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.7</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">FTMO</td>
-                    <td><span class="badge badge-forex">Forex</span></td>
-                    <td>$155 one-off</td>
-                    <td>80-90%</td>
-                    <td>2-Step</td>
-                    <td>10%+</td>
-                    <td><div class="rating"><span class="star">★</span> 4.7</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">FundedNext</td>
-                    <td><span class="badge badge-both">Both</span></td>
-                    <td>$99 one-off</td>
-                    <td>Up to 95%</td>
-                    <td>1 or 2-Step</td>
-                    <td>Up to 18%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.6</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">The5ers</td>
-                    <td><span class="badge badge-forex">Forex</span></td>
-                    <td>$95 one-off</td>
-                    <td>80-100%</td>
-                    <td>1-Step / Instant</td>
-                    <td>20-40%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.5</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">FXIFY</td>
-                    <td><span class="badge badge-both">Both</span></td>
-                    <td>$99 one-off</td>
-                    <td>Up to 100%</td>
-                    <td>1-Step</td>
-                    <td>-15%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.5</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">E8 Funding</td>
-                    <td><span class="badge badge-forex">Forex</span></td>
-                    <td>$228 one-off</td>
-                    <td>80%</td>
-                    <td>2-Step</td>
-                    <td>Up to 20%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.3</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">Earn2Trade</td>
-                    <td><span class="badge badge-futures">Futures</span></td>
-                    <td>$150/mo</td>
-                    <td>80%</td>
-                    <td>Monthly Sub</td>
-                    <td>Up to 40%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.2</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-                <tr>
-                    <td class="firm-name">Blue Guardian</td>
-                    <td><span class="badge badge-forex">Forex</span></td>
-                    <td>$99 one-off</td>
-                    <td>85%</td>
-                    <td>2-Step</td>
-                    <td>10-15%</td>
-                    <td><div class="rating"><span class="star">★</span> 4.1</div></td>
-                    <td><button onclick="openModal()" class="btn-disabled">Coming Soon</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="affiliate-disclosure">
-            <strong>💡 Affiliate Disclosure:</strong> PropRanked earns affiliate commissions when you sign up through our links at no extra cost to you. This helps us maintain independent, unbiased reviews. All opinions and comparisons are our own.
-        </div>
-    </section>
-
-    <!-- Individual Firm Reviews -->
-    <section class="comparison-section" id="reviews">
-        <h2 class="section-title">Detailed Firm Reviews</h2>
-        <p class="section-subtitle">Deep dives into what makes each prop firm unique</p>
-
-        <div class="firms-grid">
-            <!-- TopStep -->
-            <div class="firm-card">
-                <h3>TopStep</h3>
-                <p>Monthly subscription model focused on futures traders. Transparent rules, strong community, and real-world trading simulator.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Futures</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$49/month</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">100% → 90%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★★ 4.8/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- Apex Trader Funding -->
-            <div class="firm-card">
-                <h3>Apex Trader Funding</h3>
-                <p>One-step evaluation for serious futures traders. Fast payouts, low fees, and straightforward evaluation process.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Futures</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$167 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">90%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.7/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- FTMO -->
-            <div class="firm-card">
-                <h3>FTMO</h3>
-                <p>Established forex prop firm with global reach. Popular in Europe, robust risk management, consistent payouts.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$155 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">80-90%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.7/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- FundedNext -->
-            <div class="firm-card">
-                <h3>FundedNext</h3>
-                <p>Flexible evaluation with 1 or 2-step options. Supports both forex and futures. High payout potential up to 95%.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex & Futures</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$99 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">Up to 95%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.6/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- The5ers -->
-            <div class="firm-card">
-                <h3>The5ers</h3>
-                <p>Best affiliate commissions in the industry (20-40%). Instant funding option. Strong trader community.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$95 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">80-100%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.5/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- FXIFY -->
-            <div class="firm-card">
-                <h3>FXIFY</h3>
-                <p>Modern platform supporting both forex and crypto. Quick evaluation, transparent rules, crypto funding option.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex & Futures</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$99 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">Up to 100%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.5/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- E8 Funding -->
-            <div class="firm-card">
-                <h3>E8 Funding</h3>
-                <p>Professional-grade forex prop firm. Strict risk management, high capital limits, good for experienced traders.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$228 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">80%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.3/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- Earn2Trade -->
-            <div class="firm-card">
-                <h3>Earn2Trade</h3>
-                <p>Monthly subscription futures platform. Excellent affiliate commissions (up to 40%), strong educational resources.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Futures</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$150/month</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">80%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.2/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-
-            <!-- Blue Guardian -->
-            <div class="firm-card">
-                <h3>Blue Guardian</h3>
-                <p>Emerging forex prop firm with competitive pricing. Growing community, solid support, good for intermediate traders.</p>
-                <div class="firm-specs">
-                    <div class="spec">
-                        <span class="spec-label">Market</span>
-                        <span class="spec-value">Forex</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Cost</span>
-                        <span class="spec-value">$99 one-off</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Payout</span>
-                        <span class="spec-value">85%</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Rating</span>
-                        <span class="spec-value">★★★★☆ 4.1/5</span>
-                    </div>
-                </div>
-                <button onclick="openModal()" class="btn-disabled">Get Notified</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About PropRanked</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Independent reviews and comparisons of prop trading firms. Our mission is to help traders find the right funded account provider.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PropRanked</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#comparison">Compare Firms</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="trading-guides.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#compare">Compare Firms</a></li>
-                    <li><a href="#reviews">Detailed Reviews</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PropRanked. All rights reserved. Affiliate disclosure: We earn commissions from affiliate links.</p>
             </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="trading-guides.html">Trading Guides</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PropRanked. Independent prop firm reviews. Not financial advice. Trade at your own risk.</p>
         </div>
     </footer>
 
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Get Notified at Launch</h2>
+            <p style="color: #b0b0b0; margin-bottom: 20px;">Join our waitlist to be among the first when PropRanked launches with exclusive affiliate offers.</p>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <button class="modal-btn" onclick="submitEmail()">Notify Me</button>
+        </div>
+    </div>
+
     <script>
-        // Modal Functions
+        let currentSort = 'name';
+        let sortDirection = 'asc';
+
         function openModal() {
-            document.getElementById('notifyModal').classList.add('active');
+            document.getElementById('emailModal').style.display = 'block';
         }
 
         function closeModal() {
-            document.getElementById('notifyModal').classList.remove('active');
+            document.getElementById('emailModal').style.display = 'none';
         }
 
-        function subscribeEmail() {
+        function submitEmail() {
             const email = document.getElementById('emailInput').value;
-            if (email && email.includes('@')) {
-                alert('✅ Thanks! We\'ll notify you when affiliate links go live. Check your email for confirmation!');
-                document.getElementById('emailInput').value = '';
+            if (email) {
+                alert('Thank you! You\'ll be notified at launch.');
                 closeModal();
-            } else {
-                alert('Please enter a valid email address');
             }
         }
 
-        // Close modal when clicking outside
+        function copyCode(code) {
+            navigator.clipboard.writeText(code);
+            const btn = event.target;
+            btn.textContent = '✓ Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = `Copy: ${code}`;
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+
+        function applyFilter() {
+            const filterValue = document.getElementById('filterDropdown').value;
+            const rows = document.querySelectorAll('#comparisonTable tbody tr');
+
+            rows.forEach(row => {
+                if (!filterValue) {
+                    row.style.display = '';
+                } else {
+                    const categories = row.dataset.category.split(',');
+                    row.style.display = categories.includes(filterValue) ? '' : 'none';
+                }
+            });
+        }
+
+        function sortTable(column) {
+            currentSort = column;
+            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+
+            const tbody = document.querySelector('#comparisonTable tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+
+            rows.sort((a, b) => {
+                let aValue, bValue;
+
+                if (column === 'name') {
+                    aValue = a.querySelector('.firm-name').textContent.trim();
+                    bValue = b.querySelector('.firm-name').textContent.trim();
+                } else if (column === 'rating') {
+                    aValue = a.querySelector('.rating').textContent.length;
+                    bValue = b.querySelector('.rating').textContent.length;
+                } else if (column === 'discount') {
+                    aValue = parseInt(a.querySelector('.discount').textContent);
+                    bValue = parseInt(b.querySelector('.discount').textContent);
+                }
+
+                if (typeof aValue === 'string') {
+                    return sortDirection === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                } else {
+                    return sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
+                }
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+
+            // Update sort button styling
+            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
         window.onclick = function(event) {
-            const modal = document.getElementById('notifyModal');
-            if (event.target == modal) {
+            const modal = document.getElementById('emailModal');
+            if (event.target === modal) {
                 closeModal();
             }
         }
-
-        // Allow Enter key to subscribe
-        document.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && document.getElementById('emailInput') === document.activeElement) {
-                subscribeEmail();
-            }
-        });
     </script>
 </body>
 </html>
