@@ -3,138 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free trading guides and resources for prop trading success.">
-    <title>Trading Guides - PropRanked</title>
+    <title>Trading Guides - PropRanked | Learn Prop Trading Strategies</title>
+    <meta name="description" content="Comprehensive trading guides for prop traders. Learn risk management, technical analysis, evaluation strategies, and more.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SCH6BLQ1FN');
+    </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-dark: #0f1419; --secondary-dark: #1a1f2e; --accent-green: #00d084;
-            --accent-green-hover: #00b86d; --accent-teal: #00b4d8; --text-primary: #ffffff;
-            --text-secondary: #b0b8c1; --border-color: #2d3748;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background-color: var(--primary-dark); color: var(--text-primary); line-height: 1.6; }
-        nav { position: sticky; top: 0; background-color: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem; z-index: 1000; display: flex;
-            justify-content: space-between; align-items: center; }
-        .nav-brand { font-size: 1.5rem; font-weight: 700; color: var(--accent-green); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; font-weight: 500; }
-        .nav-links a:hover { color: var(--accent-green); }
-        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-green); }
-        .subtitle { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 3rem; }
-        .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
-        .guide-card { background: var(--secondary-dark); border: 1px solid var(--border-color);
-            border-radius: 12px; padding: 2rem; transition: all 0.3s; }
-        .guide-card:hover { border-color: var(--accent-green); transform: translateY(-5px); }
-        .guide-card h3 { color: var(--accent-green); margin-bottom: 1rem; }
-        .guide-card p { color: var(--text-secondary); margin-bottom: 1rem; }
-        .btn { display: inline-block; padding: 0.6rem 1.5rem;
-            background: var(--accent-green); color: var(--primary-dark);
-            text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
-            transition: all 0.3s; cursor: pointer; }
-        .btn:hover { background: var(--accent-green-hover); transform: translateY(-2px); }
-        footer { background: var(--secondary-dark); border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem; margin-top: 4rem; }
-        .footer-content { max-width: 1400px; margin: 0 auto; display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
-        .footer-section h4 { color: var(--accent-green); margin-bottom: 1rem; }
-        .footer-section a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
-        .footer-section a:hover { color: var(--accent-green); }
-        .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 2rem;
-            text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
-        @media (max-width: 768px) { .container { padding: 2rem 1rem; } h1 { font-size: 2rem; }
-            nav { flex-direction: column; gap: 1rem; } }
+
+        body {
+            background-color: #0f1419;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0f1419;
+            border-bottom: 1px solid #1a1f2e;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #00d084;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00d084;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            color: #00d084;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .guide-card {
+            background-color: #1a1f2e;
+            border: 1px solid #2a3040;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-card:hover {
+            border-color: #00d084;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 208, 132, 0.1);
+        }
+
+        .guide-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .guide-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .guide-card p {
+            color: #b0b0b0;
+            font-size: 15px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-guide {
+            color: #00d084;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .read-guide:hover {
+            gap: 12px;
+        }
+
+        footer {
+            background-color: #1a1f2e;
+            border-top: 1px solid #2a3040;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #00d084;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #00d084;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2a3040;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-brand">⚡ PropRanked</a>
-        <ul class="nav-links">
-            <li><a href="index.html#compare">Compare</a></li>
-            <li><a href="index.html#reviews">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                PropRanked
+            </a>
+            <ul>
+                <li><a href="index.html#comparison">Compare</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
-        <h1>Trading Guides</h1>
-        <p class="subtitle">Master prop trading with our comprehensive guides and resources.</p>
+        <div class="page-header">
+            <h1>Trading Guides</h1>
+            <p>Master the skills you need to pass prop firm evaluations and become a profitable trader.</p>
+        </div>
 
         <div class="guides-grid">
+            <!-- Guide 1: Risk Management -->
             <div class="guide-card">
-                <h3>📊 Risk Management 101</h3>
-                <p>Learn the fundamental principles of risk management. Understanding position sizing, stop losses, and risk-to-reward ratios is essential for prop trading success.</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">⚠️</div>
+                <h3>Risk Management: The #1 Rule for Prop Traders</h3>
+                <p>Learn the 2% rule, position sizing, drawdown management, and how to protect your capital. Risk management is what separates professionals from gamblers.</p>
+                <a href="guide-risk-management.html" class="read-guide">Read Guide →</a>
             </div>
 
+            <!-- Guide 2: Technical Analysis -->
             <div class="guide-card">
-                <h3>💹 Technical Analysis Basics</h3>
-                <p>Introduction to support/resistance, trend lines, and candlestick patterns. Master the technical tools used by successful prop traders.</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">📊</div>
+                <h3>Technical Analysis for Prop Traders</h3>
+                <p>Master support and resistance, trend analysis, chart patterns, and moving averages. Learn to identify high-probability trade setups using pure price action.</p>
+                <a href="guide-technical-analysis.html" class="read-guide">Read Guide →</a>
             </div>
 
+            <!-- Guide 3: Evaluation Strategies -->
             <div class="guide-card">
-                <h3>🎯 Evaluating Your Trading Plan</h3>
-                <p>How to create and backtest a trading strategy before risking real capital. Test your system on prop firm simulators first.</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">🎯</div>
+                <h3>How to Pass Prop Firm Evaluations</h3>
+                <p>Proven strategies from traders who passed FTMO, TopStep, Apex, and more. Learn the psychology, discipline, and techniques that lead to success.</p>
+                <a href="guide-evaluation-strategies.html" class="read-guide">Read Guide →</a>
             </div>
 
+            <!-- Guide 4: Trading Platforms -->
             <div class="guide-card">
-                <h3>⚙️ Setting Up Your Trading Station</h3>
-                <p>Everything you need for professional prop trading: hardware, software, internet reliability, and workspace setup for optimal performance.</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">💻</div>
+                <h3>Trading Platforms Setup & Comparison</h3>
+                <p>Complete guide to Tradovate, cTrader, MetaTrader, and NinjaTrader. Learn setup tips, tools, and how to choose the right platform for your trading.</p>
+                <a href="guide-trading-platforms.html" class="read-guide">Read Guide →</a>
             </div>
 
+            <!-- Guide 5: Futures vs Forex -->
             <div class="guide-card">
-                <h3>📈 Futures vs Forex Trading</h3>
-                <p>Understand the key differences between futures and forex markets. Which is better for your trading style and risk tolerance?</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">📈</div>
+                <h3>Futures vs Forex: Which Should You Trade?</h3>
+                <p>Compare futures and forex trading. Learn the pros and cons of each, and which is better for prop trading evaluations. Includes ES, NQ, YM, and forex analysis.</p>
+                <a href="guide-futures-vs-forex.html" class="read-guide">Read Guide →</a>
             </div>
 
+            <!-- Guide 6: Trading Journal -->
             <div class="guide-card">
-                <h3>🚀 Passing Prop Firm Evaluations</h3>
-                <p>Strategies for successfully passing one-step and two-step evaluations. Learn what prop firms are actually looking for in funded traders.</p>
-                <button class="btn">Read Guide</button>
+                <div class="guide-icon">📝</div>
+                <h3>Trading Journal: Your Secret Weapon</h3>
+                <p>Learn why every professional trader keeps a journal. Track trades, identify patterns, and measure your improvement. Includes sample template and analysis methods.</p>
+                <a href="guide-trading-journal.html" class="read-guide">Read Guide →</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About PropRanked</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Independent reviews of prop trading firms helping traders find the right funded account provider.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PropRanked</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#comparison">Compare Firms</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="trading-guides.html">Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="index.html#compare">Compare</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="index.html#reviews">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PropRanked. All rights reserved. | Affiliate disclosure: We earn commissions from affiliate links.</p>
             </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="trading-guides.html">Guides</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="privacy.html">Privacy</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="terms.html">Terms</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PropRanked. Independent reviews. Not financial advice.</p>
         </div>
     </footer>
 </body>
