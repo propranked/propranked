@@ -251,52 +251,30 @@
 
         <div class="contact-form">
             <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">Send us a Message</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <iframe src="https://docs.google.com/forms/d/1Bogt_pQ-_uBZ1450Ea2QnrZj-FZTxN8RQZxBzfbuOTg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 8px;">Loading…</iframe>
         </div>
 
         <div class="contact-info">
-            <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">Other Ways to Reach Us</h2>
+            <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">How It Works</h2>
 
             <div class="info-item">
-                <div class="info-label">📧 Email</div>
-                <p>contact@propranked.com</p>
+                <div class="info-label">📝 Submissions</div>
+                <p>All form submissions are automatically saved to a spreadsheet that you can access anytime.</p>
             </div>
 
             <div class="info-item">
                 <div class="info-label">💬 Social Media</div>
-                <p>Follow us on Twitter/X @PropRanked for daily prop firm updates and trading insights.</p>
+                <p>Follow us on Twitter/X @prop_ranked for daily prop firm updates and trading insights.</p>
             </div>
 
             <div class="info-item">
-                <div class="info-label">🤝 Partnerships</div>
-                <p>If you represent a prop firm or want to advertise, please reach out at partnerships@propranked.com</p>
+                <div class="info-label">✓ Confirmation</div>
+                <p>You'll see a confirmation message after submitting the form if it was successful.</p>
             </div>
 
             <div class="info-item">
                 <div class="info-label">⏱️ Response Time</div>
-                <p>We typically respond to inquiries within 24 hours during business days.</p>
+                <p>We typically review submissions and respond within 24 hours during business days.</p>
             </div>
         </div>
     </div>
@@ -336,5 +314,44 @@
             <p>&copy; 2026 PropRanked. Independent prop firm reviews. Not financial advice. Trade at your own risk.</p>
         </div>
     </footer>
+
+    <script>
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const formData = new FormData(form);
+
+            // Replace with your Formspree form ID
+            const formspreeURL = 'https://formspree.io/f/YOUR_FORM_ID';
+
+            try {
+                const response = await fetch(formspreeURL, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('formMessage').style.display = 'block';
+                    form.reset();
+
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        document.getElementById('formMessage').style.display = 'none';
+                    }, 5000);
+                } else {
+                    alert('Error sending message. Please try again.');
+                }
+            } catch (error) {
+                alert('Error sending message. Please try again.');
+                console.error('Error:', error);
+            }
+        });
+    </script>
 </body>
 </html>
