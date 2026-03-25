@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Platforms for Prop Traders: Setup Guide | PropRanked</title>
+    <meta name="description" content="Master the top trading platforms: Tradovate, cTrader, MetaTrader, and NinjaTrader. Learn setup, tools, and best practices for prop trading.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SCH6BLQ1FN');</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0f1419; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; }
+        header { background-color: #0f1419; border-bottom: 1px solid #1a1f2e; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #00d084; text-decoration: none; }
+        nav a { color: #e0e0e0; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #00d084; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: 42px; margin: 40px 0 20px; color: #ffffff; }
+        h2 { font-size: 28px; margin: 40px 0 20px; color: #00d084; }
+        p { margin: 15px 0; font-size: 16px; color: #b0b0b0; }
+        table { width: 100%; margin: 20px 0; border-collapse: collapse; border: 1px solid #2a3040; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #2a3040; }
+        th { background-color: #1a1f2e; color: #00d084; }
+        .highlight { background-color: #1a1f2e; border-left: 4px solid #00d084; padding: 20px; margin: 20px 0; border-radius: 6px; }
+        footer { background-color: #1a1f2e; border-top: 1px solid #2a3040; padding: 40px 0; margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">⚡ PropRanked</a>
+            <ul style="display: flex; list-style: none; gap: 30px;">
+                <li><a href="index.html#comparison">Compare</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="trading-guides.html">Guides</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Trading Platforms Setup: Choose the Right One for You</h1>
+
+        <p>Your trading platform is your workspace. Choosing the right one can significantly impact your trading performance. This guide covers the major platforms used by prop traders.</p>
+
+        <h2>Tradovate (Futures Specialist)</h2>
+
+        <p>Tradovate is the leading platform for futures traders, especially those trading ES, NQ, and YM.</p>
+
+        <div class="highlight">
+            <strong>Pros:</strong> Fast execution, minimal lag, excellent charts<br><br>
+            <strong>Cons:</strong> Limited to futures only<br><br>
+            <strong>Best For:</strong> Futures day traders
+        </div>
+
+        <p><strong>Setup Tips:</strong></p>
+        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
+            <li>Use DOM (Depth of Market) for order entry</li>
+            <li>Set up hotkeys for quick entry/exit</li>
+            <li>Use Volume Profile for support/resistance</li>
+            <li>Enable alerts for key levels</li>
+        </ul>
+
+        <h2>cTrader (Forex/CFDs)</h2>
+
+        <p>cTrader is popular among forex and CFD traders. Known for clean interface and advanced tools.</p>
+
+        <div class="highlight">
+            <strong>Pros:</strong> Excellent charting, low spreads, algorithmic trading<br><br>
+            <strong>Cons:</strong> Less popular than MT4/MT5<br><br>
+            <strong>Best For:</strong> Forex and CFD traders
+        </div>
+
+        <h2>MetaTrader 4/5 (Forex/Crypto)</h2>
+
+        <p>MetaTrader is the most used platform globally. MT4 is simpler, MT5 is more advanced.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>MT4</th>
+                    <th>MT5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Learning Curve</td>
+                    <td>Easy</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Timeframes</td>
+                    <td>9</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Indicators</td>
+                    <td>50+</td>
+                    <td>100+</td>
+                </tr>
+                <tr>
+                    <td>Experts/EAs</td>
+                    <td>Extensive library</td>
+                    <td>Growing library</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>NinjaTrader (Advanced Futures)</h2>
+
+        <p>NinjaTrader is for serious futures traders who want advanced automation and algorithmic tools.</p>
+
+        <div class="highlight">
+            <strong>Pros:</strong> Powerful automation, backtesting, advanced analysis<br><br>
+            <strong>Cons:</strong> Steep learning curve<br><br>
+            <strong>Best For:</strong> Advanced futures traders
+        </div>
+
+        <h2>Setting Up Your Trading Station</h2>
+
+        <p>Regardless of platform, your setup should include:</p>
+
+        <ol style="margin: 15px 0 15px 20px; color: #b0b0b0;">
+            <li>Main chart with trend analysis and support/resistance</li>
+            <li>Volume profile or DOM for entry confirmation</li>
+            <li>Economic calendar for news events</li>
+            <li>Risk calculator for position sizing</li>
+            <li>Alerts for key price levels</li>
+            <li>Order management tools for quick entry/exit</li>
+        </ol>
+
+        <h2>Internet and Hardware Considerations</h2>
+
+        <p><strong>Fast, reliable internet is critical.</strong> For prop trading evaluation:</p>
+
+        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
+            <li>Use wired ethernet connection (not Wi-Fi)</li>
+            <li>Have backup internet (mobile hotspot)</li>
+            <li>Use a dedicated trading computer</li>
+            <li>Avoid running other software during trading</li>
+        </ul>
+
+        <h2>Choosing Your Platform</h2>
+
+        <p>Consider what you'll trade:</p>
+        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
+            <li>Futures (ES, NQ, YM) → Tradovate</li>
+            <li>Forex/CFDs → MetaTrader 4/5 or cTrader</li>
+            <li>Advanced automation → NinjaTrader</li>
+        </ul>
+
+        <p>Most prop firms offer multiple platforms. Choose the one that best fits your trading style.</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div style="text-align: center; color: #666; font-size: 14px;">
+                <p>&copy; 2026 PropRanked. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
