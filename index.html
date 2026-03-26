@@ -88,6 +88,9 @@
         .firm-platforms{display:flex;flex-wrap:wrap;gap:6px;}
         .plat-chip{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--grey);font-size:11px;font-weight:500;padding:4px 11px;border-radius:100px;}
         .card-cta{margin-top:auto;border-top:1px solid var(--border);padding-top:20px;}
+        .discount-note{font-size:12px;color:var(--gold);background:var(--gldim);border:1px solid rgba(201,168,76,0.18);border-radius:7px;padding:6px 12px;}
+        .deals-cta{display:block;width:100%;text-align:center;background:transparent;color:var(--green);border:1px solid rgba(0,208,132,0.35);font-weight:600;font-size:13px;padding:9px 16px;border-radius:9px;text-decoration:none;transition:all 0.2s;margin-bottom:8px;}
+        .deals-cta:hover{background:var(--gdim);border-color:rgba(0,208,132,0.6);}
         .visit-btn{display:block;width:100%;text-align:center;background:var(--green);color:#080b14;font-weight:700;font-size:14px;padding:12px 16px;border-radius:9px;text-decoration:none;transition:all 0.2s;letter-spacing:0.3px;}
         .visit-btn:hover{background:#00e699;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,208,132,0.3);}
 
@@ -150,7 +153,7 @@
                 <span class="stat-label">Firms Ranked</span>
             </div>
             <div class="stat">
-                <span class="stat-val">85%</span>
+                <span class="stat-val">90%</span>
                 <span class="stat-label">Max Discount</span>
             </div>
             <div class="stat">
@@ -213,41 +216,66 @@
 </footer>
 
 <script>
+/* ── FIRMS DATA — verified March 2026 ── */
 const firms = [
-    {name:"Apex Trader Funding", stars:5, discount:85, platforms:["Tradovate","Rhythmic"], url:"https://apextraderfunding.com", domain:"apextraderfunding.com"},
-    {name:"TopStep", stars:5, discount:30, platforms:["Tradovate","Rhythmic"], url:"https://topstep.com", domain:"topstep.com"},
-    {name:"FTMO", stars:4, discount:20, platforms:["MT4/MT5","cTrader"], url:"https://ftmo.com", domain:"ftmo.com"},
-    {name:"FundedNext", stars:5, discount:40, platforms:["Tradovate","cTrader"], url:"https://fundednext.com", domain:"fundednext.com"},
-    {name:"The5ers", stars:5, discount:25, platforms:["MT4/MT5","TradingView"], url:"https://the5ers.com", domain:"the5ers.com"},
-    {name:"E8 Funding", stars:4, discount:35, platforms:["Tradovate","NinjaTrader"], url:"https://e8funding.com", domain:"e8funding.com"},
-    {name:"Earn2Trade", stars:4, discount:45, platforms:["Tradovate","ThinkOrSwim"], url:"https://earn2trade.com", domain:"earn2trade.com"},
-    {name:"Blue Guardian", stars:4, discount:50, platforms:["MT4/MT5"], url:"https://blueguardian.com", domain:"blueguardian.com"},
-    {name:"FXIFY", stars:4, discount:15, platforms:["MT4/MT5","cTrader"], url:"https://fxify.com", domain:"fxify.com"},
-    {name:"Lucid Trading", stars:4, discount:50, platforms:["MT4/MT5"], url:"https://lucidtrading.com", domain:"lucidtrading.com"},
-    {name:"WarBux", stars:4, discount:20, platforms:["MT4/MT5"], url:"https://warbux.com", domain:"warbux.com"},
-    {name:"Take Profit Trader", stars:4, discount:40, platforms:["MT4/MT5"], url:"https://takeprofittrader.com", domain:"takeprofittrader.com"},
-    {name:"Tradeify", stars:4, discount:30, platforms:["MT4/MT5"], url:"https://tradeify.com", domain:"tradeify.com"},
-    {name:"Legends Trading", stars:4, discount:35, platforms:["MT4/MT5"], url:"https://legendstrading.com", domain:"legendstrading.com"},
-    {name:"MyFundedFutures", stars:4, discount:0, platforms:["Tradovate"], url:"https://myfundedfutures.com", domain:"myfundedfutures.com"},
-    {name:"Funded Futures Network", stars:4, discount:40, platforms:["Tradovate"], url:"https://fundedfuturesnetwork.com", domain:"fundedfuturesnetwork.com"},
-    {name:"DayTraders.com", stars:4, discount:0, platforms:["Tradovate"], url:"https://daytraders.com", domain:"daytraders.com"},
-    {name:"TheTradesMakers", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://thetradesmakers.com", domain:"thetradesmakers.com"},
-    {name:"BluSky Trading", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://bluskytrading.com", domain:"bluskytrading.com"},
-    {name:"Bulenox", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://bulenox.com", domain:"bulenox.com"},
-    {name:"TradeDay", stars:3, discount:30, platforms:["MT4/MT5","cTrader"], url:"https://tradeday.com", domain:"tradeday.com"},
-    {name:"UProfit", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://uprofit.com", domain:"uprofit.com"}
+    {name:"Apex Trader Funding", stars:5, discount:90, discountNote:"Up to 90% off — codes rotate, check site",
+     platforms:["Rithmic","Tradovate"], url:"https://apextraderfunding.com", domain:"apextraderfunding.com"},
+    {name:"TopStep", stars:5, discount:70, discountNote:"Up to 70% off — codes change regularly",
+     platforms:["Tradovate","NinjaTrader","Quantower","ATAS"], url:"https://topstep.com", domain:"topstep.com"},
+    {name:"FTMO", stars:4, discount:10, discountNote:"10% off — use code FTMO10",
+     platforms:["MT4","MT5","cTrader","DXtrade"], url:"https://ftmo.com", domain:"ftmo.com"},
+    {name:"FundedNext", stars:5, discount:30, discountNote:"Up to 30% off on futures plans",
+     platforms:["MT4/MT5","cTrader","NinjaTrader","Tradovate"], url:"https://fundednext.com", domain:"fundednext.com"},
+    {name:"The5ers", stars:5, discount:10, discountNote:"Up to 10% off — check site for codes",
+     platforms:["MT5","cTrader"], url:"https://the5ers.com", domain:"the5ers.com"},
+    {name:"E8 Markets", stars:4, discount:10, discountNote:"10% off — use code MATCH",
+     platforms:["MT5","cTrader","Match Trader","TradeLocker"], url:"https://e8markets.com", domain:"e8markets.com"},
+    {name:"Earn2Trade", stars:4, discount:50, discountNote:"Up to 50% off — verify code at checkout",
+     platforms:["NinjaTrader","Finamark","Rithmic"], url:"https://earn2trade.com", domain:"earn2trade.com"},
+    {name:"Blue Guardian", stars:4, discount:40, discountNote:"40% off — use code SHINY",
+     platforms:["MT5","Match Trader","TradeLocker"], url:"https://blueguardian.com", domain:"blueguardian.com"},
+    {name:"FXIFY", stars:4, discount:40, discountNote:"Up to 40% off — check site for active codes",
+     platforms:["MT4","MT5","DXtrade"], url:"https://fxify.com", domain:"fxify.com"},
+    {name:"Bulenox", stars:4, discount:75, discountNote:"75% off — use code LUMI",
+     platforms:["NinjaTrader","Tradovate","Quantower","ATAS"], url:"https://bulenox.com", domain:"bulenox.com"},
+    {name:"MyFundedFutures", stars:4, discount:50, discountNote:"Up to 50% off — see myfundedfutures.com/coupons",
+     platforms:["Tradovate","NinjaTrader","TradingView","Quantower"], url:"https://myfundedfutures.com", domain:"myfundedfutures.com"},
+    {name:"Take Profit Trader", stars:4, discount:40, discountNote:"40% off for life — use code GOOD",
+     platforms:["NinjaTrader","Tradovate","TradingView","Quantower"], url:"https://takeprofittrader.com", domain:"takeprofittrader.com"},
+    {name:"Tradeify", stars:4, discount:30, discountNote:"30% off — use code LUMI",
+     platforms:["Tradovate","NinjaTrader","TradingView","Quantower"], url:"https://tradeify.co", domain:"tradeify.co"},
+    {name:"Funded Futures Network", stars:4, discount:40, discountNote:"40% off — use code LUMI",
+     platforms:["NinjaTrader","Quantower","Rithmic"], url:"https://fundedfuturesnetwork.com", domain:"fundedfuturesnetwork.com"},
+    {name:"TradeDay", stars:3, discount:40, discountNote:"40% off — use code NOFEE40",
+     platforms:["NinjaTrader","Tradovate","TradingView","Quantower"], url:"https://tradeday.io", domain:"tradeday.io"},
+    /* Firms where live discount data could not be verified — click through to discover current offers */
+    {name:"Lucid Trading", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5"], url:"https://lucidtrading.com", domain:"lucidtrading.com"},
+    {name:"WarBux", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5"], url:"https://warbux.com", domain:"warbux.com"},
+    {name:"Legends Trading", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5"], url:"https://legendstrading.com", domain:"legendstrading.com"},
+    {name:"DayTraders.com", stars:4, discount:0, dealsCTA:true,
+     platforms:["Tradovate","Rithmic"], url:"https://daytraders.com", domain:"daytraders.com"},
+    {name:"TheTradesMakers", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5"], url:"https://thetradesmakers.com", domain:"thetradesmakers.com"},
+    {name:"BluSky Trading", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5"], url:"https://bluskytrading.com", domain:"bluskytrading.com"},
+    {name:"UProfit", stars:4, discount:0, dealsCTA:true,
+     platforms:["MT4/MT5","Tradovate"], url:"https://uprofit.com", domain:"uprofit.com"}
 ];
 
 let sort='rating', filter='';
 
 function starsHtml(n){return'★'.repeat(n)+'☆'.repeat(5-n);}
 
+/* Logo with Clearbit primary → Google favicon fallback → letter avatar */
 function logoHtml(f){
     const l=f.name.charAt(0);
     return `<img src="https://logo.clearbit.com/${f.domain}" alt="${f.name}" loading="lazy"
         onload="this.style.display='block';this.nextElementSibling.style.display='none'"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-        style="display:block;width:38px;height:38px;object-fit:contain;">
+        onerror="if(!this.dataset.fb){this.dataset.fb='1';this.src='https://www.google.com/s2/favicons?domain=${f.domain}&sz=64';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+        style="display:block;width:38px;height:38px;object-fit:contain;border-radius:4px;">
     <span class="firm-logo-fallback" style="display:none">${l}</span>`;
 }
 
@@ -270,10 +298,12 @@ function render(){
                 </div>
                 ${f.discount>0?`<div class="firm-badge">–${f.discount}% OFF</div>`:''}
             </div>
+            ${f.discountNote?`<div class="discount-note">🏷️ ${f.discountNote}</div>`:''}
             <div class="firm-platforms">
                 ${f.platforms.map(p=>`<span class="plat-chip">${p}</span>`).join('')}
             </div>
             <div class="card-cta">
+                ${f.dealsCTA?`<a href="${f.url}" target="_blank" rel="noopener sponsored" class="deals-cta">🔖 Click here to discover latest deals →</a>`:''}
                 <a href="${f.url}" target="_blank" rel="noopener sponsored" class="visit-btn">Visit ${f.name} →</a>
             </div>
         </div>

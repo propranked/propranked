@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risk Management: The #1 Rule for Prop Traders — PropRanked</title>
-    <meta name="description" content="Master risk management for prop trading. Position sizing, stop losses, and drawdown management to pass evaluations and protect capital.">
+    <title>Risk Management for Prop Traders — PropRanked</title>
+    <meta name="description" content="Master risk management for prop trading. Position sizing, the 1% rule, drawdown management, and how to protect capital through evaluations and funded accounts.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
@@ -77,66 +77,109 @@
         <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Risk Management</div>
         <div class="guide-icon-big">⚠️</div>
         <h1>Risk Management: The #1 Rule for Prop Traders</h1>
-        <p>Master position sizing, drawdown management, and stop placement to pass evaluations and protect your capital.</p>
+        <p>Master position sizing, drawdown rules, and stop placement — the skills that separate professionals from blown accounts.</p>
     </div>
 </section>
 <article class="article">
-    <p>Risk management is the foundation of successful prop trading. While many traders focus on finding winning strategies, professional traders know that managing risk is what separates winners from those who blow accounts.</p>
 
-    <h2>The 2% Rule: Your Most Important Tool</h2>
-    <p>The 2% rule is the cornerstone of professional risk management: never risk more than 2% of your account on a single trade.</p>
-    <div class="callout"><p><strong>Example:</strong> If your account is $100,000, risk no more than $2,000 per trade. Even with 10 consecutive losses, you've only lost 20% of your account — survivable with proper management.</p></div>
+    <p>Risk management is not a topic traders like to study — it feels less exciting than finding setups or optimising entries. But every professional trader, and every funded trader who consistently withdraws profits, will tell you the same thing: how you manage risk determines whether you last in this game. The strategy matters far less than how you size your positions and how you react when trades go wrong.</p>
 
-    <h2>Position Sizing Formula</h2>
+    <h2>Why Risk Management Matters More in Prop Trading</h2>
+    <p>In a personal account, a bad loss is frustrating but recoverable over time. In a prop firm evaluation or funded account, the rules are strict. Most firms enforce a maximum daily drawdown of 3–5% and a maximum trailing or static drawdown of 6–12%. Violate either limit once and you lose the account — regardless of how profitable you were before that moment.</p>
+    <p>This changes the entire risk equation. The goal is not to maximise returns — the goal is to stay in the game long enough to build a track record, then extract profits through payouts. A single bad day can end everything.</p>
+
+    <div class="callout"><p><strong>The Asymmetry of Losses:</strong> A 10% loss requires an 11.1% gain to break even. A 20% loss requires a 25% gain. A 50% loss requires a 100% gain. The further you fall, the harder it is to recover — which is why prop firms use hard limits instead of letting traders dig their way out.</p></div>
+
+    <h2>The 1% Rule: Position Sizing That Keeps You in the Game</h2>
+    <p>Many traders reference the 2% rule — never risk more than 2% of your account per trade. For prop trading, where drawdown limits are strict and evaluation accounts may not be re-topped up, the 1% rule is a more conservative and appropriate target.</p>
+
+    <h3>How to Calculate Your Position Size</h3>
+    <p>Position size is not a guess — it is a calculation driven by three inputs: account size, risk per trade (%), and the distance to your stop loss in dollar terms.</p>
+    <ol>
+        <li><strong>Determine your risk per trade in dollars:</strong> On a $100,000 account at 1% risk, that is $1,000.</li>
+        <li><strong>Determine your stop loss in ticks or pips:</strong> If trading ES futures and placing a stop 4 points away, each ES contract = $50/point, so 4 points = $200 risk per contract.</li>
+        <li><strong>Divide risk amount by risk per contract:</strong> $1,000 ÷ $200 = 5 contracts maximum.</li>
+    </ol>
+
+    <div class="callout"><p><strong>Always calculate first, enter second.</strong> Never enter a position without knowing exactly how many contracts or lots you will trade. Pre-calculating your size before the market opens removes emotional interference from the decision.</p></div>
+
+    <h3>Position Sizing by Asset Class</h3>
     <table>
-        <thead><tr><th>Component</th><th>Calculation</th><th>Example</th></tr></thead>
+        <thead><tr><th>Instrument</th><th>Tick Size</th><th>Tick Value</th><th>$1,000 risk / 10-tick stop</th></tr></thead>
         <tbody>
-            <tr><td>Account Balance</td><td>Your starting capital</td><td>$100,000</td></tr>
-            <tr><td>Risk Percentage</td><td>2% of account</td><td>$2,000</td></tr>
-            <tr><td>Stop Loss Distance</td><td>Distance to stop in pips/ticks</td><td>50 pips</td></tr>
-            <tr><td>Position Size</td><td>Risk ÷ Stop Distance</td><td>40 units</td></tr>
+            <tr><td>ES (S&P 500 Futures)</td><td>0.25 pts</td><td>$12.50</td><td>10 contracts</td></tr>
+            <tr><td>NQ (Nasdaq Futures)</td><td>0.25 pts</td><td>$5.00</td><td>25 contracts</td></tr>
+            <tr><td>MES (Micro ES)</td><td>0.25 pts</td><td>$1.25</td><td>80 contracts</td></tr>
+            <tr><td>Forex EUR/USD</td><td>0.0001</td><td>$10/pip (std lot)</td><td>10 pips = 1 lot max</td></tr>
+            <tr><td>MNQ (Micro NQ)</td><td>0.25 pts</td><td>$0.50</td><td>200 contracts</td></tr>
         </tbody>
     </table>
 
-    <h2>Understanding Drawdown</h2>
-    <p>Every prop firm has a drawdown limit — the maximum your account can lose from peak balance. Typical limits are:</p>
+    <h2>Understanding Drawdown: Static vs Trailing</h2>
+    <p>Prop firms enforce two types of drawdown rules and it is critical to understand the difference before you start trading an evaluation.</p>
+
+    <h3>Static (End-of-Day) Drawdown</h3>
+    <p>A static drawdown is calculated from the starting account balance and never moves. If you start with $100,000 and the firm allows a $5,000 maximum drawdown, your account equity must never fall below $95,000 — regardless of any profits you make. This is the friendliest type of rule because your target floor does not increase.</p>
+
+    <h3>Trailing Drawdown</h3>
+    <p>A trailing drawdown follows your highest achieved equity. If your account peaks at $110,000 before you have made a payout, the $5,000 trailing drawdown means your floor is now $105,000. You cannot drop back to $95,000 anymore. This is common with futures firms like Apex Trader Funding and TopStep, and it significantly constrains your risk as you build profits.</p>
+
+    <div class="callout"><p><strong>Apex Trader Funding Example:</strong> On a $50,000 plan with a $2,500 trailing drawdown, if you grow to $55,000, your floor rises to $52,500. Every dollar of profit narrows the acceptable loss range until your drawdown "locks in" once you reach a specific threshold — at which point it becomes static. Know your firm's specific rule.</p></div>
+
+    <h2>Daily Loss Limits: Your Most Dangerous Constraint</h2>
+    <p>Most prop firms impose a maximum daily loss limit — typically 3–5% of the account balance. This is the rule that catches traders off-guard most frequently, because one volatile session can consume multiple days of normal risk in minutes.</p>
+    <p>Common daily loss limits by firm type:</p>
     <ul>
-        <li><strong>Daily Drawdown:</strong> Loss on any single trading day (usually 5–10%)</li>
-        <li><strong>Maximum Drawdown:</strong> Total cumulative loss from peak (usually 10–20%)</li>
+        <li><strong>Futures firms (Apex, TopStep, TradeDay):</strong> $500–$2,000 on standard $50K–$150K accounts</li>
+        <li><strong>Forex firms (FTMO, FundedNext):</strong> Typically 5% of starting balance per day</li>
+        <li><strong>Hybrid firms:</strong> Often 3% of current balance</li>
     </ul>
-    <p>Proper position sizing ensures you stay within drawdown limits even during losing streaks.</p>
+    <p>Best practice: set your own internal daily stop at 50–60% of the firm's limit. If the firm allows $1,000 daily loss, stop trading when you are down $500–$600. This buffer protects you from a final bad trade that breaches the limit.</p>
 
-    <h2>The Risk-Reward Ratio</h2>
-    <p>Never take a trade unless your potential profit is at least 2x your potential loss.</p>
-    <div class="callout"><p><strong>Setup:</strong> Stop loss 50 pips away → Target must be at least 100 pips away<br><strong>Result:</strong> Even a 50% win rate keeps you profitable long-term.</p></div>
+    <h2>The R-Multiple System: Thinking in Risk Units</h2>
+    <p>Professional traders do not think in dollars — they think in R-multiples. One "R" equals the dollar amount you are risking on a trade. A 2R win means you made twice what you risked. A 1R loss means you lost exactly your planned risk amount.</p>
+    <p>This framework removes emotional attachment to dollar values and lets you evaluate your strategy with pure mathematics. If your strategy wins 45% of the time with an average winner of 2R and an average loser of 1R, your expectancy is:</p>
+    <p style="text-align:center;">(0.45 × 2R) – (0.55 × 1R) = 0.90R – 0.55R = +0.35R per trade</p>
+    <p>A positive expectancy means the system is profitable over a large enough sample size. The key is consistency in sizing (always risking 1R) so the math actually plays out.</p>
 
-    <h2>Money Management Rules for Evaluations</h2>
-    <ol>
-        <li><strong>Never risk more than 2% per trade</strong> — Evaluation accounts have tight drawdown limits</li>
-        <li><strong>Scale into winners</strong> — Once profitable, gradually increase position size</li>
-        <li><strong>Avoid revenge trading</strong> — A single bad trade can end your evaluation</li>
-        <li><strong>Use daily loss stops</strong> — Stop trading after losing 2–3% in a day</li>
-        <li><strong>Keep a trading journal</strong> — Track every trade to identify patterns</li>
-    </ol>
+    <h3>Risk-Reward Ratios That Work</h3>
+    <table>
+        <thead><tr><th>Win Rate</th><th>Minimum R:R to Break Even</th><th>Suggested R:R for Profit</th></tr></thead>
+        <tbody>
+            <tr><td>35%</td><td>1.86:1</td><td>2.5:1 or higher</td></tr>
+            <tr><td>40%</td><td>1.5:1</td><td>2:1 or higher</td></tr>
+            <tr><td>50%</td><td>1:1</td><td>1.5:1 or higher</td></tr>
+            <tr><td>60%</td><td>0.67:1</td><td>1:1 minimum</td></tr>
+        </tbody>
+    </table>
 
-    <h2>Common Risk Management Mistakes</h2>
-    <div class="callout"><p>
-        <strong>❌ Adding to losing positions</strong> — Violates the 2% rule and increases risk<br><br>
-        <strong>❌ Moving stops arbitrarily</strong> — Reduces discipline and inflates losses<br><br>
-        <strong>❌ Ignoring drawdown limits</strong> — The most common way traders blow funded accounts<br><br>
-        <strong>❌ Over-leveraging</strong> — Using too many contracts magnifies losses dangerously
-    </p></div>
+    <h2>Stop Loss Placement: Science, Not Guesswork</h2>
+    <p>A stop loss must be placed at a location where the market structure would be invalidated — not at a fixed number of ticks chosen for convenience. Common structural stop placements include:</p>
+    <ul>
+        <li><strong>Below the most recent swing low</strong> (for long trades) — if price breaks that low, your thesis is wrong</li>
+        <li><strong>Above the most recent swing high</strong> (for short trades)</li>
+        <li><strong>Below/above a key support or resistance zone</strong> the market has respected multiple times</li>
+        <li><strong>Beyond the ATR (Average True Range):</strong> Placing your stop within 1× the daily ATR typically gets stopped out by normal volatility. Stops outside 1× ATR have a better chance of surviving noise.</li>
+    </ul>
+    <p>The ATR of the ES futures is typically 30–50 points on a daily basis. Placing a 5-point stop on a day trade is not structural — it is noise. Size your position to accommodate a proper structural stop rather than placing a tight stop to trade more contracts.</p>
 
-    <h2>Bottom Line</h2>
-    <p>Risk management isn't flashy, but it's what separates professional traders from gamblers. Master the 2% rule, respect drawdown limits, and use hard stops on every trade — and profitable trading will follow.</p>
+    <h2>Managing Risk Across Multiple Positions</h2>
+    <p>If you trade more than one instrument or hold multiple positions at once, total portfolio risk must be monitored — not just per-trade risk. Two correlated positions (e.g., NQ and ES) can combine to create 2R of exposure even though each individually represents 1R.</p>
+    <p>Guidelines for multi-position risk:</p>
+    <ul>
+        <li>Never exceed 3R total open risk at any one time during evaluations</li>
+        <li>Avoid holding correlated instruments (NQ + ES, EUR/USD + GBP/USD) simultaneously without accounting for correlation</li>
+        <li>As daily PnL approaches your internal daily stop, reduce position sizes or stop trading entirely</li>
+    </ul>
 
     <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
 </article>
+
 <footer>
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-brand-name">🏆 PropRanked</div>
-            <p>Independent rankings of the world's top prop trading firms.</p>
+            <p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p>
         </div>
         <div class="footer-grid">
             <div class="footer-col">
@@ -158,7 +201,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 PropRanked. Not financial advice.</span>
+            <span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span>
             <span>Independent prop firm reviews.</span>
         </div>
     </div>

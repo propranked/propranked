@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Your Funded Prop Account — PropRanked</title>
+    <meta name="description" content="How to manage a funded prop trading account. Payout rules, scaling plans, consistency requirements, protecting your account, and how to build towards full-time income.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
+    <style>
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        h3{font-size:17px;font-weight:700;color:var(--white);margin:28px 0 10px;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;}
+        table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
+        th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
+        td{color:var(--grey);font-size:14px;}
+        ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        .back-link:hover{text-decoration:underline;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Funded Account Management</div>
+        <div class="guide-icon-big">💰</div>
+        <h1>Managing Your Funded Account</h1>
+        <p>Payout rules, consistency requirements, scaling strategies, and how to build sustainable income from funded prop accounts.</p>
+    </div>
+</section>
+<article class="article">
+
+    <p>Passing the evaluation is a significant milestone — but the funded account is where many traders discover a new set of challenges they did not anticipate. Payout rules, consistency requirements, position size restrictions, and the psychological shift of trading "real" capital (even if it technically belongs to the firm) all require adjustments. This guide covers everything you need to know to sustain and grow a funded account over time.</p>
+
+    <h2>Reading Your Funded Account Agreement Carefully</h2>
+    <p>Every funded account operates under specific terms that often differ from the evaluation rules. Before trading a single day in your funded account, read the agreement in full. Common differences to look for:</p>
+    <ul>
+        <li><strong>Minimum trading days before first withdrawal:</strong> Many firms require 5–10 trading days before your first payout request, regardless of how quickly you reach the minimum withdrawal amount.</li>
+        <li><strong>Consistency rules:</strong> FTMO and several other forex firms cap how much any single day can contribute to a payout. The most common rule: no single day can account for more than 30–50% of the total profit in your payout period. This prevents a single lucky day from qualifying for a large payout.</li>
+        <li><strong>Position size limits during the initial period:</strong> Some firms restrict your maximum position size during the first payout cycle or first 30 days to assess your trading before granting full scale access.</li>
+        <li><strong>Profit split:</strong> What percentage do you keep? The industry standard is 80%, but many firms now offer 90% after initial payouts, and some advertise up to 100% for the first payout. Understand exactly how the split is applied.</li>
+    </ul>
+
+    <h2>Understanding Payout Structures</h2>
+    <p>Different firms pay differently. Understanding the mechanics prevents surprises at withdrawal time.</p>
+    <table>
+        <thead><tr><th>Payout Type</th><th>Examples</th><th>How It Works</th></tr></thead>
+        <tbody>
+            <tr><td>On-demand payout</td><td>Tradeify, MyFundedFutures</td><td>Request payout any time you meet minimum balance and trading day requirements</td></tr>
+            <tr><td>Bi-weekly payout</td><td>FTMO, FundedNext</td><td>Payouts available on the 1st and 15th of each month (or similar fixed schedule)</td></tr>
+            <tr><td>Weekly payout</td><td>Earn2Trade, some futures firms</td><td>Payouts processed weekly, typically Wednesdays</td></tr>
+            <tr><td>Monthly payout</td><td>Older model, less common now</td><td>Single payout cycle per month; less flexible</td></tr>
+        </tbody>
+    </table>
+
+    <h3>What Counts Toward a Payout Request?</h3>
+    <p>Typically, only closed trade profits above a minimum threshold count toward a payout. Open positions and unrealised PnL usually do not count — you must close the trades first. If you have a consistency rule (e.g., no single day above 30% of total), you need to close the month's trades in a distributed way — not have one outlier day followed by many flat days.</p>
+
+    <div class="callout"><p><strong>The $10,000 Minimum Example (FTMO-style):</strong> You have a $100,000 funded account with 80% profit split. Over 15 trading days you accumulate $12,000 in closed profits. No single day exceeded $3,600 (30% of $12,000). You request a payout. FTMO takes 20% ($2,400); you receive $9,600. The account resets to the starting balance for the next cycle. Each subsequent cycle builds your track record toward the Premium programme which reduces the profit split cost.</p></div>
+
+    <h2>The Conservative Start: Protecting Your Funded Status</h2>
+    <p>The most common mistake with a new funded account is trading it identically to the final phase of the evaluation. The evaluation was passed on a performance peak; the funded account needs to be sustained over months and years. Starting conservatively is the professional approach.</p>
+    <p>Recommended approach for the first 30 days of a funded account:</p>
+    <ul>
+        <li><strong>Reduce position size by 20–30%</strong> compared to your evaluation size. This cushion absorbs the natural variance of a new environment and reduces the psychological pressure.</li>
+        <li><strong>Aim for a smaller, consistent daily target</strong> (half your evaluation pace is fine — you are building a track record, not sprinting).</li>
+        <li><strong>Do not request a payout in the first 15–20 days.</strong> Let the account breathe and demonstrate consistency before extracting capital.</li>
+        <li><strong>Keep your drawdown usage below 50% of your maximum limit.</strong> If your firm allows a $5,000 maximum drawdown, never let your current open drawdown exceed $2,500 in the first month.</li>
+    </ul>
+
+    <h2>Scaling: Growing Multiple Funded Accounts</h2>
+    <p>The economics of prop trading at scale work through accumulating multiple funded accounts rather than trying to trade one account with excessive size. If you can consistently generate 5% monthly returns on a $100,000 FTMO account (earning $4,000 after split), you can replicate that by holding 3–5 funded accounts simultaneously across one or multiple firms.</p>
+
+    <h3>Multi-Account Management Rules</h3>
+    <ul>
+        <li><strong>Keep accounts at different firms or with different strategies</strong> to reduce correlated risk — if all accounts fail simultaneously, your income drops to zero.</li>
+        <li><strong>Do not run the same exact strategy across all accounts simultaneously.</strong> If your strategy enters NQ long at the same time across 5 accounts and NQ crashes, all 5 accounts hit their daily limit together.</li>
+        <li><strong>Treat the combined daily drawdown across all accounts as a single portfolio limit.</strong> If you manage 5 × $100K accounts with $1,000 daily stop each, your portfolio daily limit is $5,000 — and you should set your own internal portfolio stop at $3,000–$3,500.</li>
+    </ul>
+
+    <h2>Firm-Specific Scaling Plans</h2>
+    <p>Several prop firms have built-in scaling plans that increase your account size as you demonstrate consistent profitability:</p>
+    <ul>
+        <li><strong>FTMO Scaling Plan:</strong> After trading for 4 months with consistent profitability (no consecutive loss months, average monthly profit ≥ 10%), FTMO increases your account by 25%. A $100K account grows to $125K, then $156K, etc.</li>
+        <li><strong>The5ers Growth Programme:</strong> The5ers operates on a unique model where successful traders advance through account tiers automatically based on performance milestones, eventually accessing $4M in capital through their fund.</li>
+        <li><strong>FundedNext Scaling:</strong> FundedNext adds a portion of evaluation fees back to funded accounts as balance credits over time — effectively rewarding consistency with additional capital.</li>
+    </ul>
+
+    <h2>Tax Considerations for Funded Traders</h2>
+    <p>Tax treatment of prop trading income varies significantly by country. In the United States, prop trading payouts are typically treated as self-employment income (Schedule C) or ordinary income. Futures contracts traded on US exchanges (ES, NQ) receive 60/40 tax treatment under Section 1256 — 60% of gains taxed at long-term capital gains rates regardless of holding period, 40% at short-term rates — which is favourable compared to ordinary income rates.</p>
+    <p>In the UK, profits from prop trading may be treated as income or capital gains depending on the frequency and nature of trading. In most of Europe, forex and CFD gains are taxed as capital gains or ordinary income depending on jurisdiction. Always consult a tax professional who understands trading income — the rules are complex and vary by country, and the cost of professional advice is recoverable against your trading income in most jurisdictions.</p>
+
+    <div class="callout"><p><strong>Keep Records:</strong> Maintain complete records of all trades, payout receipts, platform fees, evaluation costs, and trading-related expenses. These records are essential for accurate tax filing and may allow you to deduct evaluation fees and platform costs as business expenses — but only with proper documentation. Many funded traders run their trading as a sole trader or limited company for tax efficiency.</p></div>
+
+    <h2>When to Walk Away vs When to Push Through</h2>
+    <p>Not every drawdown period requires a strategic change. But sustained underperformance in a funded account that risks the account's viability requires honest assessment. Signs that a strategic review is needed:</p>
+    <ul>
+        <li>Three or more consecutive losing months with no improvement in process metrics</li>
+        <li>Consistent violation of your own entry criteria (tracked in your journal)</li>
+        <li>Account drawdown exceeding 60% of the maximum allowed drawdown</li>
+        <li>A significant change in market conditions (e.g., a regime change from trending to choppy) that your strategy has not adapted to</li>
+    </ul>
+    <p>In these situations, the professional response is to reduce size significantly (not quit) and focus on process correction. Trade smaller, trade less, and address the root cause identified through your journal review. A funded account that is trading at 30% of normal size and breaking even is far better than one trading at full size and approaching its maximum drawdown limit.</p>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms.</p></div>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
+            <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span><span>Independent prop firm reviews.</span></div>
+    </div>
+</footer>
+</body>
+</html>

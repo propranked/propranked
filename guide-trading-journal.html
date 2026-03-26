@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trading Journal: Your Secret Weapon — PropRanked</title>
-    <meta name="description" content="Why every professional trader keeps a journal. Track trades, identify patterns, and measure your improvement to pass prop firm evaluations.">
+    <meta name="description" content="How to build a trading journal that actually improves your performance. What to track, how to analyse your data, and the journaling habits of consistently funded traders.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        :root{--bg:#080b14;--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
         header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
@@ -30,9 +30,11 @@
         .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
         h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
         h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        h3{font-size:17px;font-weight:700;color:var(--white);margin:28px 0 10px;}
         p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
         .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
-        .callout p{color:var(--white);margin:0;line-height:1.8;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;}
         table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
         th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
         th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
@@ -41,6 +43,7 @@
         li{margin-bottom:8px;line-height:1.7;}
         li strong{color:var(--white);}
         .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        .back-link:hover{text-decoration:underline;}
         footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
         .footer-inner{max-width:1280px;margin:0 auto;}
         .footer-brand{margin-bottom:48px;}
@@ -73,59 +76,78 @@
         <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Trading Journal</div>
         <div class="guide-icon-big">📝</div>
         <h1>Trading Journal: Your Secret Weapon</h1>
-        <p>Track every trade, identify your patterns, and accelerate your improvement as a prop trader.</p>
+        <p>What to record, how to analyse it, and the journaling habits that separate improving traders from those who repeat the same mistakes.</p>
     </div>
 </section>
 <article class="article">
-    <p>The single most common trait among consistently profitable traders is that they keep a trading journal. Not occasionally — every single day, every single trade. Here's why it matters and how to do it right.</p>
 
-    <h2>Why a Trading Journal is Non-Negotiable</h2>
-    <p>Without a journal, you're flying blind. You might feel like you're improving, but feelings aren't data. A journal gives you objective feedback on what's actually working and what's costing you money.</p>
-    <div class="callout"><p>Traders who journal consistently report identifying losing patterns within 30 days that they had been repeating for months. The journal doesn't change your behavior — it makes the truth undeniable.</p></div>
+    <p>Every consistently profitable funded trader keeps a journal — not because they enjoy paperwork, but because objective data is the only reliable way to identify what is working and what is not. Memory is unreliable and self-serving: traders remember winning trades vividly and subtly adjust their mental narrative around losing trades. A journal forces honesty and turns your trading history into a data set you can actually learn from.</p>
 
-    <h2>What to Record in Every Entry</h2>
+    <h2>Why Most Trading Journals Fail</h2>
+    <p>Most traders who start a journal stop within two weeks. The common failure modes are:</p>
+    <ul>
+        <li><strong>Recording too much too early.</strong> A 10-field journal for every trade creates friction. Start with 5–6 core fields and expand only when the habit is established.</li>
+        <li><strong>Only logging data, never reviewing it.</strong> Logging trades is step one. The actual benefit comes from weekly and monthly reviews where patterns emerge.</li>
+        <li><strong>Emotional avoidance.</strong> Bad weeks breed inconsistent journaling. The sessions most worth reviewing are the worst ones — the ones traders are most tempted to skip recording.</li>
+        <li><strong>No screenshot habit.</strong> Numbers in a spreadsheet are useful; a screenshot of the actual chart at entry and exit is far more revealing. You will see patterns in your entries that numbers alone cannot capture.</li>
+    </ul>
+
+    <h2>The Core Data Fields to Track</h2>
+    <p>Start with these minimum fields for every trade. This can be done in a simple spreadsheet (Google Sheets, Excel) or a dedicated tool like TradesViz, Edgewonk, or Tradezella.</p>
+
     <table>
-        <thead><tr><th>Field</th><th>What to Record</th></tr></thead>
+        <thead><tr><th>Field</th><th>What to Record</th><th>Why It Matters</th></tr></thead>
         <tbody>
-            <tr><td>Date & Time</td><td>When the trade was entered and exited</td></tr>
-            <tr><td>Instrument</td><td>ES, NQ, EUR/USD, etc.</td></tr>
-            <tr><td>Direction</td><td>Long or Short</td></tr>
-            <tr><td>Entry Price</td><td>Exact entry level</td></tr>
-            <tr><td>Stop Loss</td><td>Where your stop was placed</td></tr>
-            <tr><td>Target</td><td>Your planned profit target</td></tr>
-            <tr><td>Exit Price</td><td>Where you actually exited</td></tr>
-            <tr><td>P&L</td><td>Profit or loss in dollars/points</td></tr>
-            <tr><td>Setup Type</td><td>Breakout, pullback, reversal, etc.</td></tr>
-            <tr><td>Notes</td><td>Why you took the trade, what happened</td></tr>
-            <tr><td>Emotion Score</td><td>1–10 rating of how disciplined you were</td></tr>
+            <tr><td>Date & Time</td><td>Entry and exit timestamps</td><td>Identify best/worst trading hours; session analysis</td></tr>
+            <tr><td>Instrument</td><td>ES, NQ, EUR/USD, etc.</td><td>Know which markets you perform best in</td></tr>
+            <tr><td>Direction</td><td>Long or Short</td><td>Detect long/short bias or imbalance</td></tr>
+            <tr><td>Entry Price</td><td>Exact entry price</td><td>Compare planned vs actual entry</td></tr>
+            <tr><td>Stop Price</td><td>Stop loss level</td><td>Calculate actual risk per trade</td></tr>
+            <tr><td>Target Price</td><td>Initial profit target</td><td>Track whether you hit targets or exit early</td></tr>
+            <tr><td>Exit Price</td><td>Actual exit price</td><td>Compare to target; identify early exit pattern</td></tr>
+            <tr><td>PnL (R-multiple)</td><td>Result in R-multiples</td><td>Normalise results regardless of position size changes</td></tr>
+            <tr><td>Setup Type</td><td>e.g., "VWAP pullback", "FVG fill", "S/R breakout"</td><td>Identify which setups have edge and which do not</td></tr>
+            <tr><td>Trade Quality (1–5)</td><td>Your honest assessment of setup quality</td><td>Compare subjective quality to objective outcome</td></tr>
+            <tr><td>Rule Compliance</td><td>Did this trade meet your entry criteria? Yes/No</td><td>Catch trades taken outside your rules</td></tr>
+            <tr><td>Notes</td><td>What you were thinking; what you noticed</td><td>Psychological patterns, contextual information</td></tr>
         </tbody>
     </table>
 
-    <h2>Weekly Review Process</h2>
-    <p>Daily entries are only half the work. The real value comes from your weekly review:</p>
-    <ol>
-        <li>Calculate your win rate, average win, and average loss for the week</li>
-        <li>Identify which setup types performed best and worst</li>
-        <li>Review any trades where you deviated from your plan</li>
-        <li>Note any emotional patterns — did you trade better in the morning or afternoon?</li>
-        <li>Set one specific goal for the following week based on your findings</li>
-    </ol>
+    <div class="callout"><p><strong>Screenshot Everything.</strong> Before you close a trade, take a screenshot of the chart with your entry, stop, and exit marked. Store these in folders by month. During weekly reviews, reviewing 10–15 screenshots in sequence reveals patterns invisible in raw data — like consistently entering too early before confirmation, or consistently exiting at the first sign of profit rather than at the target.</p></div>
 
-    <h2>Metrics to Track Over Time</h2>
+    <h2>The Weekly Review Process</h2>
+    <p>Set aside 30–45 minutes every weekend for a structured review. This is not about self-criticism — it is about data-driven adjustment. A productive weekly review has three components:</p>
+
+    <h3>1. Statistical Summary</h3>
+    <p>Calculate for the week: total trades, win rate, average win in R, average loss in R, total PnL in R, largest winner, largest loser. Compare to your rolling 30-day and 90-day averages. Are any statistics moving in concerning directions?</p>
+
+    <h3>2. Trade-by-Trade Chart Review</h3>
+    <p>Open every screenshot. For each trade, ask: Did this entry meet my setup criteria? Was the stop logical? Did I hit my target or exit early — and if early, why? Did I follow my rules? You are looking for patterns, not judging individual trades.</p>
+
+    <h3>3. Pattern Identification</h3>
+    <p>After reviewing all trades, answer: What are my 2–3 best-performing setups? Which setups consistently underperform? Which times of day produce my best results? Which produce my worst? Did I take any trades outside my rules — and how did they perform? These patterns drive adjustments the following week.</p>
+
+    <h2>Key Metrics Every Trader Should Calculate</h2>
+
+    <h3>Expectancy</h3>
+    <p>Expectancy = (Win Rate × Average Win) – (Loss Rate × Average Loss), expressed in R. A positive expectancy means your system makes money over a large sample. A negative expectancy means you are losing even if you have more wins than losses (because your losses are larger).</p>
+    <p>Example: 45% win rate, average winner +2R, average loser −1R: (0.45 × 2) – (0.55 × 1) = 0.90 – 0.55 = +0.35R per trade.</p>
+
+    <h3>Profit Factor</h3>
+    <p>Profit Factor = Total Gross Profits ÷ Total Gross Losses. A profit factor above 1.5 is considered respectable; above 2.0 is excellent. Below 1.0 means you are losing money. This metric is particularly useful for identifying whether a system breakdown is happening — a sudden drop in profit factor over a 30-trade window is an early warning signal.</p>
+
+    <h3>Maximum Consecutive Losses (Max Drawdown String)</h3>
+    <p>How many losses in a row does your system typically produce? Understanding your historical maximum losing streak helps you psychologically — you know whether 5 consecutive losses is within normal parameters or genuinely concerning. Most consistently profitable systems have maximum losing streaks of 5–8 trades.</p>
+
+    <h2>Journaling Tools Used by Prop Traders</h2>
     <ul>
-        <li><strong>Win Rate:</strong> Percentage of winning trades (aim for 40–60%)</li>
-        <li><strong>Profit Factor:</strong> Total wins ÷ Total losses (anything above 1.5 is strong)</li>
-        <li><strong>Average R-Multiple:</strong> Average profit in terms of risk units</li>
-        <li><strong>Best Setup:</strong> Which trade type generates the most consistent profit</li>
-        <li><strong>Worst Time of Day:</strong> When do most of your losses occur?</li>
+        <li><strong>TradesViz:</strong> Web-based journal with automatic import from Tradovate, NinjaTrader, Rithmic, and more. Excellent statistical dashboards. Free tier available.</li>
+        <li><strong>Edgewonk:</strong> Paid desktop/web journal with deep psychological tracking features. Popular among FTMO traders.</li>
+        <li><strong>Tradezella:</strong> Clean, modern interface with automatic broker import. Good for beginners who want useful charts without complexity.</li>
+        <li><strong>Google Sheets / Excel:</strong> Manual but fully customisable. Best for traders who want complete control over their tracking. Start here before committing to a paid tool.</li>
     </ul>
 
-    <h2>Journaling for Prop Firm Evaluations</h2>
-    <p>During an evaluation, your journal becomes even more important. It helps you stay accountable to your rules, identify if you're creeping toward the daily loss limit, and review whether your position sizing is consistent.</p>
-    <div class="callout"><p><strong>Pro tip:</strong> Screenshot your chart at entry and exit for every trade during your evaluation. Reviewing these screenshots during your weekly review will reveal more than any written notes alone.</p></div>
-
-    <h2>Bottom Line</h2>
-    <p>The trading journal is the highest-ROI habit you can build as a prop trader. It costs you 5 minutes per trade and can save you months of repeated mistakes. Start today — your future funded account depends on it.</p>
+    <div class="callout"><p><strong>The 30-Trade Rule:</strong> A strategy has no statistically meaningful edge measurement until you have at least 30–50 trades in similar conditions. Do not draw major conclusions from a 5-trade sample. Journal consistently for 30+ trades before evaluating whether a setup or approach has genuine edge — patience in data collection is itself a professional habit.</p></div>
 
     <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
 </article>
@@ -137,7 +159,7 @@
             <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
             <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
         </div>
-        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice.</span><span>Independent prop firm reviews.</span></div>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span><span>Independent prop firm reviews.</span></div>
     </div>
 </footer>
 </body>

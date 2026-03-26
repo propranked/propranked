@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Flow Trading for Prop Traders — PropRanked</title>
+    <meta name="description" content="Learn order flow trading fundamentals. DOM, footprint charts, delta, volume at price, and how to read the tape to time entries and exits in futures markets.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
+    <style>
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        h3{font-size:17px;font-weight:700;color:var(--white);margin:28px 0 10px;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;}
+        table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
+        th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
+        td{color:var(--grey);font-size:14px;}
+        ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        .back-link:hover{text-decoration:underline;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Order Flow</div>
+        <div class="guide-icon-big">🌊</div>
+        <h1>Order Flow Trading Fundamentals</h1>
+        <p>DOM, footprint charts, delta, and volume-at-price — understand who is buying and selling to time entries and exits with precision.</p>
+    </div>
+</section>
+<article class="article">
+
+    <p>Order flow analysis is the study of the actual buy and sell orders flowing through the market — not just the price result of those orders, but the structure, size, and location of the transactions themselves. While candlestick charts show you what price did, order flow shows you how it happened and who was responsible. For prop traders in futures markets, order flow provides context that price charts alone cannot supply, particularly for trade timing and identifying when a key level is genuinely being defended versus simply tested.</p>
+    <p>This guide is written for traders at all levels — beginning with concepts accessible to a new trader and progressing to advanced applications.</p>
+
+    <h2>The Building Blocks: Bids, Asks, and Market Orders</h2>
+    <p>Every transaction in a futures market involves a buyer and a seller. Understanding the mechanics of how orders are matched is the foundation of order flow analysis.</p>
+    <ul>
+        <li><strong>Bid:</strong> The highest price a buyer is willing to pay right now. Passive order — it sits in the order book waiting to be filled.</li>
+        <li><strong>Ask (Offer):</strong> The lowest price a seller is willing to accept right now. Also passive — sitting in the order book.</li>
+        <li><strong>Market Order:</strong> An aggressive order that executes immediately at the best available price. A buy market order lifts the ask; a sell market order hits the bid.</li>
+    </ul>
+    <p>The spread — the difference between the bid and ask — is the immediate cost of entering a position with a market order. In the ES futures, the spread is typically one tick (0.25 points = $12.50 per contract). In NQ, also one tick (0.25 points = $5.00 per contract).</p>
+
+    <h2>The DOM (Depth of Market)</h2>
+    <p>The Depth of Market, also called the Order Book or Level 2, shows the pending limit orders stacked above and below the current price. The DOM displays:</p>
+    <ul>
+        <li>The price levels currently available</li>
+        <li>The number of contracts waiting to buy at each bid level (buy orders)</li>
+        <li>The number of contracts waiting to sell at each ask level (sell orders)</li>
+    </ul>
+    <p>The DOM is dynamic — it changes every millisecond as orders are placed, cancelled, and filled. Reading the DOM in real time requires practice, but the basic signals are:</p>
+    <ul>
+        <li><strong>Large bid stacking:</strong> A large number of contracts sitting on the bid at a key level suggests buyers are defending that price. If the market tests this level and the bids hold, a bounce is likely.</li>
+        <li><strong>Bid pulling:</strong> Large bids that disappear as price approaches them (a practice called "spoofing" or "layering" in its most extreme form, though some is simply legitimate order management) — this signals that the apparent support is weak.</li>
+        <li><strong>Absorption:</strong> Price reaches a large sell level, buyers absorb the offer (consume the contracts), and price fails to drop. The sellers ran out of inventory — a bullish signal.</li>
+    </ul>
+
+    <div class="callout"><p><strong>Note for Forex Traders:</strong> The DOM concept applies primarily to exchange-traded futures (ES, NQ, etc.) where the order book is centralised and transparent. Forex is OTC and decentralised — individual brokers show their own "level 2" but it represents their internal book, not the full market. Order flow analysis is most powerful and reliable in CME futures markets.</p></div>
+
+    <h2>Footprint Charts: Seeing Volume Inside Candles</h2>
+    <p>A footprint chart (also called a Volume Profile Candle or Cluster Chart) breaks each candlestick open to show the volume traded at each price level within that candle, split between buys and sells. Each cell in the footprint shows: (bid trades × ask trades) — the number of contracts that traded at the bid (sell-side aggression) vs at the ask (buy-side aggression) at that specific price.</p>
+
+    <h3>Delta: The Core Footprint Metric</h3>
+    <p>Delta is the difference between aggressive buy volume and aggressive sell volume for a given bar or time period: Delta = Ask Volume − Bid Volume. A positive delta means more buyers were aggressive than sellers — they were lifting offers. A negative delta means sellers were more aggressive — they were hitting bids.</p>
+    <p>Delta divergence is one of the most powerful order flow signals: when price makes a new high but delta is declining (fewer buyers lifting the ask on each subsequent high), it suggests buying pressure is weakening and the move may be running out of fuel. Similarly, when price makes a new low but delta turns positive (buyers absorbing sell pressure at the bottom), it is a potential exhaustion signal.</p>
+
+    <h3>Key Footprint Patterns</h3>
+    <table>
+        <thead><tr><th>Pattern</th><th>What It Looks Like</th><th>Interpretation</th></tr></thead>
+        <tbody>
+            <tr><td>Absorption</td><td>Price reaches a level with heavy selling; delta stays positive or neutral; price fails to fall further</td><td>Buyers absorbed the selling — potential reversal or continuation higher</td></tr>
+            <tr><td>Unfinished Auction</td><td>A candle closes with single prints at the extreme (only one trade at the high/low)</td><td>Price moved too fast; market will likely return to "finish" the auction</td></tr>
+            <tr><td>Stacked Imbalances</td><td>Multiple consecutive price levels with heavy buying on the ask side with minimal bid-side volume</td><td>Strong directional intent — momentum likely continues in the direction of the imbalance</td></tr>
+            <tr><td>Exhaustion Bar</td><td>A high-volume candle in the direction of trend with a large negative delta (for a bullish bar) — many sellers absorbed by buyers on the way up</td><td>Potential climax — trend may pause or reverse</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Volume Profile: Where the Market Spends Its Time</h2>
+    <p>Volume Profile plots the total volume traded at each price level over a defined period (session, week, month). Unlike time-based charts, Volume Profile answers: "Where did the market do the most business?" Key components are:</p>
+    <ul>
+        <li><strong>Point of Control (POC):</strong> The price level with the highest traded volume. Price gravitates toward the POC — it acts as a magnetic level. Expect to test the POC in trending sessions.</li>
+        <li><strong>Value Area (VA):</strong> The price range containing 70% of all volume traded. The Value Area High (VAH) and Value Area Low (VAL) are critical reference levels. Opening inside the value area suggests balance; opening outside and failing to re-enter is a strong directional signal.</li>
+        <li><strong>Low Volume Node (LVN):</strong> Price zones with thin volume — the market moved quickly through these areas. Price tends to accelerate through LVNs in the direction of the move.</li>
+        <li><strong>High Volume Node (HVN):</strong> Price zones with heavy volume — the market spent significant time here. HVNs act as support and resistance zones; they slow or stop trending moves.</li>
+    </ul>
+
+    <div class="callout"><p><strong>Opening Price Strategy:</strong> In the ES futures, if the opening price is above the previous day's Value Area High and holds above it in the first 30 minutes, the session bias is bullish — institutions are accepting prices at elevated levels. Conversely, if price opens above the VAH and immediately falls back inside the value area, there was no follow-through buying and a move toward the POC or VAL is probable.</p></div>
+
+    <h2>Platforms for Order Flow Analysis</h2>
+    <p>True footprint and DOM analysis requires a platform with real-time tick data and footprint chart capability. The main options for prop traders are:</p>
+    <ul>
+        <li><strong>NinjaTrader:</strong> With add-on tools like Jigsaw Daytradr or the built-in Market Analyzer, NinjaTrader provides DOM and basic order flow tools. The footprint plugin by Orderflowtrading.io is popular.</li>
+        <li><strong>Quantower:</strong> Built-in footprint charts and cluster analysis without additional plugins. Clean interface and modern design.</li>
+        <li><strong>ATAS (formerly Order Flow +):</strong> Dedicated order flow platform with the most advanced footprint capabilities. Supported by MyFundedFutures, TopStep, Bulenox, and other futures prop firms. Has a free trial period.</li>
+        <li><strong>Bookmap:</strong> Specialises in DOM visualisation with a liquidity heatmap — shows historical bid/ask order placement as a heatmap overlay. Excellent for identifying where large orders have been placed and defended.</li>
+        <li><strong>Sierra Chart:</strong> Professional-grade platform widely used by institutional traders. Has advanced order flow tools and is customisable, but has a steeper learning curve.</li>
+    </ul>
+    <p>For beginners, Quantower or ATAS provide the best balance between power and usability. For advanced traders who want the deepest DOM analysis, Bookmap or Sierra Chart are the professional choices.</p>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms.</p></div>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
+            <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span><span>Independent prop firm reviews.</span></div>
+    </div>
+</footer>
+</body>
+</html>

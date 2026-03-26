@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Pass Prop Firm Evaluations — PropRanked</title>
-    <meta name="description" content="Proven strategies to pass prop firm evaluations. Psychology, discipline and techniques from traders who passed FTMO, TopStep, Apex and more.">
+    <meta name="description" content="Proven strategies to pass FTMO, TopStep, Apex and other prop firm evaluations. Rules, mindset, daily loss management, and the habits of traders who get funded.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        :root{--bg:#080b14;--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
         header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
@@ -30,13 +30,20 @@
         .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
         h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
         h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        h3{font-size:17px;font-weight:700;color:var(--white);margin:28px 0 10px;}
         p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
         .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
-        .callout p{color:var(--white);margin:0;line-height:1.8;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;}
+        table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
+        th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
+        td{color:var(--grey);font-size:14px;}
         ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
         li{margin-bottom:8px;line-height:1.7;}
         li strong{color:var(--white);}
         .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        .back-link:hover{text-decoration:underline;}
         footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
         .footer-inner{max-width:1280px;margin:0 auto;}
         .footer-brand{margin-bottom:48px;}
@@ -69,71 +76,89 @@
         <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Evaluation Strategies</div>
         <div class="guide-icon-big">🎯</div>
         <h1>How to Pass Prop Firm Evaluations</h1>
-        <p>Proven strategies from traders who passed FTMO, TopStep, Apex, FundedNext and more.</p>
+        <p>Proven habits, rule management, and the mindset shifts that turn evaluation attempts into funded accounts.</p>
     </div>
 </section>
 <article class="article">
-    <p>Passing a prop firm evaluation is a significant accomplishment. Thousands of traders attempt evaluations every month, but only a fraction pass. This guide covers the strategies that consistently work.</p>
 
-    <h2>Understand Your Evaluation Requirements</h2>
-    <div class="callout"><p>
-        <strong>✓ Daily Loss Limit:</strong> Maximum you can lose in one day<br>
-        <strong>✓ Maximum Drawdown:</strong> Maximum cumulative loss allowed<br>
-        <strong>✓ Profit Target:</strong> How much profit you need to hit<br>
-        <strong>✓ Minimum Trading Days:</strong> How many days you must trade
-    </p></div>
-    <p>Read the rules before risking a single dollar. Most traders who fail do so because they didn't fully understand the constraints they were operating under.</p>
+    <p>Most traders fail evaluations not because they cannot trade — but because they trade differently under evaluation conditions than they do in demo. The pressure of a real target with a real time cost creates emotional and behavioural changes that cause poor decisions. This guide covers the practical frameworks and habits that consistently funded traders use to pass evaluations at FTMO, TopStep, Apex, and similar firms.</p>
 
-    <h2>Start Slow and Build Confidence</h2>
-    <ol>
-        <li>Start with small positions — 1–2 micro-contracts or minimal lots</li>
-        <li>Focus on consistency, not chasing profits</li>
-        <li>Track every trade in a journal</li>
-        <li>Increase size only after 10+ successful trades</li>
-        <li>Never increase size to "make back" losses</li>
-    </ol>
+    <h2>Understand the Rules Before You Trade a Single Contract</h2>
+    <p>Every prop firm evaluation has a unique ruleset. Before funding any evaluation, you must know — by memory, not by reference — every rule that can get you failed. The consequences of breaking a rule are usually instant and terminal: the account is closed regardless of your PnL.</p>
 
-    <h2>Write a Trading Plan Before You Start</h2>
+    <table>
+        <thead><tr><th>Rule Type</th><th>Common Limits</th><th>How It Gets Broken</th></tr></thead>
+        <tbody>
+            <tr><td>Maximum Daily Loss</td><td>3–5% of account balance</td><td>One bad session with position sizing too large</td></tr>
+            <tr><td>Maximum Total Drawdown</td><td>6–12% (static or trailing)</td><td>Sequence of losses, or one catastrophic trade</td></tr>
+            <tr><td>Profit Target</td><td>8–10% Phase 1, 5% Phase 2 (FTMO-style)</td><td>Not an issue — but chasing it causes overtrading</td></tr>
+            <tr><td>Minimum Trading Days</td><td>5–10 days (some firms)</td><td>Hitting target too fast on 3 days = still failed</td></tr>
+            <tr><td>Consistency Rules</td><td>No single day > 30–50% of total profit</td><td>One lucky big day disqualifies the whole run</td></tr>
+            <tr><td>News Trading Restrictions</td><td>Some firms ban holding through major news</td><td>Forgetting to close positions before NFP or FOMC</td></tr>
+        </tbody>
+    </table>
+
+    <div class="callout"><p><strong>Print out the rules.</strong> Keep a physical copy next to your screen during the evaluation. It sounds basic — but many accounts are lost to rules traders "thought they remembered correctly." The daily loss limit is particularly treacherous because it often includes unrealised PnL (floating losses count, not just closed trades).</p></div>
+
+    <h2>Set Your Own Internal Limits Below the Firm's Limits</h2>
+    <p>The firm's limits are the hard floor — you must never touch them. Professional funded traders create their own internal daily stop that is 40–50% below the firm's maximum. This creates a buffer for the inevitable moment when a trade moves against you sharply.</p>
+    <p>Example for an FTMO $100,000 account (5% max daily loss = $5,000):</p>
     <ul>
-        <li>What markets you'll trade (ES, NQ, YM, EUR/USD, etc.)</li>
-        <li>Your trading hours and best time windows</li>
-        <li>Entry and exit rules — written, not improvised</li>
-        <li>Position size for each scenario</li>
-        <li>Your personal daily loss limit (stop trading after X loss)</li>
+        <li><strong>Internal daily stop:</strong> $2,500–$2,800 (50–56% of the firm limit)</li>
+        <li><strong>If you hit your internal stop, close all positions and walk away</strong> for the rest of the day</li>
+        <li><strong>If you are down $1,500 and have an open losing trade, monitor closely</strong> — do not add to a loser that is approaching your daily limit</li>
     </ul>
 
-    <h2>The Psychology of Passing</h2>
-    <p>Emotions kill evaluations. When you're close to hitting your profit target, it's tempting to take excessive risk. Stick to your plan and let wins accumulate naturally.</p>
-    <div class="callout"><p>
-        <strong>❌ Over-trading to hit target faster</strong><br>
-        <strong>❌ Taking excessive risk on a single trade</strong><br>
-        <strong>❌ Revenge trading after a loss</strong><br>
-        <strong>❌ Ignoring or moving stop losses</strong>
-    </p></div>
-
-    <h2>At 50% Profit, Shift Strategy</h2>
-    <p>Once you've reached 50% of your profit target, you're in a strong position. Now the priority changes:</p>
+    <h2>Pace Yourself Toward the Profit Target</h2>
+    <p>One of the most common evaluation mistakes is treating the profit target like a sprint. Traders take too much risk early, hit a bad streak, and burn out their drawdown buffer. The correct approach is to trade at a consistent daily pace.</p>
+    <p>For a 30-day FTMO Phase 1 with a 10% ($10,000) profit target on a $100,000 account:</p>
     <ul>
-        <li>Slightly reduce position size to protect gains</li>
-        <li>Focus on consistency, not adding more profit</li>
-        <li>Avoid the temptation to over-trade</li>
-        <li>Let time work in your favor — slow and steady wins</li>
+        <li>At steady pace: $10,000 ÷ 20 trading days = $500/day target</li>
+        <li>At 1% daily risk ($1,000), that requires a 50% daily win rate — very achievable</li>
+        <li>Missing some days is fine — the evaluation period is long enough</li>
     </ul>
 
-    <h2>Bottom Line</h2>
-    <p>Passing prop firm evaluations is about discipline, not exceptional skill. Follow your plan, manage risk with precision, control emotions, and you'll significantly improve your pass rate.</p>
+    <div class="callout"><p><strong>Slow and Steady Wins Evaluations:</strong> The traders who pass most consistently are not the ones who try to hit the profit target in a week. They are the ones who show up every day, trade their plan, take 1–3 good setups, and walk away. Patience is a tradeable edge in evaluations.</p></div>
+
+    <h2>Trade Fewer, Better Setups</h2>
+    <p>Overtrading is the primary reason evaluations fail. When you have a target in front of you, every price movement looks like an opportunity. The psychology of "I need to make progress" leads to taking suboptimal setups that would normally be filtered out.</p>
+    <p>A practical solution: define in writing, before the session, exactly what setup you are looking for and what conditions must exist before you trade. This is called a trade plan. Examples:</p>
+    <ul>
+        <li>"I will only trade pullbacks to the 21 EMA in the direction of the daily trend, between 9:30–11:30 AM New York time."</li>
+        <li>"I will only trade the first test of the session VWAP after a clear break of the opening range."</li>
+        <li>"I will not trade during the first 15 minutes of the New York open or 30 minutes around any Tier 1 news event."</li>
+    </ul>
+    <p>Written criteria dramatically reduce the number of setups you take — and the ones that do meet criteria tend to be higher quality. Fewer trades, better trades.</p>
+
+    <h2>Managing the Final Days Before You Pass</h2>
+    <p>A common failure mode: a trader reaches 8% profit on a 10% target and then either (a) rushes to complete the final 2% and makes a costly mistake, or (b) over-protects the accumulated profit and freezes up mentally. Both are psychologically driven errors.</p>
+    <p>The solution is to treat the final days exactly like the first days. Same size, same criteria, same session length. The account does not "know" you are close — the market does not care. Continue executing your edge with the same disciplined approach that got you to 8% in the first place.</p>
+
+    <h2>Evaluation Type Comparison</h2>
+    <table>
+        <thead><tr><th>Evaluation Type</th><th>Examples</th><th>Key Advantage</th><th>Key Risk</th></tr></thead>
+        <tbody>
+            <tr><td>2-Phase Evaluation</td><td>FTMO, FundedNext, The5ers</td><td>Structured, clear targets, industry-standard</td><td>Two stages to pass; takes more time</td></tr>
+            <tr><td>1-Phase Evaluation</td><td>E8 Markets 1-step, FXIFY One Phase</td><td>Faster path to funded account</td><td>Typically stricter daily loss rules</td></tr>
+            <tr><td>Futures Combine</td><td>TopStep, TradeDay</td><td>Subscription model; no reset fees</td><td>Trailing drawdown can tighten as you profit</td></tr>
+            <tr><td>Instant Funding</td><td>Tradeify, Blue Guardian</td><td>Start trading funded immediately</td><td>Often lower payout split or stricter consistency rules</td></tr>
+        </tbody>
+    </table>
+
+    <h2>After You Pass: The Funded Account Rules Are Different</h2>
+    <p>Passing the evaluation is the beginning, not the end. Most funded accounts have rules that differ from the evaluation. Common differences include reduced position size limits during the first 30 days, consistency rules that cap how much any single day contributes to your payout request, and minimum trading day requirements before your first withdrawal. Read the funded account agreement carefully — traders who pass evaluations and then lose funded accounts because they did not re-read the rules for the live phase are unfortunately very common.</p>
 
     <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
 </article>
 <footer>
     <div class="footer-inner">
-        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms.</p></div>
+        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p></div>
         <div class="footer-grid">
             <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
             <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
             <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
         </div>
-        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice.</span><span>Independent prop firm reviews.</span></div>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span><span>Independent prop firm reviews.</span></div>
     </div>
 </footer>
 </body>
