@@ -3,183 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risk Management: The #1 Rule for Prop Traders | PropRanked</title>
-    <meta name="description" content="Master risk management for prop trading. Learn position sizing, stop losses, and drawdown management to pass evaluations and protect capital.">
+    <title>Risk Management: The #1 Rule for Prop Traders — PropRanked</title>
+    <meta name="description" content="Master risk management for prop trading. Position sizing, stop losses, and drawdown management to pass evaluations and protect capital.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SCH6BLQ1FN');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0f1419; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; }
-        header { background-color: #0f1419; border-bottom: 1px solid #1a1f2e; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
-        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #00d084; text-decoration: none; }
-        nav a { color: #e0e0e0; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #00d084; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .breadcrumb { padding: 20px 0; font-size: 14px; color: #888; }
-        .breadcrumb a { color: #00d084; text-decoration: none; }
-        h1 { font-size: 42px; margin: 40px 0 20px; color: #ffffff; }
-        h2 { font-size: 28px; margin: 40px 0 20px; color: #00d084; }
-        h3 { font-size: 20px; margin: 30px 0 15px; color: #ffffff; }
-        p { margin: 15px 0; font-size: 16px; color: #b0b0b0; }
-        .highlight { background-color: #1a1f2e; border-left: 4px solid #00d084; padding: 20px; margin: 20px 0; border-radius: 6px; }
-        .highlight strong { color: #00d084; }
-        table { width: 100%; margin: 20px 0; border-collapse: collapse; border: 1px solid #2a3040; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #2a3040; }
-        th { background-color: #1a1f2e; color: #00d084; font-weight: 600; }
-        footer { background-color: #1a1f2e; border-top: 1px solid #2a3040; padding: 40px 0; margin-top: 60px; }
-        .footer-bottom { text-align: center; color: #666; font-size: 14px; }
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .breadcrumb a:hover{text-decoration:underline;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        h3{font-size:17px;font-weight:700;color:var(--white);margin:28px 0 10px;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;}
+        table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
+        th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
+        td{color:var(--grey);font-size:14px;}
+        ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        .back-link:hover{text-decoration:underline;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">⚡ PropRanked</a>
-            <ul style="display: flex; list-style: none; gap: 30px;">
-                <li><a href="index.html#comparison">Compare</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="trading-guides.html">Guides</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <a href="trading-guides.html">Trading Guides</a> / Risk Management
-        </div>
-
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Risk Management</div>
+        <div class="guide-icon-big">⚠️</div>
         <h1>Risk Management: The #1 Rule for Prop Traders</h1>
-
-        <p>Risk management is the foundation of successful prop trading. While many traders focus on finding winning strategies, professional traders know that managing risk is what separates winners from those who blow accounts. This guide covers everything you need to know about risk management for prop firm evaluations and beyond.</p>
-
-        <h2>The 2% Rule: Your Most Important Tool</h2>
-
-        <p>The 2% rule is the cornerstone of professional risk management. Here's how it works:</p>
-
-        <div class="highlight">
-            <strong>Never risk more than 2% of your account on a single trade.</strong><br><br>
-            If your account is $100,000, you should risk no more than $2,000 per trade. This means if you take a loss on that trade, your maximum loss is $2,000.
-        </div>
-
-        <p>Why 2%? Because even if you have 10 consecutive losing trades, you've only lost 20% of your account. With proper risk management, you can survive multiple losing streaks and still be profitable long-term.</p>
-
-        <h2>Position Sizing Formula</h2>
-
-        <p>Here's the professional formula for calculating position size:</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Component</th>
-                    <th>Calculation</th>
-                    <th>Example</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Account Balance</td>
-                    <td>Your starting capital</td>
-                    <td>$100,000</td>
-                </tr>
-                <tr>
-                    <td>Risk Percentage</td>
-                    <td>2% of account</td>
-                    <td>$2,000</td>
-                </tr>
-                <tr>
-                    <td>Stop Loss Distance</td>
-                    <td>Distance to your stop in pips</td>
-                    <td>50 pips</td>
-                </tr>
-                <tr>
-                    <td>Position Size</td>
-                    <td>Risk ÷ Stop Distance</td>
-                    <td>40 contracts</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Understanding Drawdown</h2>
-
-        <p>Every prop firm has a drawdown limit—the maximum amount your account can lose from peak balance. Typical limits are:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li><strong style="color: #00d084;">Daily Drawdown:</strong> Loss on any single trading day (usually 5-10%)</li>
-            <li><strong style="color: #00d084;">Maximum Drawdown:</strong> Total cumulative loss from peak (usually 10-20%)</li>
-        </ul>
-
-        <p>Proper position sizing ensures you stay within drawdown limits even during losing streaks.</p>
-
-        <h2>The Risk-Reward Ratio</h2>
-
-        <p>Never take a trade unless your potential profit is at least 2x your potential loss. Example:</p>
-
-        <div class="highlight">
-            <strong>Setup:</strong> Your stop loss is 50 pips away<br>
-            <strong>Your target:</strong> Must be at least 100 pips away<br>
-            <strong>Risk-Reward Ratio:</strong> 1:2 (risking 50 to make 100)
-        </div>
-
-        <p>This ensures that even if you're right only 50% of the time, you're still profitable.</p>
-
-        <h2>Stop Loss Placement</h2>
-
-        <p><strong>Always use hard stops.</strong> Never trade without a predetermined stop loss level. Your stop should be based on:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Technical levels (support/resistance, moving averages)</li>
-            <li>Order block breakdowns</li>
-            <li>Liquidity voids (FVGs)</li>
-            <li>Fixed distance stops (for scalping)</li>
-        </ul>
-
-        <h2>Money Management Rules for Evaluations</h2>
-
-        <p>When trading evaluations at prop firms, follow these strict rules:</p>
-
-        <ol style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li><strong style="color: #00d084;">Never risk more than 2% per trade</strong> — Evaluation accounts have tight drawdown limits</li>
-            <li><strong style="color: #00d084;">Scale into winners</strong> — Once profitable, gradually increase position size</li>
-            <li><strong style="color: #00d084;">Avoid revenge trading</strong> — A single bad trade can end your evaluation</li>
-            <li><strong style="color: #00d084;">Use daily loss stops</strong> — Stop trading after losing 2-3% in a day</li>
-            <li><strong style="color: #00d084;">Keep a trading journal</strong> — Track every trade to identify patterns</li>
-        </ol>
-
-        <h2>Common Risk Management Mistakes</h2>
-
-        <div class="highlight">
-            <strong>❌ Adding to losing positions</strong> — This violates 2% rule and increases risk<br><br>
-            <strong>❌ Moving stops to break-even</strong> — Reduces risk, but also reduces profit potential<br><br>
-            <strong>❌ Ignoring drawdown limits</strong> — Many traders blow accounts because they ignored this<br><br>
-            <strong>❌ Over-leveraging</strong> — Using too many contracts magnifies losses
-        </div>
-
-        <h2>Bottom Line</h2>
-
-        <p>Risk management isn't flashy, but it's what separates professional traders from gamblers. The traders who consistently pass prop firm evaluations and maintain profitable trading careers are the ones who:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Risk only 1-2% per trade</li>
-            <li>Follow strict position sizing formulas</li>
-            <li>Respect drawdown limits at all times</li>
-            <li>Use hard stops on every trade</li>
-            <li>Track their performance religiously</li>
-        </ul>
-
-        <p>Master risk management first, and profitable trading will follow.</p>
+        <p>Master position sizing, drawdown management, and stop placement to pass evaluations and protect your capital.</p>
     </div>
+</section>
+<article class="article">
+    <p>Risk management is the foundation of successful prop trading. While many traders focus on finding winning strategies, professional traders know that managing risk is what separates winners from those who blow accounts.</p>
 
-    <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 PropRanked. All rights reserved.</p>
+    <h2>The 2% Rule: Your Most Important Tool</h2>
+    <p>The 2% rule is the cornerstone of professional risk management: never risk more than 2% of your account on a single trade.</p>
+    <div class="callout"><p><strong>Example:</strong> If your account is $100,000, risk no more than $2,000 per trade. Even with 10 consecutive losses, you've only lost 20% of your account — survivable with proper management.</p></div>
+
+    <h2>Position Sizing Formula</h2>
+    <table>
+        <thead><tr><th>Component</th><th>Calculation</th><th>Example</th></tr></thead>
+        <tbody>
+            <tr><td>Account Balance</td><td>Your starting capital</td><td>$100,000</td></tr>
+            <tr><td>Risk Percentage</td><td>2% of account</td><td>$2,000</td></tr>
+            <tr><td>Stop Loss Distance</td><td>Distance to stop in pips/ticks</td><td>50 pips</td></tr>
+            <tr><td>Position Size</td><td>Risk ÷ Stop Distance</td><td>40 units</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Understanding Drawdown</h2>
+    <p>Every prop firm has a drawdown limit — the maximum your account can lose from peak balance. Typical limits are:</p>
+    <ul>
+        <li><strong>Daily Drawdown:</strong> Loss on any single trading day (usually 5–10%)</li>
+        <li><strong>Maximum Drawdown:</strong> Total cumulative loss from peak (usually 10–20%)</li>
+    </ul>
+    <p>Proper position sizing ensures you stay within drawdown limits even during losing streaks.</p>
+
+    <h2>The Risk-Reward Ratio</h2>
+    <p>Never take a trade unless your potential profit is at least 2x your potential loss.</p>
+    <div class="callout"><p><strong>Setup:</strong> Stop loss 50 pips away → Target must be at least 100 pips away<br><strong>Result:</strong> Even a 50% win rate keeps you profitable long-term.</p></div>
+
+    <h2>Money Management Rules for Evaluations</h2>
+    <ol>
+        <li><strong>Never risk more than 2% per trade</strong> — Evaluation accounts have tight drawdown limits</li>
+        <li><strong>Scale into winners</strong> — Once profitable, gradually increase position size</li>
+        <li><strong>Avoid revenge trading</strong> — A single bad trade can end your evaluation</li>
+        <li><strong>Use daily loss stops</strong> — Stop trading after losing 2–3% in a day</li>
+        <li><strong>Keep a trading journal</strong> — Track every trade to identify patterns</li>
+    </ol>
+
+    <h2>Common Risk Management Mistakes</h2>
+    <div class="callout"><p>
+        <strong>❌ Adding to losing positions</strong> — Violates the 2% rule and increases risk<br><br>
+        <strong>❌ Moving stops arbitrarily</strong> — Reduces discipline and inflates losses<br><br>
+        <strong>❌ Ignoring drawdown limits</strong> — The most common way traders blow funded accounts<br><br>
+        <strong>❌ Over-leveraging</strong> — Using too many contracts magnifies losses dangerously
+    </p></div>
+
+    <h2>Bottom Line</h2>
+    <p>Risk management isn't flashy, but it's what separates professional traders from gamblers. Master the 2% rule, respect drawdown limits, and use hard stops on every trade — and profitable trading will follow.</p>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="/">Compare Firms</a>
+                <a href="blog.html">Blog</a>
+                <a href="trading-guides.html">Trading Guides</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <span>© 2026 PropRanked. Not financial advice.</span>
+            <span>Independent prop firm reviews.</span>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

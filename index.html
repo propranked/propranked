@@ -3,482 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropRanked - Elite Prop Trading Firms Compared</title>
-    <meta name="description" content="Discover and compare the best prop trading firms with exclusive affiliate deals and real-time data.">
+    <title>PropRanked — Elite Prop Trading Firms Ranked & Compared</title>
+    <meta name="description" content="Discover and compare the best prop trading firms with exclusive deals and real data. FTMO, Apex, TopStep, FundedNext and 18 more.">
     <meta name="google-site-verification" content="w1OBH-fNfaB4bL2Z8pKmR9vQ3xL5mN6yJ7dH8kE9sF0">
-    <meta property="og:title" content="PropRanked - Elite Prop Trading Firms">
-    <meta property="og:description" content="Compare premium prop trading firms with exclusive discounts">
+    <meta property="og:title" content="PropRanked — Elite Prop Trading Firms">
+    <meta property="og:description" content="Compare the best prop firms with real data and exclusive discounts">
     <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-SCH6BLQ1FN');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg:       #080b14;
+            --bg2:      #0d1220;
+            --bg-card:  rgba(255,255,255,0.03);
+            --border:   rgba(255,255,255,0.07);
+            --bh:       rgba(0,208,132,0.35);
+            --green:    #00d084;
+            --gdim:     rgba(0,208,132,0.1);
+            --gold:     #c9a84c;
+            --gldim:    rgba(201,168,76,0.12);
+            --white:    #f0f2f5;
+            --grey:     #7a8699;
+            --dim:      #3d4756;
         }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;}
 
-        body {
-            background-color: #0f1419;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+        /* ── NAV ── */
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:800;text-decoration:none;color:var(--green);letter-spacing:-0.3px;}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+
+        /* ── HERO ── */
+        .hero{position:relative;text-align:center;padding:110px 32px 90px;overflow:hidden;}
+        .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(0,208,132,0.11) 0%,transparent 65%),linear-gradient(180deg,#080b14 0%,#0d1220 100%);}
+        .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.045) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.045) 1px,transparent 1px);background-size:52px 52px;}
+        .hero-glow{position:absolute;width:600px;height:300px;left:50%;top:0;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(0,208,132,0.07) 0%,transparent 70%);pointer-events:none;}
+        .hero-content{position:relative;z-index:1;max-width:780px;margin:0 auto;}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gldim);border:1px solid rgba(201,168,76,0.28);border-radius:100px;padding:6px 18px;font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:30px;}
+        .hero h1{font-size:clamp(38px,6.5vw,72px);font-weight:900;line-height:1.06;letter-spacing:-2.5px;margin-bottom:22px;color:var(--white);}
+        .hero h1 .accent{background:linear-gradient(130deg,#00d084 0%,#00ffaa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .hero-sub{font-size:18px;color:var(--grey);max-width:480px;margin:0 auto 52px;line-height:1.7;}
+        .hero-stats{display:inline-flex;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+        .stat{padding:18px 36px;border-right:1px solid var(--border);}
+        .stat:last-child{border-right:none;}
+        .stat-val{display:block;font-size:26px;font-weight:800;color:var(--green);line-height:1;margin-bottom:5px;}
+        .stat-label{font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:1.2px;}
+
+        /* ── CONTROLS ── */
+        .controls-wrap{max-width:1280px;margin:0 auto;padding:52px 32px 0;}
+        .controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+        .search-wrap{position:relative;flex:1;min-width:200px;max-width:280px;}
+        .search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--grey);font-size:14px;pointer-events:none;}
+        .search-box{width:100%;background:var(--bg-card);border:1px solid var(--border);color:var(--white);padding:10px 14px 10px 38px;border-radius:8px;font-size:14px;transition:border-color 0.2s;}
+        .search-box::placeholder{color:var(--dim);}
+        .search-box:focus{outline:none;border-color:rgba(0,208,132,0.4);}
+        .sort-btns{display:flex;gap:8px;flex-wrap:wrap;}
+        .sort-btn{background:var(--bg-card);color:var(--grey);border:1px solid var(--border);padding:9px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all 0.2s;white-space:nowrap;}
+        .sort-btn:hover{border-color:rgba(0,208,132,0.3);color:var(--white);}
+        .sort-btn.active{background:var(--gdim);border-color:rgba(0,208,132,0.5);color:var(--green);}
+
+        /* ── FIRMS GRID ── */
+        .firms-wrap{max-width:1280px;margin:0 auto;padding:28px 32px 80px;}
+        .firms-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+
+        /* ── CARD ── */
+        .firm-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 30px;display:flex;flex-direction:column;gap:18px;transition:all 0.25s ease;animation:fadeUp 0.35s ease forwards;}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+        .firm-card:hover{border-color:var(--bh);transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,0.45),0 0 0 1px rgba(0,208,132,0.08);}
+        .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;}
+        .firm-identity{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
+        .firm-logo-wrap{width:54px;height:54px;border-radius:13px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;}
+        .firm-logo-wrap img{width:38px;height:38px;object-fit:contain;}
+        .firm-logo-fallback{font-size:22px;font-weight:800;color:var(--green);}
+        .firm-name-col{flex:1;min-width:0;}
+        .firm-name{font-size:17px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+        .firm-stars{color:var(--gold);font-size:14px;letter-spacing:1px;}
+        .firm-badge{background:var(--gldim);border:1px solid rgba(201,168,76,0.32);color:var(--gold);font-size:12px;font-weight:700;padding:4px 11px;border-radius:6px;white-space:nowrap;flex-shrink:0;align-self:flex-start;}
+        .firm-platforms{display:flex;flex-wrap:wrap;gap:6px;}
+        .plat-chip{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--grey);font-size:11px;font-weight:500;padding:4px 11px;border-radius:100px;}
+        .card-cta{margin-top:auto;border-top:1px solid var(--border);padding-top:20px;}
+        .visit-btn{display:block;width:100%;text-align:center;background:var(--green);color:#080b14;font-weight:700;font-size:14px;padding:12px 16px;border-radius:9px;text-decoration:none;transition:all 0.2s;letter-spacing:0.3px;}
+        .visit-btn:hover{background:#00e699;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,208,132,0.3);}
+
+        /* ── FOOTER ── */
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:52px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:52px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:900px){.firms-grid{grid-template-columns:1fr;}}
+        @media(max-width:768px){
+            .hero{padding:70px 20px 64px;}
+            .hero h1{letter-spacing:-1.5px;}
+            .hero-stats{flex-direction:column;width:100%;max-width:280px;}
+            .stat{border-right:none;border-bottom:1px solid var(--border);}
+            .stat:last-child{border-bottom:none;}
+            nav{padding:0 20px;}
+            nav ul{gap:22px;}
+            .controls-wrap,.firms-wrap{padding-left:20px;padding-right:20px;}
+            .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+            .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
         }
-
-        header {
-            background-color: #0f1419;
-            border-bottom: 1px solid #1a1f2e;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #00d084;
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #00d084;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .page-header {
-            text-align: center;
-            padding: 60px 20px 40px;
-        }
-
-        .page-header h1 {
-            font-size: 48px;
-            color: #00d084;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .page-header p {
-            font-size: 18px;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .control-btn {
-            background-color: #1a1f2e;
-            color: #00d084;
-            border: 1px solid #00d084;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .control-btn:hover,
-        .control-btn.active {
-            background-color: #00d084;
-            color: #0f1419;
-            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
-        }
-
-        .search-box {
-            background-color: #1a1f2e;
-            color: #e0e0e0;
-            border: 1px solid #2a3040;
-            padding: 10px 15px;
-            border-radius: 6px;
-            font-size: 14px;
-            width: 250px;
-            transition: all 0.3s ease;
-        }
-
-        .search-box::placeholder {
-            color: #b0b0b0;
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: #00d084;
-            background-color: #252a38;
-        }
-
-        .firms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 40px 0;
-        }
-
-        .firm-card {
-            background-color: #1a1f2e;
-            border: 1px solid #2a3040;
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .firm-card:hover {
-            border-color: #00d084;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 208, 132, 0.1);
-        }
-
-        .firm-card-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .firm-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-
-        .firm-rating {
-            color: #00d084;
-            font-size: 16px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .firm-discount {
-            background-color: #00d084;
-            color: #0f1419;
-            padding: 6px 12px;
-            border-radius: 4px;
-            display: inline-block;
-            font-weight: 700;
-            font-size: 12px;
-            margin-bottom: 16px;
-            width: fit-content;
-        }
-
-        .firm-platforms {
-            color: #b0b0b0;
-            font-size: 13px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .platform-label {
-            color: #00d084;
-            font-weight: 600;
-            font-size: 11px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-
-        .firm-cta {
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid #2a3040;
-        }
-
-        .visit-btn {
-            background-color: #00d084;
-            color: #0f1419;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 12px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-        }
-
-        .visit-btn:hover {
-            background-color: #00e699;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
-        }
-
-        footer {
-            background-color: #1a1f2e;
-            border-top: 1px solid #2a3040;
-            padding: 40px 20px;
-            text-align: center;
-            color: #b0b0b0;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h3 {
-            color: #00d084;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .footer-section a {
-            display: block;
-            color: #b0b0b0;
-            text-decoration: none;
-            font-size: 13px;
-            margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #00d084;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #2a3040;
-            padding-top: 20px;
-            font-size: 12px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 32px;
-            }
-
-            .firms-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .search-box {
-                width: 100%;
-            }
-
-            .controls {
-                flex-direction: column;
-            }
-
-            .control-btn,
-            .search-box {
-                width: 100%;
-            }
+        @media(max-width:480px){
+            .footer-grid{grid-template-columns:1fr;}
+            .card-top{flex-direction:column;}
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo"><span>🏆</span> PropRanked</a>
-            <ul>
-                <li><a href="#compare">Compare</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="trading-guides.html">Guides</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="page-header">
-            <h1>PropRanked: Elite Prop Trading Firms</h1>
-            <p>Compare the best prop trading firms with real data, exclusive discounts, and affiliate deals</p>
-        </div>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="container">
-            <div class="controls">
-                <input type="text" class="search-box" id="searchBox" placeholder="Search firms...">
-                <button class="control-btn active" data-sort="rating">Sort by Rating</button>
-                <button class="control-btn" data-sort="discount">Sort by Discount</button>
-                <button class="control-btn" data-sort="name">Sort by Name</button>
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+        <div class="hero-badge">🏆 &nbsp;2026 Rankings — Updated Weekly</div>
+        <h1>Elite Prop Firms,<br><span class="accent">Ranked & Compared</span></h1>
+        <p class="hero-sub">Independent rankings for the world's best prop trading firms. Real data, exclusive discounts, zero fluff.</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-val">22</span>
+                <span class="stat-label">Firms Ranked</span>
             </div>
-
-            <div class="firms-grid" id="firmsGrid">
-                <!-- Populated by JavaScript -->
+            <div class="stat">
+                <span class="stat-val">85%</span>
+                <span class="stat-label">Max Discount</span>
+            </div>
+            <div class="stat">
+                <span class="stat-val">Live</span>
+                <span class="stat-label">2026 Data</span>
             </div>
         </div>
+    </div>
+</section>
 
-    </main>
+<section id="compare">
+    <div class="controls-wrap">
+        <div class="controls">
+            <div class="search-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-box" id="searchBox" placeholder="Search firms…">
+            </div>
+            <div class="sort-btns">
+                <button class="sort-btn active" data-sort="rating">⭐ Top Rated</button>
+                <button class="sort-btn" data-sort="discount">💰 Best Discount</button>
+                <button class="sort-btn" data-sort="name">A–Z Name</button>
+            </div>
+        </div>
+    </div>
+    <div class="firms-wrap">
+        <div class="firms-grid" id="firmsGrid"></div>
+    </div>
+</section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Navigation</h3>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
                 <a href="/">Compare Firms</a>
                 <a href="blog.html">Blog</a>
-                <a href="trading-guides.html">Guides</a>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <a href="blog.html">Blog & Updates</a>
                 <a href="trading-guides.html">Trading Guides</a>
-                <a href="#">Affiliate Program</a>
-                <a href="#">Privacy Policy</a>
             </div>
-            <div class="footer-section">
-                <h3>About</h3>
-                <a href="#">About PropRanked</a>
-                <a href="#">Contact</a>
-                <a href="#">Disclaimer</a>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 PropRanked. Helping traders find their perfect prop firm.</p>
+            <span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span>
+            <span>Independent prop firm reviews.</span>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        const firmsData = [
-            {name: "Apex Trader Funding", rating: "⭐⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, Rhythmic", url: "https://apextraderfunding.com"},
-            {name: "TopStep Trader", rating: "⭐⭐⭐⭐⭐", discount: "30%", platforms: "Tradovate, Rhythmic", url: "https://topsteptrader.com"},
-            {name: "FTMO", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5, cTrader", url: "https://ftmo.com"},
-            {name: "FundedNext", rating: "⭐⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate, cTrader", url: "https://fundednext.com"},
-            {name: "The5ers", rating: "⭐⭐⭐⭐⭐", discount: "25%", platforms: "MT4/MT5, TradingView", url: "https://the5ers.com"},
-            {name: "E8 Funding", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "Tradovate, NinjaTrader", url: "https://e8funding.com"},
-            {name: "Earn2Trade", rating: "⭐⭐⭐⭐", discount: "45%", platforms: "Tradovate, ThinkOrSwim", url: "https://earn2trade.com"},
-            {name: "Blue Guardian", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", url: "https://blueguardian.com"},
-            {name: "FXIFY", rating: "⭐⭐⭐⭐", discount: "15%", platforms: "MT4/MT5, cTrader", url: "https://fxify.com"},
-            {name: "Lucid Trading", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", url: "https://lucidtrading.com"},
-            {name: "WarBux", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5", url: "https://warbux.com"},
-            {name: "Take Profit Trader", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "MT4/MT5", url: "https://takeprofittrader.com"},
-            {name: "Tradeify", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4/MT5", url: "https://tradeify.com"},
-            {name: "Legends Trading", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4/MT5", url: "https://legendstrading.com"},
-            {name: "MyFundedFutures", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", url: "https://myfundedfutures.com"},
-            {name: "Funded Futures Network", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate", url: "https://fundedfuturesnetwork.com"},
-            {name: "DayTraders.com", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", url: "https://daytraders.com"},
-            {name: "TheTradesMakers", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://thetradesmakers.com"},
-            {name: "BluSky Trading", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://bluskytrading.com"},
-            {name: "Bulenox", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://bulenox.com"},
-            {name: "TradeDay", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4/MT5, cTrader", url: "https://tradeday.com"},
-            {name: "UProfit", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", url: "https://uprofit.com"}
-        ];
+<script>
+const firms = [
+    {name:"Apex Trader Funding", stars:5, discount:85, platforms:["Tradovate","Rhythmic"], url:"https://apextraderfunding.com", domain:"apextraderfunding.com"},
+    {name:"TopStep", stars:5, discount:30, platforms:["Tradovate","Rhythmic"], url:"https://topstep.com", domain:"topstep.com"},
+    {name:"FTMO", stars:4, discount:20, platforms:["MT4/MT5","cTrader"], url:"https://ftmo.com", domain:"ftmo.com"},
+    {name:"FundedNext", stars:5, discount:40, platforms:["Tradovate","cTrader"], url:"https://fundednext.com", domain:"fundednext.com"},
+    {name:"The5ers", stars:5, discount:25, platforms:["MT4/MT5","TradingView"], url:"https://the5ers.com", domain:"the5ers.com"},
+    {name:"E8 Funding", stars:4, discount:35, platforms:["Tradovate","NinjaTrader"], url:"https://e8funding.com", domain:"e8funding.com"},
+    {name:"Earn2Trade", stars:4, discount:45, platforms:["Tradovate","ThinkOrSwim"], url:"https://earn2trade.com", domain:"earn2trade.com"},
+    {name:"Blue Guardian", stars:4, discount:50, platforms:["MT4/MT5"], url:"https://blueguardian.com", domain:"blueguardian.com"},
+    {name:"FXIFY", stars:4, discount:15, platforms:["MT4/MT5","cTrader"], url:"https://fxify.com", domain:"fxify.com"},
+    {name:"Lucid Trading", stars:4, discount:50, platforms:["MT4/MT5"], url:"https://lucidtrading.com", domain:"lucidtrading.com"},
+    {name:"WarBux", stars:4, discount:20, platforms:["MT4/MT5"], url:"https://warbux.com", domain:"warbux.com"},
+    {name:"Take Profit Trader", stars:4, discount:40, platforms:["MT4/MT5"], url:"https://takeprofittrader.com", domain:"takeprofittrader.com"},
+    {name:"Tradeify", stars:4, discount:30, platforms:["MT4/MT5"], url:"https://tradeify.com", domain:"tradeify.com"},
+    {name:"Legends Trading", stars:4, discount:35, platforms:["MT4/MT5"], url:"https://legendstrading.com", domain:"legendstrading.com"},
+    {name:"MyFundedFutures", stars:4, discount:0, platforms:["Tradovate"], url:"https://myfundedfutures.com", domain:"myfundedfutures.com"},
+    {name:"Funded Futures Network", stars:4, discount:40, platforms:["Tradovate"], url:"https://fundedfuturesnetwork.com", domain:"fundedfuturesnetwork.com"},
+    {name:"DayTraders.com", stars:4, discount:0, platforms:["Tradovate"], url:"https://daytraders.com", domain:"daytraders.com"},
+    {name:"TheTradesMakers", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://thetradesmakers.com", domain:"thetradesmakers.com"},
+    {name:"BluSky Trading", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://bluskytrading.com", domain:"bluskytrading.com"},
+    {name:"Bulenox", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://bulenox.com", domain:"bulenox.com"},
+    {name:"TradeDay", stars:3, discount:30, platforms:["MT4/MT5","cTrader"], url:"https://tradeday.com", domain:"tradeday.com"},
+    {name:"UProfit", stars:4, discount:0, platforms:["MT4/MT5"], url:"https://uprofit.com", domain:"uprofit.com"}
+];
 
-        let currentSort = 'rating';
-        let currentFilter = '';
+let sort='rating', filter='';
 
-        function renderFirms() {
-            const grid = document.getElementById('firmsGrid');
-            let filtered = [...firmsData];
+function starsHtml(n){return'★'.repeat(n)+'☆'.repeat(5-n);}
 
-            // Filter by search
-            if (currentFilter) {
-                filtered = filtered.filter(f =>
-                    f.name.toLowerCase().includes(currentFilter.toLowerCase())
-                );
-            }
+function logoHtml(f){
+    const l=f.name.charAt(0);
+    return `<img src="https://logo.clearbit.com/${f.domain}" alt="${f.name}" loading="lazy"
+        onload="this.style.display='block';this.nextElementSibling.style.display='none'"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        style="display:block;width:38px;height:38px;object-fit:contain;">
+    <span class="firm-logo-fallback" style="display:none">${l}</span>`;
+}
 
-            // Sort
-            if (currentSort === 'rating') {
-                filtered.sort((a, b) => b.rating.length - a.rating.length);
-            } else if (currentSort === 'discount') {
-                filtered.sort((a, b) => {
-                    const discountA = parseInt(a.discount) || 0;
-                    const discountB = parseInt(b.discount) || 0;
-                    return discountB - discountA;
-                });
-            } else if (currentSort === 'name') {
-                filtered.sort((a, b) => a.name.localeCompare(b.name));
-            }
+function render(){
+    let data=[...firms];
+    if(filter) data=data.filter(f=>f.name.toLowerCase().includes(filter.toLowerCase()));
+    if(sort==='rating') data.sort((a,b)=>b.stars-a.stars||b.discount-a.discount);
+    else if(sort==='discount') data.sort((a,b)=>b.discount-a.discount);
+    else data.sort((a,b)=>a.name.localeCompare(b.name));
 
-            grid.innerHTML = filtered.map(firm => `
-                <div class="firm-card">
-                    <div class="firm-card-content">
-                        <div class="firm-name">${firm.name}</div>
-                        <div class="firm-rating">${firm.rating}</div>
-                        <div class="firm-discount">${firm.discount} Discount</div>
-                        <div class="firm-platforms">
-                            <div class="platform-label">Trading Platforms</div>
-                            <div>${firm.platforms}</div>
-                        </div>
-                    </div>
-                    <div class="firm-cta">
-                        <a href="${firm.url}" target="_blank" class="visit-btn">Visit → ${firm.name.split(' ')[0]}</a>
+    document.getElementById('firmsGrid').innerHTML=data.map(f=>`
+        <div class="firm-card">
+            <div class="card-top">
+                <div class="firm-identity">
+                    <div class="firm-logo-wrap">${logoHtml(f)}</div>
+                    <div class="firm-name-col">
+                        <div class="firm-name">${f.name}</div>
+                        <div class="firm-stars">${starsHtml(f.stars)}</div>
                     </div>
                 </div>
-            `).join('');
-        }
+                ${f.discount>0?`<div class="firm-badge">–${f.discount}% OFF</div>`:''}
+            </div>
+            <div class="firm-platforms">
+                ${f.platforms.map(p=>`<span class="plat-chip">${p}</span>`).join('')}
+            </div>
+            <div class="card-cta">
+                <a href="${f.url}" target="_blank" rel="noopener sponsored" class="visit-btn">Visit ${f.name} →</a>
+            </div>
+        </div>
+    `).join('');
+}
 
-        // Event listeners
-        document.querySelectorAll('.control-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.control-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentSort = btn.dataset.sort;
-                renderFirms();
-            });
-        });
-
-        document.getElementById('searchBox').addEventListener('input', (e) => {
-            currentFilter = e.target.value;
-            renderFirms();
-        });
-
-        // Initial render
-        renderFirms();
-    </script>
+document.querySelectorAll('.sort-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        sort=btn.dataset.sort;
+        render();
+    });
+});
+document.getElementById('searchBox').addEventListener('input',e=>{filter=e.target.value;render();});
+render();
+</script>
 </body>
 </html>

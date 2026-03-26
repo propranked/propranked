@@ -3,162 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Platforms for Prop Traders: Setup Guide | PropRanked</title>
-    <meta name="description" content="Master the top trading platforms: Tradovate, cTrader, MetaTrader, and NinjaTrader. Learn setup, tools, and best practices for prop trading.">
+    <title>Trading Platforms Setup & Comparison — PropRanked</title>
+    <meta name="description" content="Complete guide to Tradovate, cTrader, MetaTrader, and NinjaTrader. Setup tips, tools, and how to choose the right platform for prop trading.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SCH6BLQ1FN');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0f1419; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; }
-        header { background-color: #0f1419; border-bottom: 1px solid #1a1f2e; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
-        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #00d084; text-decoration: none; }
-        nav a { color: #e0e0e0; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #00d084; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: 42px; margin: 40px 0 20px; color: #ffffff; }
-        h2 { font-size: 28px; margin: 40px 0 20px; color: #00d084; }
-        p { margin: 15px 0; font-size: 16px; color: #b0b0b0; }
-        table { width: 100%; margin: 20px 0; border-collapse: collapse; border: 1px solid #2a3040; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #2a3040; }
-        th { background-color: #1a1f2e; color: #00d084; }
-        .highlight { background-color: #1a1f2e; border-left: 4px solid #00d084; padding: 20px; margin: 20px 0; border-radius: 6px; }
-        footer { background-color: #1a1f2e; border-top: 1px solid #2a3040; padding: 40px 0; margin-top: 60px; }
+        :root{--bg:#080b14;--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout p{color:var(--white);margin:0;line-height:1.8;}
+        table{width:100%;margin:24px 0;border-collapse:collapse;border-radius:10px;overflow:hidden;}
+        th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--border);}
+        th{background:rgba(255,255,255,0.05);color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:0.8px;}
+        td{color:var(--grey);font-size:14px;}
+        ul{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">⚡ PropRanked</a>
-            <ul style="display: flex; list-style: none; gap: 30px;">
-                <li><a href="index.html#comparison">Compare</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="trading-guides.html">Guides</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <h1>Trading Platforms Setup: Choose the Right One for You</h1>
-
-        <p>Your trading platform is your workspace. Choosing the right one can significantly impact your trading performance. This guide covers the major platforms used by prop traders.</p>
-
-        <h2>Tradovate (Futures Specialist)</h2>
-
-        <p>Tradovate is the leading platform for futures traders, especially those trading ES, NQ, and YM.</p>
-
-        <div class="highlight">
-            <strong>Pros:</strong> Fast execution, minimal lag, excellent charts<br><br>
-            <strong>Cons:</strong> Limited to futures only<br><br>
-            <strong>Best For:</strong> Futures day traders
-        </div>
-
-        <p><strong>Setup Tips:</strong></p>
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Use DOM (Depth of Market) for order entry</li>
-            <li>Set up hotkeys for quick entry/exit</li>
-            <li>Use Volume Profile for support/resistance</li>
-            <li>Enable alerts for key levels</li>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
         </ul>
-
-        <h2>cTrader (Forex/CFDs)</h2>
-
-        <p>cTrader is popular among forex and CFD traders. Known for clean interface and advanced tools.</p>
-
-        <div class="highlight">
-            <strong>Pros:</strong> Excellent charting, low spreads, algorithmic trading<br><br>
-            <strong>Cons:</strong> Less popular than MT4/MT5<br><br>
-            <strong>Best For:</strong> Forex and CFD traders
-        </div>
-
-        <h2>MetaTrader 4/5 (Forex/Crypto)</h2>
-
-        <p>MetaTrader is the most used platform globally. MT4 is simpler, MT5 is more advanced.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>MT4</th>
-                    <th>MT5</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Learning Curve</td>
-                    <td>Easy</td>
-                    <td>Moderate</td>
-                </tr>
-                <tr>
-                    <td>Timeframes</td>
-                    <td>9</td>
-                    <td>21</td>
-                </tr>
-                <tr>
-                    <td>Indicators</td>
-                    <td>50+</td>
-                    <td>100+</td>
-                </tr>
-                <tr>
-                    <td>Experts/EAs</td>
-                    <td>Extensive library</td>
-                    <td>Growing library</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>NinjaTrader (Advanced Futures)</h2>
-
-        <p>NinjaTrader is for serious futures traders who want advanced automation and algorithmic tools.</p>
-
-        <div class="highlight">
-            <strong>Pros:</strong> Powerful automation, backtesting, advanced analysis<br><br>
-            <strong>Cons:</strong> Steep learning curve<br><br>
-            <strong>Best For:</strong> Advanced futures traders
-        </div>
-
-        <h2>Setting Up Your Trading Station</h2>
-
-        <p>Regardless of platform, your setup should include:</p>
-
-        <ol style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Main chart with trend analysis and support/resistance</li>
-            <li>Volume profile or DOM for entry confirmation</li>
-            <li>Economic calendar for news events</li>
-            <li>Risk calculator for position sizing</li>
-            <li>Alerts for key price levels</li>
-            <li>Order management tools for quick entry/exit</li>
-        </ol>
-
-        <h2>Internet and Hardware Considerations</h2>
-
-        <p><strong>Fast, reliable internet is critical.</strong> For prop trading evaluation:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Use wired ethernet connection (not Wi-Fi)</li>
-            <li>Have backup internet (mobile hotspot)</li>
-            <li>Use a dedicated trading computer</li>
-            <li>Avoid running other software during trading</li>
-        </ul>
-
-        <h2>Choosing Your Platform</h2>
-
-        <p>Consider what you'll trade:</p>
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Futures (ES, NQ, YM) → Tradovate</li>
-            <li>Forex/CFDs → MetaTrader 4/5 or cTrader</li>
-            <li>Advanced automation → NinjaTrader</li>
-        </ul>
-
-        <p>Most prop firms offer multiple platforms. Choose the one that best fits your trading style.</p>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Trading Platforms</div>
+        <div class="guide-icon-big">💻</div>
+        <h1>Trading Platforms Setup & Comparison</h1>
+        <p>Tradovate, cTrader, MetaTrader, and NinjaTrader — everything you need to know.</p>
     </div>
+</section>
+<article class="article">
+    <p>Choosing the right trading platform is critical for prop trading success. Each platform has different strengths, and your choice will depend on whether you're trading futures or forex, your preferred charting tools, and which prop firms support it.</p>
 
-    <footer>
-        <div class="container">
-            <div style="text-align: center; color: #666; font-size: 14px;">
-                <p>&copy; 2026 PropRanked. All rights reserved.</p>
-            </div>
+    <h2>Platform Comparison Overview</h2>
+    <table>
+        <thead><tr><th>Platform</th><th>Best For</th><th>Asset Classes</th><th>Prop Firms</th></tr></thead>
+        <tbody>
+            <tr><td>Tradovate</td><td>Futures day trading</td><td>Futures (ES, NQ, YM)</td><td>TopStep, Apex, Earn2Trade</td></tr>
+            <tr><td>MetaTrader 4/5</td><td>Forex, CFDs</td><td>Forex, indices, metals</td><td>FTMO, The5ers, FXIFY</td></tr>
+            <tr><td>cTrader</td><td>Forex, advanced order types</td><td>Forex, CFDs</td><td>FTMO, FundedNext, FXIFY</td></tr>
+            <tr><td>NinjaTrader</td><td>Futures, advanced automation</td><td>Futures, forex</td><td>E8 Funding, Earn2Trade</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Tradovate</h2>
+    <p>Tradovate is the go-to platform for futures prop trading. It's cloud-based, meaning you can trade from any browser without downloading software. It's supported by most major futures prop firms including TopStep and Apex Trader Funding.</p>
+    <ul>
+        <li><strong>Pros:</strong> Cloud-based, clean interface, low latency, mobile app available</li>
+        <li><strong>Cons:</strong> Only supports futures — no forex</li>
+        <li><strong>Best for:</strong> ES, NQ, YM, and other CME futures contracts</li>
+    </ul>
+
+    <h2>MetaTrader 4 & 5 (MT4/MT5)</h2>
+    <p>MetaTrader is the world's most popular retail trading platform. MT4 is the classic choice, while MT5 adds more asset classes and order types. Both are supported by a massive number of forex prop firms.</p>
+    <ul>
+        <li><strong>Pros:</strong> Huge community, thousands of indicators, Expert Advisors (EAs) available</li>
+        <li><strong>Cons:</strong> Dated UI (MT4), requires download, some features locked</li>
+        <li><strong>Best for:</strong> Forex pairs, gold, indices via CFD</li>
+    </ul>
+
+    <h2>cTrader</h2>
+    <p>cTrader is a modern alternative to MetaTrader, favored by institutional-style prop firms like FTMO and FundedNext. It has a cleaner interface, better charting, and Level 2 market data built in.</p>
+    <ul>
+        <li><strong>Pros:</strong> Modern UI, Level 2 data, advanced order types, fast execution</li>
+        <li><strong>Cons:</strong> Smaller community than MT4, fewer third-party indicators</li>
+        <li><strong>Best for:</strong> Forex, gold, indices — especially if you value clean execution</li>
+    </ul>
+
+    <h2>NinjaTrader</h2>
+    <p>NinjaTrader is powerful but complex. It's most popular with futures traders who want advanced automation, custom indicators, or algorithmic strategies. It supports both futures and forex.</p>
+    <div class="callout"><p><strong>Tip:</strong> NinjaTrader has a steeper learning curve. If you're new to prop trading, start with Tradovate (futures) or MT5 (forex) before moving to NinjaTrader.</p></div>
+
+    <h2>Which Platform Should You Choose?</h2>
+    <ul>
+        <li>Trading <strong>futures</strong> → Use <strong>Tradovate</strong> (most prop firms require or recommend it)</li>
+        <li>Trading <strong>forex</strong> with classic tools → Use <strong>MetaTrader 5</strong></li>
+        <li>Trading <strong>forex</strong> with modern interface → Use <strong>cTrader</strong></li>
+        <li>Need <strong>automation</strong> or advanced analytics → Use <strong>NinjaTrader</strong></li>
+    </ul>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms.</p></div>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
+            <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
         </div>
-    </footer>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice.</span><span>Independent prop firm reviews.</span></div>
+    </div>
+</footer>
 </body>
 </html>

@@ -3,389 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact PropRanked - Get in touch with our team for questions about prop trading firms and reviews.">
-    <title>Contact Us - PropRanked</title>
+    <title>Contact Us — PropRanked</title>
+    <meta name="description" content="Get in touch with the PropRanked team. Questions, partnerships, and feedback welcome.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-dark: #0f1419;
-            --secondary-dark: #1a1f2e;
-            --accent-green: #00d084;
-            --accent-green-hover: #00b86d;
-            --accent-teal: #00b4d8;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b8c1;
-            --border-color: #2d3748;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-green);
-        }
-
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-form {
-            background: var(--secondary-dark);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .form-iframe-wrapper {
-            background: var(--secondary-dark);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            padding: 0;
-            position: relative;
-        }
-
-        .form-iframe-wrapper iframe {
-            display: block;
-            border: none;
-        }
-
-        .google-form-note {
-            background: rgba(0, 208, 132, 0.1);
-            border: 1px solid var(--accent-teal);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .google-form-note strong {
-            color: var(--accent-green);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--accent-green);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.95rem;
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-green);
-            background: rgba(0, 208, 132, 0.05);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background: var(--accent-green);
-            color: var(--primary-dark);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .btn:hover {
-            background: var(--accent-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 208, 132, 0.2);
-        }
-
-        .contact-info {
-            background: rgba(0, 208, 132, 0.08);
-            border: 1px solid var(--accent-teal);
-            border-radius: 12px;
-            padding: 2rem;
-        }
-
-        .info-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .info-label {
-            color: var(--accent-green);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background: var(--secondary-dark);
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--accent-green);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding-top: 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-        }
+        :root{--bg:#080b14;--bg2:#0d1220;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--bh:rgba(0,208,132,0.35);--green:#00d084;--gdim:rgba(0,208,132,0.1);--gold:#c9a84c;--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:80px 32px 64px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .section-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gdim);border:1px solid rgba(0,208,132,0.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+        .page-hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-2px;margin-bottom:16px;}
+        .page-hero p{font-size:17px;color:var(--grey);max-width:480px;margin:0 auto;}
+        .container{max-width:760px;margin:0 auto;padding:0 32px;}
+        .content{padding:56px 0 80px;}
+        .contact-card{background:var(--bcard);border:1px solid var(--border);border-radius:16px;padding:36px;margin-bottom:24px;}
+        .contact-card h2{font-size:20px;font-weight:700;color:var(--white);margin-bottom:24px;}
+        .form-group{margin-bottom:20px;}
+        .form-group label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);margin-bottom:8px;}
+        .form-group input,.form-group textarea{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--white);padding:12px 14px;border-radius:9px;font-family:inherit;font-size:14px;transition:border-color 0.2s;}
+        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:rgba(0,208,132,0.4);}
+        .form-group input::placeholder,.form-group textarea::placeholder{color:var(--dim);}
+        .form-group textarea{resize:vertical;min-height:140px;}
+        .submit-btn{display:inline-block;background:var(--green);color:#080b14;font-weight:700;font-size:14px;padding:13px 32px;border-radius:9px;border:none;cursor:pointer;transition:all 0.2s;letter-spacing:0.3px;}
+        .submit-btn:hover{background:#00e699;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,208,132,0.3);}
+        .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px;}
+        .info-item{background:rgba(0,208,132,0.05);border:1px solid rgba(0,208,132,0.15);border-radius:12px;padding:20px;}
+        .info-icon{font-size:22px;margin-bottom:10px;}
+        .info-label{font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+        .info-item p{font-size:14px;color:var(--grey);line-height:1.6;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){.info-grid{grid-template-columns:1fr;}nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
+
+<header>
     <nav>
-        <a href="index.html" class="nav-brand">⚡ PropRanked</a>
-        <ul class="nav-links">
-            <li><a href="index.html#compare">Compare</a></li>
-            <li><a href="index.html#reviews">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
         </ul>
     </nav>
+</header>
 
-    <div class="container">
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="section-badge">✉️ &nbsp;Get In Touch</div>
         <h1>Contact Us</h1>
-        <p class="subtitle">Have questions about prop firms? Interested in partnerships? Get in touch with our team.</p>
+        <p>Questions about prop firms? Partnership inquiries? We'd love to hear from you.</p>
+    </div>
+</section>
 
-        <div class="contact-form">
-            <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">Send us a Message</h2>
-            <div class="google-form-note">
-                <strong>Note:</strong> If you see a Google sign-in prompt, simply sign in to your Google account to submit the form. Your responses are automatically saved to our database.
-            </div>
+<main class="container">
+    <div class="content">
+        <div class="contact-card">
+            <h2>Send Us a Message</h2>
             <div class="form-iframe-wrapper">
-                <iframe src="https://docs.google.com/forms/d/1Bogt_pQ-_uBZ1450Ea2QnrZj-FZTxN8RQZxBzfbuOTg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 8px; display: block;">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/1Bogt_pQ-_uBZ1450Ea2QnrZj-FZTxN8RQZxBzfbuOTg/viewform?embedded=true" width="100%" height="580" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:8px;display:block;background:transparent;">Loading…</iframe>
             </div>
         </div>
 
-        <div class="contact-info">
-            <h2 style="color: var(--accent-green); margin-bottom: 1.5rem;">How It Works</h2>
-
-            <div class="info-item">
-                <div class="info-label">📝 Submissions</div>
-                <p>All form submissions are automatically saved to a spreadsheet that you can access anytime.</p>
-            </div>
-
-            <div class="info-item">
-                <div class="info-label">💬 Social Media</div>
-                <p>Follow us on Twitter/X @prop_ranked for daily prop firm updates and trading insights.</p>
-            </div>
-
-            <div class="info-item">
-                <div class="info-label">✓ Confirmation</div>
-                <p>You'll see a confirmation message after submitting the form if it was successful.</p>
-            </div>
-
-            <div class="info-item">
-                <div class="info-label">⏱️ Response Time</div>
-                <p>We typically review submissions and respond within 24 hours during business days.</p>
+        <div class="contact-card">
+            <h2>How It Works</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">📝</div>
+                    <div class="info-label">Submissions</div>
+                    <p>All form submissions are automatically saved and reviewed by our team.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">💬</div>
+                    <div class="info-label">Social Media</div>
+                    <p>Follow us on X @prop_ranked for daily prop firm updates and insights.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✓</div>
+                    <div class="info-label">Confirmation</div>
+                    <p>You'll see a confirmation message after submitting successfully.</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-label">Response Time</div>
+                    <p>We typically respond within 24 hours on business days.</p>
+                </div>
             </div>
         </div>
     </div>
+</main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About PropRanked</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">Independent reviews and comparisons of prop trading firms. Our mission is to help traders find the right funded account provider.</p>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="/">Compare Firms</a>
+                <a href="blog.html">Blog</a>
+                <a href="trading-guides.html">Trading Guides</a>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html#compare">Compare Firms</a></li>
-                    <li><a href="index.html#reviews">Detailed Reviews</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4>Resources</h4>
-                <ul>
-                    <li><a href="trading-guides.html">Trading Guides</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="faq.html">FAQ</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                </ul>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 PropRanked. Independent prop firm reviews. Not financial advice. Trade at your own risk.</p>
+            <span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span>
+            <span>Independent prop firm reviews.</span>
         </div>
-    </footer>
-
-    <script>
-        // Contact form submission handler
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const form = this;
-            const formData = new FormData(form);
-
-            // Replace with your Formspree form ID
-            const formspreeURL = 'https://formspree.io/f/YOUR_FORM_ID';
-
-            try {
-                const response = await fetch(formspreeURL, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Show success message
-                    document.getElementById('formMessage').style.display = 'block';
-                    form.reset();
-
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        document.getElementById('formMessage').style.display = 'none';
-                    }, 5000);
-                } else {
-                    alert('Error sending message. Please try again.');
-                }
-            } catch (error) {
-                alert('Error sending message. Please try again.');
-                console.error('Error:', error);
-            }
-        });
-    </script>
+    </div>
+</footer>
 </body>
 </html>

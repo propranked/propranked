@@ -3,118 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prop Firm Evaluation Strategies: How to Pass | PropRanked</title>
-    <meta name="description" content="Learn the strategies successful traders use to pass prop firm evaluations. From FTMO to TopStep, master the rules and win.">
+    <title>How to Pass Prop Firm Evaluations — PropRanked</title>
+    <meta name="description" content="Proven strategies to pass prop firm evaluations. Psychology, discipline and techniques from traders who passed FTMO, TopStep, Apex and more.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SCH6BLQ1FN');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0f1419; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; }
-        header { background-color: #0f1419; border-bottom: 1px solid #1a1f2e; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
-        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #00d084; text-decoration: none; }
-        nav a { color: #e0e0e0; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #00d084; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: 42px; margin: 40px 0 20px; color: #ffffff; }
-        h2 { font-size: 28px; margin: 40px 0 20px; color: #00d084; }
-        p { margin: 15px 0; font-size: 16px; color: #b0b0b0; }
-        .highlight { background-color: #1a1f2e; border-left: 4px solid #00d084; padding: 20px; margin: 20px 0; border-radius: 6px; }
-        footer { background-color: #1a1f2e; border-top: 1px solid #2a3040; padding: 40px 0; margin-top: 60px; }
+        :root{--bg:#080b14;--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout p{color:var(--white);margin:0;line-height:1.8;}
+        ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">⚡ PropRanked</a>
-            <ul style="display: flex; list-style: none; gap: 30px;">
-                <li><a href="index.html#comparison">Compare</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="trading-guides.html">Guides</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <h1>How to Pass Prop Firm Evaluations: Proven Strategies</h1>
-
-        <p>Passing a prop firm evaluation is a significant accomplishment. Thousands of traders attempt evaluations every month, but only a fraction pass. This guide covers the strategies that successful traders use.</p>
-
-        <h2>Understand Your Evaluation Requirements</h2>
-
-        <p>Before you start trading, know the rules inside and out:</p>
-
-        <div class="highlight">
-            <strong>✓ Daily Loss Limit:</strong> How much you can lose in one day<br>
-            <strong>✓ Maximum Drawdown:</strong> Maximum cumulative loss allowed<br>
-            <strong>✓ Profit Target:</strong> How much profit you need to reach<br>
-            <strong>✓ Minimum Trading Days:</strong> How many days you must trade
-        </div>
-
-        <p>Most prop firms provide this information upfront. Read it carefully before risking a single dollar.</p>
-
-        <h2>Start Slow and Build Confidence</h2>
-
-        <p>Don't immediately trade at full position size. Instead:</p>
-
-        <ol style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Start with 1-2 micro-contracts or small positions</li>
-            <li>Focus on consistency, not profits</li>
-            <li>Track every trade in a journal</li>
-            <li>Increase size only after 10+ winning trades</li>
-            <li>Never go back to small size after hitting daily loss limit</li>
-        </ol>
-
-        <h2>Master Your Trading Plan</h2>
-
-        <p>Successful evaluators have a written trading plan before they start. Your plan should include:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>What markets you'll trade (ES, NQ, YM, etc.)</li>
-            <li>Your trading hours and best times</li>
-            <li>Your entry and exit rules</li>
-            <li>Position size for each account level</li>
-            <li>Daily loss limit (when to stop trading)</li>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
         </ul>
-
-        <h2>The Psychology of Passing</h2>
-
-        <p><strong>Emotions kill evaluations.</strong> When you're close to hitting your profit target, it's tempting to take excessive risk. Don't. Stick to your plan and let wins accumulate naturally.</p>
-
-        <div class="highlight">
-            <strong>Common Evaluation Killers:</strong><br>
-            ❌ Over-trading to hit profit target faster<br>
-            ❌ Taking excessive risk on a single trade<br>
-            ❌ Revenge trading after a loss<br>
-            ❌ Ignoring stop losses
-        </div>
-
-        <h2>When You're Halfway Through</h2>
-
-        <p>If you've reached 50% profit with 50% of the evaluation period remaining, you're in great shape. Now:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Reduce position size slightly</li>
-            <li>Focus on consistency, not more profits</li>
-            <li>Avoid the temptation to trade more</li>
-            <li>Let time work in your favor</li>
-        </ul>
-
-        <h2>When Close to Daily Loss Limit</h2>
-
-        <p>Once you've hit 75% of your daily loss limit, stop trading for the day. Professional traders know when to walk away.</p>
-
-        <h2>Bottom Line</h2>
-
-        <p>Passing prop firm evaluations is about discipline, not exceptional trading skill. Follow your plan, manage risk, control emotions, and you'll significantly increase your chances of getting funded.</p>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Evaluation Strategies</div>
+        <div class="guide-icon-big">🎯</div>
+        <h1>How to Pass Prop Firm Evaluations</h1>
+        <p>Proven strategies from traders who passed FTMO, TopStep, Apex, FundedNext and more.</p>
     </div>
+</section>
+<article class="article">
+    <p>Passing a prop firm evaluation is a significant accomplishment. Thousands of traders attempt evaluations every month, but only a fraction pass. This guide covers the strategies that consistently work.</p>
 
-    <footer>
-        <div class="container">
-            <div style="text-align: center; color: #666; font-size: 14px;">
-                <p>&copy; 2026 PropRanked. All rights reserved.</p>
-            </div>
+    <h2>Understand Your Evaluation Requirements</h2>
+    <div class="callout"><p>
+        <strong>✓ Daily Loss Limit:</strong> Maximum you can lose in one day<br>
+        <strong>✓ Maximum Drawdown:</strong> Maximum cumulative loss allowed<br>
+        <strong>✓ Profit Target:</strong> How much profit you need to hit<br>
+        <strong>✓ Minimum Trading Days:</strong> How many days you must trade
+    </p></div>
+    <p>Read the rules before risking a single dollar. Most traders who fail do so because they didn't fully understand the constraints they were operating under.</p>
+
+    <h2>Start Slow and Build Confidence</h2>
+    <ol>
+        <li>Start with small positions — 1–2 micro-contracts or minimal lots</li>
+        <li>Focus on consistency, not chasing profits</li>
+        <li>Track every trade in a journal</li>
+        <li>Increase size only after 10+ successful trades</li>
+        <li>Never increase size to "make back" losses</li>
+    </ol>
+
+    <h2>Write a Trading Plan Before You Start</h2>
+    <ul>
+        <li>What markets you'll trade (ES, NQ, YM, EUR/USD, etc.)</li>
+        <li>Your trading hours and best time windows</li>
+        <li>Entry and exit rules — written, not improvised</li>
+        <li>Position size for each scenario</li>
+        <li>Your personal daily loss limit (stop trading after X loss)</li>
+    </ul>
+
+    <h2>The Psychology of Passing</h2>
+    <p>Emotions kill evaluations. When you're close to hitting your profit target, it's tempting to take excessive risk. Stick to your plan and let wins accumulate naturally.</p>
+    <div class="callout"><p>
+        <strong>❌ Over-trading to hit target faster</strong><br>
+        <strong>❌ Taking excessive risk on a single trade</strong><br>
+        <strong>❌ Revenge trading after a loss</strong><br>
+        <strong>❌ Ignoring or moving stop losses</strong>
+    </p></div>
+
+    <h2>At 50% Profit, Shift Strategy</h2>
+    <p>Once you've reached 50% of your profit target, you're in a strong position. Now the priority changes:</p>
+    <ul>
+        <li>Slightly reduce position size to protect gains</li>
+        <li>Focus on consistency, not adding more profit</li>
+        <li>Avoid the temptation to over-trade</li>
+        <li>Let time work in your favor — slow and steady wins</li>
+    </ul>
+
+    <h2>Bottom Line</h2>
+    <p>Passing prop firm evaluations is about discipline, not exceptional skill. Follow your plan, manage risk with precision, control emotions, and you'll significantly improve your pass rate.</p>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><div class="footer-brand-name">🏆 PropRanked</div><p>Independent rankings of the world's top prop trading firms.</p></div>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
+            <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
         </div>
-    </footer>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice.</span><span>Independent prop firm reviews.</span></div>
+    </div>
+</footer>
 </body>
 </html>

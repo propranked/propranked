@@ -3,132 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Analysis for Prop Traders | Complete Guide | PropRanked</title>
-    <meta name="description" content="Master technical analysis for prop trading. Learn support/resistance, trend analysis, and chart patterns to identify high-probability trade setups.">
+    <title>Technical Analysis for Prop Traders — PropRanked</title>
+    <meta name="description" content="Master technical analysis for prop trading. Support/resistance, trend analysis, chart patterns and moving averages for high-probability setups.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SCH6BLQ1FN');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0f1419; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; }
-        header { background-color: #0f1419; border-bottom: 1px solid #1a1f2e; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
-        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #00d084; text-decoration: none; }
-        nav a { color: #e0e0e0; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #00d084; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .breadcrumb { padding: 20px 0; font-size: 14px; color: #888; }
-        .breadcrumb a { color: #00d084; text-decoration: none; }
-        h1 { font-size: 42px; margin: 40px 0 20px; color: #ffffff; }
-        h2 { font-size: 28px; margin: 40px 0 20px; color: #00d084; }
-        p { margin: 15px 0; font-size: 16px; color: #b0b0b0; }
-        .highlight { background-color: #1a1f2e; border-left: 4px solid #00d084; padding: 20px; margin: 20px 0; border-radius: 6px; }
-        footer { background-color: #1a1f2e; border-top: 1px solid #2a3040; padding: 40px 0; margin-top: 60px; }
+        :root{--bg:#080b14;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.8;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:72px 32px 56px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .breadcrumb{font-size:13px;color:var(--dim);margin-bottom:16px;}
+        .breadcrumb a{color:var(--green);text-decoration:none;}
+        .guide-icon-big{font-size:48px;margin-bottom:16px;}
+        .page-hero h1{font-size:clamp(28px,4.5vw,48px);font-weight:900;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+        .page-hero p{font-size:16px;color:var(--grey);max-width:520px;margin:0 auto;}
+        .article{max-width:820px;margin:0 auto;padding:56px 32px 80px;}
+        h2{font-size:22px;font-weight:700;color:var(--green);margin:44px 0 14px;border-top:1px solid var(--border);padding-top:36px;}
+        h2:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+        p{color:var(--grey);font-size:15px;margin-bottom:14px;line-height:1.8;}
+        .callout{background:var(--gdim);border-left:3px solid var(--green);border-radius:0 10px 10px 0;padding:20px 24px;margin:24px 0;}
+        .callout strong{color:var(--green);}
+        .callout p{color:var(--white);margin:0;line-height:1.7;}
+        ul,ol{margin:14px 0 14px 20px;color:var(--grey);font-size:15px;}
+        li{margin-bottom:8px;line-height:1.7;}
+        li strong{color:var(--white);}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--green);text-decoration:none;font-size:14px;font-weight:600;margin-top:48px;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}.article{padding:40px 20px 60px;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">⚡ PropRanked</a>
-            <ul style="display: flex; list-style: none; gap: 30px;">
-                <li><a href="index.html#comparison">Compare</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="trading-guides.html">Guides</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <a href="trading-guides.html">Trading Guides</a> / Technical Analysis
-        </div>
-
-        <h1>Technical Analysis for Prop Traders: Complete Guide</h1>
-
-        <p>Technical analysis is essential for prop trading. Whether you're trading futures, forex, or equities, understanding price action and chart patterns will help you identify high-probability setups and pass your prop firm evaluation.</p>
-
-        <h2>Support and Resistance Levels</h2>
-
-        <p>Support and resistance are the foundation of technical analysis. These are price levels where the market has historically bounced or reversed.</p>
-
-        <div class="highlight">
-            <strong>Support:</strong> A price level where buying interest emerges, preventing further downside<br><br>
-            <strong>Resistance:</strong> A price level where selling pressure emerges, preventing further upside
-        </div>
-
-        <p>Professional traders use support and resistance to:</p>
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Place stop losses below support or above resistance</li>
-            <li>Set profit targets at next resistance or support</li>
-            <li>Identify breakout opportunities</li>
-            <li>Determine entry and exit points</li>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
         </ul>
-
-        <h2>Trend Analysis</h2>
-
-        <p>Trends are your friend in trading. The direction of the trend should influence your bias:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li><strong style="color: #00d084;">Uptrend:</strong> Series of higher highs and higher lows — bias to buying</li>
-            <li><strong style="color: #00d084;">Downtrend:</strong> Series of lower highs and lower lows — bias to selling</li>
-            <li><strong style="color: #00d084;">Sideways:</strong> No clear direction — avoid large positions</li>
-        </ul>
-
-        <p>Always trade with the trend, not against it. Trading against the trend significantly reduces your win rate.</p>
-
-        <h2>Key Chart Patterns</h2>
-
-        <p><strong>Breakouts:</strong> When price breaks above resistance or below support with volume, often signals a strong move. Many prop traders specialize in breakout trading.</p>
-
-        <p><strong>Pullbacks:</strong> Price retraces part of a move before resuming. Common entry points for trend traders.</p>
-
-        <p><strong>Head and Shoulders:</strong> Reversal pattern showing three peaks, with the middle peak highest. Often precedes downtrends.</p>
-
-        <p><strong>Double Tops/Bottoms:</strong> Price tests the same level twice and reverses. Indicates weakness and potential reversals.</p>
-
-        <h2>Moving Averages</h2>
-
-        <p>Moving averages smooth out price action and reveal trends:</p>
-
-        <ul style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li><strong style="color: #00d084;">20-day MA:</strong> Short-term trend</li>
-            <li><strong style="color: #00d084;">50-day MA:</strong> Medium-term trend</li>
-            <li><strong style="color: #00d084;">200-day MA:</strong> Long-term trend</li>
-        </ul>
-
-        <p>When price is above all three moving averages, the market is in a strong uptrend. When below all three, it's in a strong downtrend.</p>
-
-        <h2>Volume Analysis</h2>
-
-        <p>Volume confirms the strength of price moves. High volume on breakouts suggests strong conviction. Low volume breakouts often fail.</p>
-
-        <div class="highlight">
-            <strong>Strong Signal:</strong> Price breaks resistance + high volume = likely continuation<br><br>
-            <strong>Weak Signal:</strong> Price breaks resistance + low volume = likely to reverse
-        </div>
-
-        <h2>Applying Technical Analysis to Evaluations</h2>
-
-        <p>When trading prop firm evaluations, focus on:</p>
-
-        <ol style="margin: 15px 0 15px 20px; color: #b0b0b0;">
-            <li>Trading major support/resistance levels</li>
-            <li>Using moving averages to confirm trend</li>
-            <li>Taking breakouts with volume confirmation</li>
-            <li>Avoiding choppy, sideways markets</li>
-            <li>Keeping stops close to invalidation levels</li>
-        </ol>
-
-        <h2>Bottom Line</h2>
-
-        <p>Technical analysis works because millions of traders use it, creating self-fulfilling prophecies at key price levels. Master support/resistance, trend analysis, and chart patterns, and you'll have the foundation for successful trading at any prop firm.</p>
+    </nav>
+</header>
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="trading-guides.html">Guides</a> / Technical Analysis</div>
+        <div class="guide-icon-big">📊</div>
+        <h1>Technical Analysis for Prop Traders</h1>
+        <p>Identify high-probability setups using support/resistance, trend analysis, chart patterns and moving averages.</p>
     </div>
+</section>
+<article class="article">
+    <p>Technical analysis is essential for prop trading. Whether you're trading futures, forex, or equities, understanding price action and chart patterns will help you identify high-probability setups and pass your evaluation.</p>
 
-    <footer>
-        <div class="container">
-            <div style="text-align: center; color: #666; font-size: 14px;">
-                <p>&copy; 2026 PropRanked. All rights reserved.</p>
-            </div>
+    <h2>Support and Resistance Levels</h2>
+    <div class="callout"><p><strong>Support:</strong> A price level where buying interest emerges, preventing further downside.<br><br><strong>Resistance:</strong> A price level where selling pressure emerges, preventing further upside.</p></div>
+    <p>Professional traders use support and resistance to place stop losses, set profit targets, identify breakout opportunities, and determine precise entry and exit points.</p>
+
+    <h2>Trend Analysis</h2>
+    <ul>
+        <li><strong>Uptrend:</strong> Series of higher highs and higher lows — bias to long positions</li>
+        <li><strong>Downtrend:</strong> Series of lower highs and lower lows — bias to short positions</li>
+        <li><strong>Sideways:</strong> No clear direction — avoid large positions until a breakout occurs</li>
+    </ul>
+    <p>Always trade with the trend, not against it. Counter-trend trading significantly reduces your win rate and is especially dangerous during evaluations.</p>
+
+    <h2>Key Chart Patterns</h2>
+    <p><strong style="color:var(--white)">Breakouts:</strong> When price breaks above resistance or below support, often signaling a strong move. Many prop traders specialize in breakout strategies.</p>
+    <p><strong style="color:var(--white)">Pullbacks:</strong> Price retraces part of a move before resuming the trend. Common and reliable entry points for trend traders.</p>
+    <p><strong style="color:var(--white)">Double Tops/Bottoms:</strong> Price tests the same level twice and reverses. Indicates potential reversal of the current trend.</p>
+
+    <h2>Moving Averages</h2>
+    <ul>
+        <li><strong>20-period MA:</strong> Short-term trend — useful for scalpers and day traders</li>
+        <li><strong>50-period MA:</strong> Medium-term trend — most widely watched by institutional traders</li>
+        <li><strong>200-period MA:</strong> Long-term trend — defines bull/bear market structure</li>
+    </ul>
+    <p>When price is above all three moving averages, the market is in a strong uptrend. When below all three, it's in a strong downtrend. Confluence with support/resistance makes these levels extremely powerful.</p>
+
+    <h2>Volume Analysis</h2>
+    <div class="callout"><p><strong>Strong Signal:</strong> Price breaks resistance + high volume = likely continuation<br><br><strong>Weak Signal:</strong> Price breaks resistance + low volume = likely to reverse</p></div>
+
+    <h2>Applying Technical Analysis in Evaluations</h2>
+    <ol>
+        <li>Trade major support/resistance levels only — avoid the noise in between</li>
+        <li>Use moving averages to confirm trend direction before entry</li>
+        <li>Take breakouts with volume confirmation for higher probability</li>
+        <li>Avoid choppy, sideways markets — patience is key</li>
+        <li>Keep stop losses close to the invalidation level of your setup</li>
+    </ol>
+
+    <h2>Bottom Line</h2>
+    <p>Technical analysis works because millions of traders use it, creating self-fulfilling price reactions at key levels. Master support/resistance, trend analysis, and chart patterns, and you'll have a solid foundation for profitable trading at any prop firm.</p>
+
+    <a href="trading-guides.html" class="back-link">← Back to All Guides</a>
+</article>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms.</p>
         </div>
-    </footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Navigation</h4><a href="/">Compare Firms</a><a href="blog.html">Blog</a><a href="trading-guides.html">Trading Guides</a></div>
+            <div class="footer-col"><h4>Resources</h4><a href="faq.html">FAQ</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy Policy</a></div>
+            <div class="footer-col"><h4>About</h4><a href="contact.html">Contact Us</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 PropRanked. Not financial advice.</span><span>Independent prop firm reviews.</span></div>
+    </div>
+</footer>
 </body>
 </html>

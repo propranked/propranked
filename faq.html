@@ -3,166 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frequently asked questions about prop trading firms, funding, and PropRanked reviews.">
-    <title>FAQ - PropRanked</title>
+    <title>FAQ — PropRanked | Prop Trading Questions Answered</title>
+    <meta name="description" content="Frequently asked questions about prop trading firms, funding, evaluations and PropRanked reviews.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-dark: #0f1419; --secondary-dark: #1a1f2e; --accent-green: #00d084;
-            --accent-green-hover: #00b86d; --accent-teal: #00b4d8; --text-primary: #ffffff;
-            --text-secondary: #b0b8c1; --border-color: #2d3748;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background-color: var(--primary-dark); color: var(--text-primary); line-height: 1.6;
-        }
-        nav {
-            position: sticky; top: 0; background-color: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem; z-index: 1000; display: flex;
-            justify-content: space-between; align-items: center;
-        }
-        .nav-brand { font-size: 1.5rem; font-weight: 700; color: var(--accent-green); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem;
-            transition: color 0.3s; font-weight: 500; }
-        .nav-links a:hover { color: var(--accent-green); }
-        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-green); }
-        .subtitle { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 3rem; }
-        .faq-item {
-            background: var(--secondary-dark); border: 1px solid var(--border-color);
-            border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; cursor: pointer;
-            transition: all 0.3s;
-        }
-        .faq-item:hover { border-color: var(--accent-green); }
-        .faq-question { color: var(--accent-green); font-weight: 600; font-size: 1.05rem; }
-        .faq-answer { color: var(--text-secondary); margin-top: 1rem; display: none; }
-        .faq-item.active .faq-answer { display: block; }
-        footer {
-            background: var(--secondary-dark); border-top: 1px solid var(--border-color);
-            padding: 3rem 2rem; margin-top: 4rem;
-        }
-        .footer-content {
-            max-width: 1400px; margin: 0 auto; display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem;
-        }
-        .footer-section h4 { color: var(--accent-green); margin-bottom: 1rem; }
-        .footer-section a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
-        .footer-section a:hover { color: var(--accent-green); }
-        .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 2rem;
-            text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
-        @media (max-width: 768px) {
-            .container { padding: 2rem 1rem; } h1 { font-size: 2rem; }
-            nav { flex-direction: column; gap: 1rem; }
-        }
+        :root{--bg:#080b14;--bg2:#0d1220;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--bh:rgba(0,208,132,0.35);--green:#00d084;--gdim:rgba(0,208,132,0.1);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{font-size:21px;font-weight:800;text-decoration:none;color:var(--green);}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:80px 32px 64px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .section-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gdim);border:1px solid rgba(0,208,132,0.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+        .page-hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-2px;margin-bottom:16px;}
+        .page-hero p{font-size:17px;color:var(--grey);max-width:480px;margin:0 auto;}
+        .container{max-width:820px;margin:0 auto;padding:0 32px;}
+        .content{padding:56px 0 80px;}
+        .faq-item{background:var(--bcard);border:1px solid var(--border);border-radius:13px;margin-bottom:12px;overflow:hidden;transition:border-color 0.2s;}
+        .faq-item:hover{border-color:rgba(0,208,132,0.2);}
+        .faq-item.open{border-color:rgba(0,208,132,0.3);}
+        .faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;gap:16px;}
+        .faq-q-text{font-size:16px;font-weight:600;color:var(--white);line-height:1.4;}
+        .faq-arrow{color:var(--green);font-size:18px;flex-shrink:0;transition:transform 0.3s;}
+        .faq-item.open .faq-arrow{transform:rotate(45deg);}
+        .faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s;}
+        .faq-item.open .faq-a{max-height:300px;padding:0 24px 20px;}
+        .faq-a p{color:var(--grey);font-size:15px;line-height:1.7;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:600px){nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
+
+<header>
     <nav>
-        <a href="index.html" class="nav-brand">⚡ PropRanked</a>
-        <ul class="nav-links">
-            <li><a href="index.html#compare">Compare</a></li>
-            <li><a href="index.html#reviews">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
         </ul>
     </nav>
+</header>
 
-    <div class="container">
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="section-badge">❓ &nbsp;FAQ</div>
         <h1>Frequently Asked Questions</h1>
-        <p class="subtitle">Find answers to common questions about prop trading firms and PropRanked.</p>
+        <p>Everything you need to know about prop trading firms and PropRanked.</p>
+    </div>
+</section>
 
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">What is a prop trading firm?</div>
-            <div class="faq-answer">A prop trading firm (proprietary trading firm) provides traders with capital to trade financial markets. Traders evaluate their skills, get funded if they pass, and then split profits with the firm.</div>
+<main class="container">
+    <div class="content">
+        <div class="faq-item open">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What is a prop trading firm?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>A prop trading firm (proprietary trading firm) provides traders with capital to trade financial markets. Traders evaluate their skills, get funded if they pass, and then split profits with the firm.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">How much does it cost to join a prop firm?</div>
-            <div class="faq-answer">Costs vary from $49/month to $250+ depending on the firm. Most charge a one-time evaluation fee between $95-$300. Check our comparison table for specific pricing.</div>
+        <div class="faq-item open">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How much does it cost to join a prop firm?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>Costs vary from $49/month to $250+ depending on the firm. Most charge a one-time evaluation fee between $95–$300. Check our comparison table for specific pricing on each firm.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Can I really make money with prop firms?</div>
-            <div class="faq-answer">Yes, but it requires discipline and trading skill. You'll split profits with the firm (typically 60-95% to you). Success depends on your trading strategy and risk management.</div>
+        <div class="faq-item open">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Can I really make money with prop firms?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>Yes, but it requires discipline and trading skill. You'll split profits with the firm (typically 60–95% to you). Success depends on your trading strategy and risk management.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">What's the difference between one-step and two-step evaluations?</div>
-            <div class="faq-answer">One-step: Pass one evaluation, get funded. Two-step: Pass initial evaluation, then another evaluation with the funded account before full funding. Two-step is more rigorous.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What's the difference between one-step and two-step evaluations?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>One-step: Pass one evaluation, get funded. Two-step: Pass an initial evaluation, then a second verification phase before full funding. Two-step is more rigorous but often comes with higher capital.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Which prop firm is best for beginners?</div>
-            <div class="faq-answer">We recommend starting with firms that have clear rules and good support like FTMO, TopStep, or FundedNext. Check our reviews for detailed comparisons.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Which prop firm is best for beginners?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>We recommend starting with firms that have clear rules and good support like FTMO, TopStep, or FundedNext. Check our comparison table for detailed side-by-side rankings.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Do prop firms trade your own money?</div>
-            <div class="faq-answer">No. Prop firms provide capital for you to trade. You don't deposit your own money (though some require initial evaluation fees). Profits are split between you and the firm.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do prop firms trade your own money?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>No. Prop firms provide capital for you to trade. You don't deposit your own trading capital (though evaluation fees are required). Profits are split between you and the firm.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">What markets can I trade with prop firms?</div>
-            <div class="faq-answer">Most prop firms offer futures, forex, or both. Some newer firms also support crypto. Check individual firm reviews for specific market access.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What markets can I trade with prop firms?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>Most prop firms offer futures, forex, or both. Some newer firms also support crypto and equities. Check individual firm reviews for specific market access details.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">How are PropRanked reviews created?</div>
-            <div class="faq-answer">Our reviews are independent and trader-verified. We analyze pricing, payout rules, evaluation difficulty, community feedback, and real user experiences to rank each firm fairly.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How are PropRanked reviews created?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>Our reviews are independent and trader-verified. We analyze pricing, payout rules, evaluation difficulty, community feedback, and real user experiences to rank each firm fairly.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">Is PropRanked affiliated with these prop firms?</div>
-            <div class="faq-answer">We earn affiliate commissions when you sign up through our links. This supports our work but doesn't influence our reviews. All opinions are independent and unbiased.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Is PropRanked affiliated with these prop firms?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>We earn affiliate commissions when you sign up through our links. This supports our work but doesn't influence our reviews or rankings. All opinions are independent and unbiased.</p></div>
         </div>
-
-        <div class="faq-item" onclick="this.classList.toggle('active')">
-            <div class="faq-question">How often do you update the reviews?</div>
-            <div class="faq-answer">We update pricing and rules monthly. Our last major update was March 2026. Subscribe to our blog for updates when firms change their offerings.</div>
+        <div class="faq-item">
+            <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How often are rankings updated?</span>
+                <span class="faq-arrow">+</span>
+            </div>
+            <div class="faq-a"><p>We update pricing and rules regularly. Our last major update was March 2026. Visit our blog for updates whenever firms change their offerings or pricing.</p></div>
         </div>
     </div>
+</main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About PropRanked</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Independent reviews of prop trading firms helping traders find the right funded account provider.</p>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="/">Compare Firms</a>
+                <a href="blog.html">Blog</a>
+                <a href="trading-guides.html">Trading Guides</a>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="index.html#compare">Compare Firms</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="index.html#reviews">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4>Resources</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="trading-guides.html">Guides</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <a href="faq.html">FAQ</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 0.5rem;"><a href="privacy.html">Privacy</a></li>
-                    <li style="margin-bottom: 0.5rem;"><a href="terms.html">Terms</a></li>
-                    <li><a href="affiliate-disclosure.html">Affiliate</a></li>
-                </ul>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 PropRanked. Independent reviews. Not financial advice.</p>
+            <span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span>
+            <span>Independent prop firm reviews.</span>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        document.querySelectorAll('.faq-item').forEach((item, idx) => {
-            if (idx < 3) item.classList.add('active');
-        });
-    </script>
+<script>
+function toggle(el){
+    const item=el.closest('.faq-item');
+    item.classList.toggle('open');
+}
+</script>
 </body>
 </html>

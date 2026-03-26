@@ -3,572 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - PropRanked | Prop Trading Firm Reviews & Guides</title>
-    <meta name="description" content="Latest insights, news, and tips for prop trading success. Read our comprehensive guides on evaluating prop firms, pricing, and trading strategies.">
-    <meta name="keywords" content="prop trading, prop firms, trading guides, evaluation rules, pricing comparison">
+    <title>Blog — PropRanked | Prop Trading Insights</title>
+    <meta name="description" content="Latest insights, news and tips for prop trading success. Reviews, comparisons and strategy guides.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCH6BLQ1FN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SCH6BLQ1FN');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCH6BLQ1FN');</script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #0f1419;
-            color: #e0e0e0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #0f1419;
-            border-bottom: 1px solid #1a1f2e;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #00d084;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            font-size: 28px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #00d084;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .page-header {
-            text-align: center;
-            padding: 60px 20px 40px;
-        }
-
-        .page-header h1 {
-            font-size: 48px;
-            color: #00d084;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .page-header p {
-            font-size: 18px;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 40px 0;
-        }
-
-        .blog-card {
-            background-color: #1a1f2e;
-            border: 1px solid #2a3040;
-            border-radius: 12px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            opacity: 1;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .blog-card.hidden {
-            display: none;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .blog-card:hover {
-            border-color: #00d084;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 208, 132, 0.1);
-        }
-
-        .blog-date {
-            color: #00d084;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .blog-card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #ffffff;
-            line-height: 1.4;
-        }
-
-        .blog-card p {
-            color: #b0b0b0;
-            font-size: 15px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .read-more {
-            color: #00d084;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: gap 0.3s ease;
-        }
-
-        .read-more:hover {
-            gap: 12px;
-        }
-
-        .load-more-container {
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .load-more-btn {
-            background-color: #00d084;
-            color: #0f1419;
-            border: none;
-            padding: 14px 40px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .load-more-btn:hover {
-            background-color: #00b870;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 208, 132, 0.2);
-        }
-
-        .load-more-btn:active {
-            transform: translateY(0);
-        }
-
-        .load-more-btn.loading {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .load-more-btn:disabled {
-            background-color: #666;
-            color: #999;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .posts-count {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #1a1f2e;
-            border-top: 1px solid #2a3040;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            color: #00d084;
-            margin-bottom: 20px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section a {
-            color: #b0b0b0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #00d084;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #2a3040;
-            padding-top: 30px;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 36px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .load-more-btn {
-                width: 100%;
-            }
-        }
+        :root{--bg:#080b14;--bg2:#0d1220;--bcard:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.07);--bh:rgba(0,208,132,0.35);--green:#00d084;--gdim:rgba(0,208,132,0.1);--gold:#c9a84c;--gldim:rgba(201,168,76,0.12);--white:#f0f2f5;--grey:#7a8699;--dim:#3d4756;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;}
+        header{position:sticky;top:0;z-index:100;background:rgba(8,11,20,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+        nav{max-width:1280px;margin:0 auto;padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:800;text-decoration:none;color:var(--green);letter-spacing:-0.3px;}
+        nav ul{list-style:none;display:flex;gap:36px;}
+        nav ul a{color:var(--grey);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s;}
+        nav ul a:hover{color:var(--white);}
+        .page-hero{position:relative;text-align:center;padding:80px 32px 64px;overflow:hidden;}
+        .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,208,132,0.08) 0%,transparent 65%),linear-gradient(180deg,#080b14,#0d1220);}
+        .page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,132,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,132,0.04) 1px,transparent 1px);background-size:52px 52px;}
+        .page-hero-content{position:relative;z-index:1;}
+        .section-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gdim);border:1px solid rgba(0,208,132,0.25);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:700;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+        .page-hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-2px;margin-bottom:16px;}
+        .page-hero p{font-size:17px;color:var(--grey);max-width:480px;margin:0 auto;}
+        .container{max-width:1280px;margin:0 auto;padding:0 32px;}
+        .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:48px 0 80px;}
+        .blog-card{background:var(--bcard);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:all 0.25s;}
+        .blog-card:hover{border-color:var(--bh);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4);}
+        .blog-tag{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1.2px;}
+        .blog-card h3{font-size:18px;font-weight:700;color:var(--white);line-height:1.4;flex:1;}
+        .blog-card p{color:var(--grey);font-size:14px;line-height:1.6;flex:1;}
+        .blog-date{font-size:12px;color:var(--dim);}
+        .read-more{color:var(--green);text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;margin-top:auto;transition:gap 0.2s;}
+        .read-more:hover{gap:10px;}
+        .empty-state{text-align:center;padding:80px 20px;color:var(--grey);}
+        .empty-state .icon{font-size:48px;margin-bottom:20px;}
+        .empty-state h2{font-size:24px;font-weight:700;color:var(--white);margin-bottom:12px;}
+        footer{background:#060810;border-top:1px solid var(--border);padding:64px 32px 36px;}
+        .footer-inner{max-width:1280px;margin:0 auto;}
+        .footer-brand{margin-bottom:48px;}
+        .footer-brand-name{font-size:20px;font-weight:800;color:var(--green);margin-bottom:10px;}
+        .footer-brand p{color:var(--grey);font-size:14px;max-width:340px;line-height:1.7;}
+        .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px;}
+        .footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);margin-bottom:20px;}
+        .footer-col a{display:block;color:var(--grey);text-decoration:none;font-size:14px;margin-bottom:11px;transition:color 0.2s;}
+        .footer-col a:hover{color:var(--white);}
+        .footer-bottom{border-top:1px solid var(--border);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px;}
+        @media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+        @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}nav ul{gap:20px;}.footer-grid{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;gap:8px;text-align:center;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">⚡</span>
-                PropRanked
-            </a>
-            <ul>
-                <li><a href="index.html#comparison">Compare</a></li>
-                <li><a href="index.html#reviews">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="container">
-        <div class="page-header">
-            <h1>Blog</h1>
-            <p>Latest insights, news, and tips for prop trading success.</p>
+<header>
+    <nav>
+        <a href="/" class="logo">🏆 PropRanked</a>
+        <ul>
+            <li><a href="/#compare">Compare</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="trading-guides.html">Guides</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-grid"></div>
+    <div class="page-hero-content">
+        <div class="section-badge">📰 &nbsp;Latest Insights</div>
+        <h1>Blog</h1>
+        <p>Prop firm updates, strategy breakdowns, and industry news for serious traders.</p>
+    </div>
+</section>
+
+<main class="container">
+    <div class="blog-grid">
+
+        <div class="blog-card">
+            <div class="blog-tag">Guide</div>
+            <h3>How to Choose the Right Prop Firm in 2026</h3>
+            <p>A comprehensive walkthrough of the key factors — drawdown rules, payout splits, platforms, and pricing — that should drive your decision.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="trading-guides.html" class="read-more">Read Guides →</a>
         </div>
 
-        <div class="blog-grid" id="blogGrid">
-            <!-- Blog Post 1: Prop Firm Updates 2026 -->
-            <!-- Blog Post: Apex Trader Funding Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="1">
-                <div class="blog-date">2026-03-26</div>
-                <h3>Apex Trader Funding Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from Apex Trader Funding. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-apex-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: TopStep Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="2">
-                <div class="blog-date">2026-03-26</div>
-                <h3>TopStep Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from TopStep. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-topstep-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: Apex Trader Funding Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="3">
-                <div class="blog-date">2026-03-26</div>
-                <h3>Apex Trader Funding Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from Apex Trader Funding. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-apex-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: TopStep Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="4">
-                <div class="blog-date">2026-03-26</div>
-                <h3>TopStep Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from TopStep. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-topstep-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: Blue Guardian Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="5">
-                <div class="blog-date">2026-03-26</div>
-                <h3>Blue Guardian Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from Blue Guardian. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-blueguardian-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: Earn2Trade Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="6">
-                <div class="blog-date">2026-03-26</div>
-                <h3>Earn2Trade Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from Earn2Trade. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-earn2trade-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: E8 Funding Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="7">
-                <div class="blog-date">2026-03-26</div>
-                <h3>E8 Funding Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from E8 Funding. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-e8-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: FXIFY Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="8">
-                <div class="blog-date">2026-03-26</div>
-                <h3>FXIFY Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from FXIFY. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-fxify-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: The5ers Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="9">
-                <div class="blog-date">2026-03-26</div>
-                <h3>The5ers Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from The5ers. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-the5ers-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: FundedNext Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="10">
-                <div class="blog-date">2026-03-26</div>
-                <h3>FundedNext Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from FundedNext. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-fundednext-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: FTMO Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="11">
-                <div class="blog-date">2026-03-26</div>
-                <h3>FTMO Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from FTMO. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-ftmo-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: Apex Trader Funding Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="12">
-                <div class="blog-date">2026-03-26</div>
-                <h3>Apex Trader Funding Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from Apex Trader Funding. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-apex-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <!-- Blog Post: TopStep Update 2026-03-26 -->
-            <div class="blog-card" data-post-index="13">
-                <div class="blog-date">2026-03-26</div>
-                <h3>TopStep Updates - 2026-03-26</h3>
-                <p>Latest updates and changes from TopStep. See what's new in pricing, features, evaluation rules, and market access for funded traders.</p>
-                <a href="blog-topstep-20260326.html" class="read-more">Read More →</a>
-            </div>
-
-
-            <div class="blog-card" data-post-index="13">
-                <div class="blog-date">March 25, 2026</div>
-                <h3>Latest Prop Firm Updates & Industry News</h3>
-                <p>Stay updated with the latest news and announcements from the top prop trading firms in 2026. Including new features, promotions, and major milestones from industry leaders.</p>
-                <a href="blog-prop-firm-updates-2026.html" class="read-more">Read More →</a>
-            </div>
-
-            <!-- Blog Post 2: Commission Payout Comparison -->
-            <div class="blog-card" data-post-index="14">
-                <div class="blog-date">March 24, 2026</div>
-                <h3>Commission & Payout Structure Comparison</h3>
-                <p>Detailed breakdown of commission structures across 7 leading prop firms. Compare earning potential, payout methods, withdrawal speeds, and crypto options available to traders.</p>
-                <a href="blog-commission-payout-comparison.html" class="read-more">Read More →</a>
-            </div>
-
-            <!-- Blog Post 3: Best Futures Prop Firms -->
-            <div class="blog-card" data-post-index="15">
-                <div class="blog-date">March 23, 2026</div>
-                <h3>Best Futures Prop Firms for ES, NQ & YM Trading</h3>
-                <p>Top 5 prop firms specializing in futures trading. Complete analysis of TopStep, The5ers, E8 Markets, Apex, and FundedNext for ES, NQ, and YM traders. Find the best fit for your trading style.</p>
-                <a href="blog-best-futures-prop-firms.html" class="read-more">Read More →</a>
-            </div>
-
-            <!-- Blog Post 4: The5ers Evaluation Rules -->
-            <div class="blog-card" data-post-index="16">
-                <div class="blog-date">March 22, 2026</div>
-                <h3>The5ers Complete Evaluation Guide 2026</h3>
-                <p>Comprehensive guide to The5ers prop firm. Learn about their account structures, evaluation rules, commission scaling, and how they've evolved with their 10-year anniversary milestone.</p>
-                <a href="blog-the5ers-evaluation-rules.html" class="read-more">Read More →</a>
-            </div>
-
-            <!-- Blog Post 5: 2026 Pricing Comparison -->
-            <div class="blog-card" data-post-index="17">
-                <div class="blog-date">March 21, 2026</div>
-                <h3>2026 Prop Firm Pricing Comparison & ROI Analysis</h3>
-                <p>Complete pricing breakdown across 9 prop firms. Compare costs, hidden fees, evaluation prices, and ROI potential. Includes real data on FTMO, TopStep, Apex, and more with promotional offers.</p>
-                <a href="blog-2026-pricing-comparison.html" class="read-more">Read More →</a>
-            </div>
-
-            <!-- Blog Post 6: FTMO vs TopStep -->
-            <div class="blog-card" data-post-index="18">
-                <div class="blog-date">March 20, 2026</div>
-                <h3>FTMO vs TopStep: Detailed Comparison</h3>
-                <p>In-depth comparison between two of the most popular prop firms. Analyze their evaluation processes, payout structures, market access, and determine which is better for your trading goals.</p>
-                <a href="blog-1-ftmo-vs-topstep.html" class="read-more">Read More →</a>
-            </div>
+        <div class="blog-card">
+            <div class="blog-tag">Comparison</div>
+            <h3>Futures vs Forex Prop Firms: Which Is Right for You?</h3>
+            <p>We break down the key differences between futures and forex-based prop firms, covering platforms, margins, and evaluation rules.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="guide-futures-vs-forex.html" class="read-more">Read Guide →</a>
         </div>
 
-        <div class="load-more-container">
-            <button class="load-more-btn" id="loadMoreBtn" onclick="loadMorePosts()">Load More Posts</button>
-            <div class="posts-count">
-                <span id="postsShown">6</span> of <span id="totalPosts">6</span> posts
+        <div class="blog-card">
+            <div class="blog-tag">Strategy</div>
+            <h3>Risk Management: The #1 Rule for Passing Evaluations</h3>
+            <p>Learn the 2% rule, position sizing, and drawdown management strategies that professional traders use to pass prop firm evaluations.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="guide-risk-management.html" class="read-more">Read Guide →</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-tag">Review</div>
+            <h3>Apex Trader Funding — 2026 Review</h3>
+            <p>One of the most popular futures prop firms. We break down their evaluation rules, pricing, payout structure, and why traders love the 85% discount.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="/" class="read-more">Compare All Firms →</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-tag">Strategy</div>
+            <h3>How to Pass Your First Prop Firm Evaluation</h3>
+            <p>Proven strategies from traders who passed FTMO, TopStep, Apex and more. Covers psychology, discipline, and techniques for success.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="guide-evaluation-strategies.html" class="read-more">Read Guide →</a>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-tag">Platform</div>
+            <h3>Tradovate vs MT4 vs cTrader — Which Platform Wins?</h3>
+            <p>A side-by-side comparison of the top trading platforms used by prop firms, covering tools, speed, charting and overall experience.</p>
+            <div class="blog-date">March 2026</div>
+            <a href="guide-trading-platforms.html" class="read-more">Read Guide →</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-brand-name">🏆 PropRanked</div>
+            <p>Independent rankings of the world's top prop trading firms. Honest reviews, real data, zero sponsorship bias.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="/">Compare Firms</a>
+                <a href="blog.html">Blog</a>
+                <a href="trading-guides.html">Trading Guides</a>
             </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="faq.html">FAQ</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 PropRanked. Not financial advice. Trade responsibly.</span>
+            <span>Independent prop firm reviews.</span>
         </div>
     </div>
+</footer>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>PropRanked</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#comparison">Compare Firms</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="trading-guides.html">Trading Guides</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 PropRanked. All rights reserved. | Affiliate disclosure: We earn commissions from affiliate links.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        let postsPerPage = 6;
-        let currentlyShown = 6;
-        let totalPosts = document.querySelectorAll('.blog-card').length;
-
-        // Update total posts count
-        document.getElementById('totalPosts').textContent = totalPosts;
-
-        // Hide all posts after the first 6
-        function initializeView() {
-            const allPosts = document.querySelectorAll('.blog-card');
-            allPosts.forEach((post, index) => {
-                if (index >= postsPerPage) {
-                    post.classList.add('hidden');
-                }
-            });
-
-            // Hide load more button if 6 or fewer posts
-            updateLoadMoreButton();
-        }
-
-        function loadMorePosts() {
-            const allPosts = document.querySelectorAll('.blog-card');
-            const hiddenPosts = Array.from(allPosts).filter(post => post.classList.contains('hidden'));
-
-            // Show next batch of posts
-            for (let i = 0; i < postsPerPage && i < hiddenPosts.length; i++) {
-                hiddenPosts[i].classList.remove('hidden');
-                currentlyShown++;
-            }
-
-            // Update count
-            document.getElementById('postsShown').textContent = currentlyShown;
-
-            // Update button state
-            updateLoadMoreButton();
-        }
-
-        function updateLoadMoreButton() {
-            const btn = document.getElementById('loadMoreBtn');
-            if (currentlyShown >= totalPosts) {
-                btn.textContent = 'All Posts Loaded';
-                btn.disabled = true;
-            }
-        }
-
-        // Initialize on page load
-        window.addEventListener('DOMContentLoaded', initializeView);
-    </script>
 </body>
 </html>
