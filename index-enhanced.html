@@ -304,28 +304,18 @@
 
     <script>
         const firmsData = [
-            {name: "Apex Trader Funding", logo: "https://www.apextraderfunding.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, Rhythmic", max_accounts: "20", status: "Verified", code: "APEX", category: "Best Pricing,Best for Futures"},
-            {name: "TopStep Trader", logo: "https://www.topsteptrader.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "30%", platforms: "Tradovate, Rhythmic", max_accounts: "10", status: "Verified", code: "TOPSTEP", category: "Current Discounts"},
-            {name: "FTMO", logo: "https://www.ftmo.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5, cTrader", max_accounts: "15", status: "Verified", code: "FTMO", category: "Current Discounts"},
-            {name: "FundedNext", logo: "https://www.fundednext.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate, cTrader", max_accounts: "12", status: "Verified", code: "FUNDEDNEXT", category: "Best Pricing,Quickest Funding"},
-            {name: "The5ers", logo: "https://www.the5ers.com/favicon.ico", rating: "⭐⭐⭐⭐⭐", discount: "25%", platforms: "MT4/MT5, TradingView", max_accounts: "8", status: "Verified", code: "THE5ERS", category: "Current Discounts"},
-            {name: "E8 Funding", logo: "https://www.e8funding.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "Tradovate, NinjaTrader", max_accounts: "6", status: "Verified", code: "E8", category: "Best Pricing"},
-            {name: "Earn2Trade", logo: "https://www.earn2trade.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "45%", platforms: "Tradovate, ThinkOrSwim", max_accounts: "10", status: "Verified", code: "EARN2TRADE", category: "Best Pricing,Highest Commission"},
-            {name: "Blue Guardian", logo: "https://www.blueguardian.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "5", status: "Verified", code: "BLUE", category: "Best Pricing"},
-            {name: "FXIFY", logo: "https://www.fxify.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "15%", platforms: "MT4/MT5, cTrader", max_accounts: "7", status: "Pending", code: "FXIFY", category: ""},
-            {name: "Lucid Trading", logo: "https://www.lucidtrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "50%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LUCID", category: "Best Pricing"},
-            {name: "WarBux", logo: "https://www.warbux.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "WARBUX", category: "Current Discounts"},
-            {name: "Take Profit Trader", logo: "https://www.takeprofittrader.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TPT", category: "Best Pricing"},
-            {name: "Tradeify", logo: "https://www.tradeify.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TRADEIFY", category: "Current Discounts"},
-            {name: "Legends Trading", logo: "https://www.legendstrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "LEGENDS", category: "Best Pricing"},
-            {name: "MyFundedFutures", logo: "https://www.myfundedfutures.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "MFF", category: "Best for Futures"},
-            {name: "Funded Futures Network", logo: "https://www.fundedfuturesnetwork.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "40%", platforms: "Tradovate", max_accounts: "N/A", status: "Verified", code: "FFN", category: "Best Pricing,Best for Futures"},
-            {name: "DayTraders.com", logo: "https://www.daytraders.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "Tradovate", max_accounts: "N/A", status: "Pending", code: "DAYTRADERS", category: "Best for Futures"},
-            {name: "TheTradesMakers", logo: "https://www.thetradesmakers.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "TTM", category: ""},
-            {name: "BluSky Trading", logo: "https://www.bluskytrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BLUSKY", category: ""},
-            {name: "Bulenox", logo: "https://www.bulenox.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "BULENOX", category: ""},
-            {name: "TradeDay", logo: "https://www.tradeday.com/favicon.ico", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4/MT5, cTrader", max_accounts: "5", status: "Verified", code: "TRADEDAY", category: "Current Discounts"},
-            {name: "UProfit", logo: "https://www.uprofit.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "N/A", platforms: "MT4/MT5", max_accounts: "N/A", status: "Pending", code: "UPROFIT", category: ""}
+            {name: "Apex Trader Funding", logo: "https://www.apextraderfunding.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "85%", platforms: "Tradovate, NinjaTrader", max_accounts: "$300K (Futures)", status: "Verified", code: "PENDING", category: "Best Pricing,Current Discounts,Best for Futures"},
+            {name: "FTMO", logo: "https://www.ftmo.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4, MT5, cTrader", max_accounts: "$400K", status: "Verified", code: "PENDING", category: "Current Discounts"},
+            {name: "FundedNext", logo: "https://www.fundednext.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "7%", platforms: "MT4, MT5, DXTrade, TradeLocker", max_accounts: "Multiple Accounts", status: "Verified", code: "PENDING", category: ""},
+            {name: "The5ers", logo: "https://www.the5ers.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "5%", platforms: "MT4, MT5, cTrader", max_accounts: "8 Max Accounts", status: "Verified", code: "PENDING", category: ""},
+            {name: "Blue Guardian", logo: "https://www.blueguardian.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "$19-$400K", platforms: "MT5, Match-Trader, TradeLocker", max_accounts: "$400K Max", status: "Verified", code: "PENDING", category: ""},
+            {name: "Earn2Trade", logo: "https://www.earn2trade.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "Variable", platforms: "MT4, MT5, DXTrade", max_accounts: "Multiple", status: "Verified", code: "PENDING", category: ""},
+            {name: "DNA Funded", logo: "https://www.dnafunded.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "Variable", platforms: "MT4, MT5, DXTrade, TradeLocker", max_accounts: "$600K", status: "Verified", code: "PENDING", category: ""},
+            {name: "TopStep", logo: "https://www.topstep.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "Variable", platforms: "Tradovate, NinjaTrader", max_accounts: "$50K-$200K", status: "Pending", code: "PENDING", category: "Best for Futures"},
+            {name: "WarBux", logo: "https://www.warbux.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "20%", platforms: "MT4, MT5", max_accounts: "Multiple", status: "Pending", code: "PENDING", category: "Current Discounts"},
+            {name: "Tradeify", logo: "https://www.tradeify.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "30%", platforms: "MT4, MT5, cTrader", max_accounts: "Unlimited", status: "Pending", code: "PENDING", category: "Current Discounts"},
+            {name: "Legends Trading", logo: "https://www.legendstrading.com/favicon.ico", rating: "⭐⭐⭐⭐", discount: "35%", platforms: "MT4, MT5", max_accounts: "Multiple", status: "Pending", code: "PENDING", category: "Current Discounts"},
+            {name: "TradeDay", logo: "https://www.tradeday.com/favicon.ico", rating: "⭐⭐⭐", discount: "30%", platforms: "MT4, MT5, cTrader", max_accounts: "5 Accounts", status: "Pending", code: "PENDING", category: "Current Discounts"}
         ];
 
         function renderTable(data) {
